@@ -1,0 +1,54 @@
+version: "3.1"
+nlu:
+- intent: ask_diet_plan
+  examples: |
+    - can i get a diet plan
+    - i need a meal plan
+    - give me a planned meal
+    - help me to creat a diet
+    - can you recomand me a diet
+    - i need a diet
+    - recommend me a mean plan
+    - i need advice on what to eat
+    - can you give me a [balanced](diet) diet plan?
+    - i want a diet plan
+- intent: inform_diet
+  examples: |
+    - [gluten free](diet)
+    - i [dont eat gluten]{"entity": "diet", "value": "gluten free"}
+    - [no gluten]{"entity": "diet", "value": "gluten free"}
+    - i am [vegan](diet)
+    - [vegetarian](diet)
+    - [veggie]{"entity": "diet", "value": "vegetarian"}
+    - im [veg]{"entity": "diet", "value": "vegetarian"}
+    - [pescatarian](diet)
+    - i want a [keto](diet) diet
+    - [ketogenic](diet) meal plan
+    - [paleo](diet) diet
+    - [primal](diet) diet
+    - [whole30](diet) diet
+    - i want a [veg]{"entity": "diet", "value": "vegetarian"} diet
+    - [veg]{"entity": "diet", "value": "vegetarian"}
+    - i want a [veg]{"entity": "diet", "value": "vegetarian"} diet
+- intent: inform_allergens
+  examples: |
+    - im allergic to [peanut](allergen)
+    - [egg](allergen)
+    - i cant eat [nuts](allergen)
+    - [dairy](allergen) products
+    - no [fish](allergen) and [egg](allergen)
+    - [meat](allergen), [sea food](allergen) and [egg](allergen)
+    - [seafood](allergen)
+    - [nuts](allergen) and [egg](allergen)
+    - [egg](allergen) and [sesame](allergen)
+- intent: deny
+  examples: |
+    - no
+- synonym: gluten free
+  examples: |
+    - dont eat gluten
+    - no gluten
+- synonym: vegetarian
+  examples: |
+    - veggie
+    - veg

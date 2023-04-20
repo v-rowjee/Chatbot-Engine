@@ -1,0 +1,90 @@
+version: "3.1"
+
+stories:
+- story: diet form with allergens
+  steps:
+  - intent: ask_diet_plan
+  - action: diet_form
+  - active_loop: diet_form
+  - slot_was_set:
+    - requested_slot: diet
+  - slot_was_set:
+    - diet: vegetarian
+  - slot_was_set:
+    - requested_slot: ask_allergens
+  - slot_was_set:
+    - ask_allergens: true
+  - slot_was_set:
+    - requested_slot: allergens
+  - intent: inform_allergens
+    entities:
+    - allergen: egg
+    - allergen: sesame
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_diet_form_slots
+  - action: action_generate_diet
+
+- story: diet form with no allergens
+  steps:
+  - intent: ask_diet_plan
+    entities:
+      - diet: vegan
+  - slot_was_set:
+      - diet: vegan
+  - action: diet_form
+  - active_loop: diet_form
+  - slot_was_set:
+      - ask_allergens: false
+  - slot_was_set:
+      - requested_slot: null
+  - active_loop: null
+  - action: utter_diet_form_slots
+  - action: action_generate_diet
+
+- story: diet form with no allergens 2
+  steps:
+  - intent: inform_diet
+    entities:
+    - diet: vegetarian
+  - slot_was_set:
+    - diet: vegetarian
+  - action: diet_form
+  - active_loop: diet_form
+  - slot_was_set:
+    - requested_slot: ask_allergens
+  - slot_was_set:
+    - ask_allergens: false
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_diet_form_slots
+  - action: action_generate_diet
+
+- story: diet form with no allergens 3
+  steps:
+  - intent: inform_diet
+    entities:
+    - diet: vegetarian
+  - slot_was_set:
+    - diet: vegetarian
+  - action: diet_form
+  - active_loop: diet_form
+  - slot_was_set:
+    - diet: Vegetarian
+  - slot_was_set:
+    - diet: Vegetarian
+  - slot_was_set:
+    - requested_slot: ask_allergens
+  - slot_was_set:
+    - ask_allergens: false
+  - slot_was_set:
+    - ask_allergens: false
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_diet_form_slots
+  - action: action_generate_diet

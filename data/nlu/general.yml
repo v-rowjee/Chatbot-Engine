@@ -1,0 +1,52 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: affirm
+  examples: |
+    - yes
+    - yeah
+    - ofc
+    - of course
+    - sure
+    - yep
+    - yea
+    - yeaah
+    - yess
+    - tes
+    - ok
+    - okay
+    - good
+    - all good
+    - fine
+
+- intent: deny
+  examples: |
+    - no
+    - not really
+    - i dont think so
+    - nope
+    - no way
+    - never
+    - not at all
+    - none
+    - no thanks
+    - no thank you
+    - nah
+    - negative
+    - no im not
+    - non
