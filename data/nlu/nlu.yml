@@ -22,7 +22,7 @@ nlu:
     - [veggie]{"entity": "diet", "value": "vegetarian"}
     - im [veg]{"entity": "diet", "value": "vegetarian"}
     - [pescatarian](diet)
-    - i want a [keto](diet) diet
+    - i want a [keto]{"entity":"diet", "value": "ketogenic"} diet
     - [ketogenic](diet) meal plan
     - [paleo](diet) diet
     - [primal](diet) diet
@@ -41,14 +41,4 @@ nlu:
     - [seafood](allergen)
     - [nuts](allergen) and [egg](allergen)
     - [egg](allergen) and [sesame](allergen)
-- intent: deny
-  examples: |
-    - no
-- synonym: gluten free
-  examples: |
-    - dont eat gluten
-    - no gluten
-- synonym: vegetarian
-  examples: |
-    - veggie
-    - veg
+

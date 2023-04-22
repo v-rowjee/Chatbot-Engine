@@ -1,25 +1,24 @@
-- synonym: dairy-free
+- synonym: dairy free
   examples: |
     - no dairy
     - cant drink dairy
     - lactose intolerant
-- synonym: egg-free
+- synonym: egg free
   examples: |
     - no egg
     - cant eat egg
     - egg-less
-- synonym: gluten-free
+- synonym: gluten free
   examples: |
     - no ingredient containing gluten
     - gluten free' diet
+    - no gluten
+    - dont eat gluten
     - no gluten
 - synonym: ketogenic
   examples: |
     - keto friendly
     - keto
-- synonym: kosher
-  examples: |
-    - cosher
 - synonym: peanut-free
   examples: |
     - allergic to peanut
@@ -29,23 +28,12 @@
   examples: |
     - does not contain meat or meat based products but can contain dairy and fish
     - no meat but can contain milk or fish
-- synonym: soy-free
-  examples: |
-    - does not contain soy
 - synonym: vegetarian
   examples: |
     - veg
     - vege
     - vegetarian
-- synonym: wheat-free
-  examples: |
-    - no wheat
-- synonym: high-protein
-  examples: |
-    - highprotein
-    - high-protein
-    - high protein
-    - lots of protein
+    - veggie
 - synonym: diet plan
   examples: |
     - diet plan
