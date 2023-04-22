@@ -1,0 +1,146 @@
+[
+  {
+    "text": "fine",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.8799175024032593
+    }
+  },
+  {
+    "text": "i dont think so",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "thanks",
+      "confidence": 0.639241635799408
+    }
+  },
+  {
+    "text": "i cant eat nuts",
+    "intent": "inform_allergens",
+    "intent_prediction": {
+      "name": "ask_diet_plan",
+      "confidence": 0.5920212864875793
+    }
+  },
+  {
+    "text": "hello",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.767371416091919
+    }
+  },
+  {
+    "text": "let's go",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.9037878513336182
+    }
+  },
+  {
+    "text": "i want a diet plan",
+    "intent": "ask_diet_plan",
+    "intent_prediction": {
+      "name": "inform_diet",
+      "confidence": 0.9874795079231262
+    }
+  },
+  {
+    "text": "tes",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "thanks",
+      "confidence": 0.5893519520759583
+    }
+  },
+  {
+    "text": "never",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.379705011844635
+    }
+  },
+  {
+    "text": "i want a keto diet",
+    "intent": "inform_diet",
+    "intent_prediction": {
+      "name": "ask_diet_plan",
+      "confidence": 0.8667750358581543
+    }
+  },
+  {
+    "text": "ketogenic meal plan",
+    "intent": "inform_diet",
+    "intent_prediction": {
+      "name": "ask_diet_plan",
+      "confidence": 0.9992384910583496
+    }
+  },
+  {
+    "text": "good afternoon",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.8938137888908386
+    }
+  },
+  {
+    "text": "no thanks",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "thanks",
+      "confidence": 0.9832335114479065
+    }
+  },
+  {
+    "text": "negative",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "inform_diet",
+      "confidence": 0.36249008774757385
+    }
+  },
+  {
+    "text": "im allergic to peanut",
+    "intent": "inform_allergens",
+    "intent_prediction": {
+      "name": "inform_diet",
+      "confidence": 0.9834892749786377
+    }
+  },
+  {
+    "text": "hi",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.4853733777999878
+    }
+  },
+  {
+    "text": "nah",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.6519721150398254
+    }
+  },
+  {
+    "text": "whole30 diet",
+    "intent": "inform_diet",
+    "intent_prediction": {
+      "name": "ask_diet_plan",
+      "confidence": 0.6149689555168152
+    }
+  },
+  {
+    "text": "dairy products",
+    "intent": "inform_allergens",
+    "intent_prediction": {
+      "name": "thanks",
+      "confidence": 0.497610479593277
+    }
+  }
+]

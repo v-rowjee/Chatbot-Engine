@@ -5,7 +5,7 @@ from typing import Text, List, Any, Dict, Optional
 from rasa_sdk import Tracker, FormValidationAction, Action
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.types import DomainDict
-from rasa_sdk.events import SlotSet, ConversationPaused, UserUtteranceReverted
+from rasa_sdk.events import SlotSet, ConversationPaused, UserUtteranceReverted, LoopInterrupted
 
 
 class GenerateDiet(Action):
@@ -43,7 +43,7 @@ class GenerateDiet(Action):
         message += f'The meal for the day amounts to {nutrients["calories"]} calories (carbohydrates: {nutrients["carbohydrates"]}, protein: {nutrients["protein"]}, fat: {nutrients["fat"]})'
         dispatcher.utter_message(text=message)
 
-        return []
+        return [LoopInterrupted(True, None)]
 
 
 class ValidateDietForm(FormValidationAction):

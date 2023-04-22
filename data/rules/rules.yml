@@ -6,6 +6,11 @@ rules:
     - intent: greet
     - action: utter_greet
 
+- rule: ending conversation
+  steps:
+    - intent: thanks
+    - action: utter_more
+
 - rule: Activate diet_form
   steps:
     - or:

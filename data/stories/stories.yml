@@ -1,6 +1,11 @@
 version: "3.1"
 
 stories:
+- story: ending conversation
+  steps:
+  - intent: thanks
+  - action: utter_more
+
 - story: diet form with allergens
   steps:
   - intent: ask_diet_plan
@@ -42,6 +47,8 @@ stories:
   - active_loop: null
   - action: utter_diet_form_slots
   - action: action_generate_diet
+  - intent: thanks
+  - action: utter_more
 
 - story: diet form with no allergens 2
   steps:
@@ -74,15 +81,9 @@ stories:
   - slot_was_set:
     - diet: Vegetarian
   - slot_was_set:
-    - diet: Vegetarian
-  - slot_was_set:
     - requested_slot: ask_allergens
   - slot_was_set:
     - ask_allergens: false
-  - slot_was_set:
-    - ask_allergens: false
-  - slot_was_set:
-    - requested_slot: null
   - slot_was_set:
     - requested_slot: null
   - active_loop: null

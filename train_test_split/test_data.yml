@@ -1,0 +1,43 @@
+version: "3.1"
+nlu:
+- intent: inform_allergens
+  examples: |
+    - i cant eat [nuts](allergen)
+    - no [fish](allergen) and [egg](allergen)
+- intent: ask_diet_plan
+  examples: |
+    - can you give me a [balanced](diet) diet plan?
+    - i need a meal plan
+- intent: greet
+  examples: |
+    - goodevening
+    - moin
+    - hello
+- intent: deny
+  examples: |
+    - no
+    - i dont think so
+    - no way
+- intent: affirm
+  examples: |
+    - good
+    - ok
+    - all good
+- intent: inform_diet
+  examples: |
+    - i want a [keto](diet) diet
+    - [veggie]{"entity": "diet", "value": "vegetarian"}
+    - [no gluten]{"entity": "diet", "value": "gluten free"}
+- intent: thanks
+  examples: |
+    - tysm
+    - ty
+    - thank1
+- synonym: gluten free
+  examples: |
+    - dont eat gluten
+    - no gluten
+- synonym: vegetarian
+  examples: |
+    - veggie
+    - veg

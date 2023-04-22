@@ -50,3 +50,22 @@ nlu:
     - negative
     - no im not
     - non
+
+- intent: thanks
+  examples: |
+    - thank you
+    - thanks!
+    - thank1
+    - tanks
+    - tenks
+    - ty
+    - tysm
+    - thank you so much
+    - thanx
+    - thks
+    - fanks
+    - sanks
+    - tanku
+    - thanks for the help
+    - thatwas very helpful thank you
+    - thank again

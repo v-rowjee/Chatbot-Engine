@@ -1,0 +1,248 @@
+[
+  {
+    "text": "i dont eat gluten",
+    "entities": [
+      {
+        "start": 2,
+        "end": 17,
+        "value": "gluten free",
+        "entity": "diet"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "diet",
+        "start": 11,
+        "end": 17,
+        "confidence_entity": 0.7482060790061951,
+        "value": "gluten",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "primal diet",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "primal",
+        "entity": "diet"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "no fish and egg",
+    "entities": [
+      {
+        "start": 3,
+        "end": 7,
+        "value": "fish",
+        "entity": "allergen"
+      },
+      {
+        "start": 12,
+        "end": 15,
+        "value": "egg",
+        "entity": "allergen"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "allergen",
+        "start": 12,
+        "end": 15,
+        "confidence_entity": 0.991626501083374,
+        "value": "egg",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "can you give me a balanced diet plan?",
+    "entities": [
+      {
+        "start": 18,
+        "end": 26,
+        "value": "balanced",
+        "entity": "diet"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "gluten free",
+    "entities": [
+      {
+        "start": 0,
+        "end": 11,
+        "value": "gluten free",
+        "entity": "diet"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "diet",
+        "start": 0,
+        "end": 6,
+        "confidence_entity": 0.9777548909187317,
+        "value": "gluten",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "no gluten",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "gluten free",
+        "entity": "diet"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "diet",
+        "start": 3,
+        "end": 9,
+        "confidence_entity": 0.9561914205551147,
+        "value": "gluten",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "egg and sesame",
+    "entities": [
+      {
+        "start": 0,
+        "end": 3,
+        "value": "egg",
+        "entity": "allergen"
+      },
+      {
+        "start": 8,
+        "end": 14,
+        "value": "sesame",
+        "entity": "allergen"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "allergen",
+        "start": 0,
+        "end": 3,
+        "confidence_entity": 0.9963089823722839,
+        "value": "egg",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "i want a keto diet",
+    "entities": [
+      {
+        "start": 9,
+        "end": 13,
+        "value": "keto",
+        "entity": "diet"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "ketogenic meal plan",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "ketogenic",
+        "entity": "diet"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "paleo diet",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "paleo",
+        "entity": "diet"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "im allergic to peanut",
+    "entities": [
+      {
+        "start": 15,
+        "end": 21,
+        "value": "peanut",
+        "entity": "allergen"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "meat, sea food and egg",
+    "entities": [
+      {
+        "start": 0,
+        "end": 4,
+        "value": "meat",
+        "entity": "allergen"
+      },
+      {
+        "start": 6,
+        "end": 14,
+        "value": "sea food",
+        "entity": "allergen"
+      },
+      {
+        "start": 19,
+        "end": 22,
+        "value": "egg",
+        "entity": "allergen"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "allergen",
+        "start": 19,
+        "end": 22,
+        "confidence_entity": 0.9960705041885376,
+        "value": "egg",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "whole30 diet",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "whole30",
+        "entity": "diet"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "dairy products",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "dairy",
+        "entity": "allergen"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

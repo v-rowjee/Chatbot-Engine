@@ -1,0 +1,97 @@
+version: "3.1"
+nlu:
+- intent: inform_allergens
+  examples: |
+    - im allergic to [peanut](allergen)
+    - [egg](allergen) and [sesame](allergen)
+    - [seafood](allergen)
+    - [nuts](allergen) and [egg](allergen)
+    - [meat](allergen), [sea food](allergen) and [egg](allergen)
+    - [dairy](allergen) products
+    - [egg](allergen)
+- intent: ask_diet_plan
+  examples: |
+    - can i get a diet plan
+    - i want a diet plan
+    - i need a diet
+    - can you recomand me a diet
+    - i need advice on what to eat
+    - recommend me a mean plan
+    - give me a planned meal
+    - help me to creat a diet
+- intent: greet
+  examples: |
+    - let's go
+    - hey there
+    - good morning
+    - hey
+    - goodmorning
+    - good evening
+    - hi
+    - hey dude
+    - good afternoon
+    - hello there
+- intent: deny
+  examples: |
+    - not at all
+    - non
+    - never
+    - no thank you
+    - nope
+    - no thanks
+    - none
+    - nah
+    - negative
+    - not really
+    - no im not
+- intent: affirm
+  examples: |
+    - yes
+    - fine
+    - yea
+    - sure
+    - yess
+    - okay
+    - yeah
+    - ofc
+    - yeaah
+    - of course
+    - yep
+    - tes
+- intent: inform_diet
+  examples: |
+    - im [veg]{"entity": "diet", "value": "vegetarian"}
+    - [veg]{"entity": "diet", "value": "vegetarian"}
+    - [vegetarian](diet)
+    - [gluten free](diet)
+    - [pescatarian](diet)
+    - [ketogenic](diet) meal plan
+    - i want a [veg]{"entity": "diet", "value": "vegetarian"} diet
+    - [primal](diet) diet
+    - [paleo](diet) diet
+    - i [dont eat gluten]{"entity": "diet", "value": "gluten free"}
+    - i am [vegan](diet)
+    - [whole30](diet) diet
+- intent: thanks
+  examples: |
+    - tenks
+    - thanx
+    - tanku
+    - sanks
+    - tanks
+    - fanks
+    - thatwas very helpful thank you
+    - thank you so much
+    - thank again
+    - thanks!
+    - thks
+    - thank you
+    - thanks for the help
+- synonym: gluten free
+  examples: |
+    - dont eat gluten
+    - no gluten
+- synonym: vegetarian
+  examples: |
+    - veggie
+    - veg

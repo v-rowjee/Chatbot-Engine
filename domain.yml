@@ -6,6 +6,7 @@ intents:
 - greet
 - affirm
 - deny
+- thanks
 - ask_diet_plan
 - inform_allergens
 - inform_diet
@@ -49,8 +50,10 @@ responses:
   - text: I'm sorry, I didn't quite understand that. Could you rephrase?
   utter_greet:
   - text: Hi, how can i help you?
+  utter_more:
+  - text: Is there anything else I can help you with?
   utter_ask_diet:
-  - text: What kind of diet are you looking for? Vegetarian, paleo, keto or other?
+  - text: What kind of diet are you looking for?
   utter_ask_ask_allergens:
   - text: Do you have any allergies?
     buttons:

@@ -1,5 +1,49 @@
 #### This file contains tests to evaluate that your bot behaves as expected.
 #### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
-
+version: "3.1"
 stories:
+- story: Test for diet with no allergen
+  steps:
+  - user: |
+      hello
+    intent: greet
+  - action: utter_greet
+  - user: |
+     can i get a [veg]{"entity": "diet", "value": "vegetarian"} meal plan for today?
+    intent: inform_diet
+  - action: diet_form
+  - active_loop: diet_form
+  - user: /deny{{"ask_allergen":"False"}}
+    intent: deny
+  - action: diet_form
+  - active_loop: null
+  - action: utter_diet_form_slots
+  - action: action_generate_diet
+  - user: |
+      thanks
+    intent: thanks
+  - action: utter_more
 
+- story: Test for diet with two allergens
+  steps:
+  - user: |
+     i want a diet plan
+    intent: ask_diet_plan
+  - action: diet_form
+  - active_loop: diet_form
+  - user: |
+      paleo diet
+    intent: inform_diet
+  - action: diet_form
+  - active_loop: diet_form
+  - user: /affirm{{"ask_allergen":"True"}}
+    intent: affirm
+  - action: diet_form
+  - active_loop: diet_form
+  - user: |
+      im allergic to [dairy](allergen) products and [eggs](allergen)
+      intent: inform_allergens
+  - action: diet_form
+  - active_loop: null
+  - action: utter_diet_form_slots
+  - action: action_generate_diet
