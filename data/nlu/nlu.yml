@@ -12,6 +12,7 @@ nlu:
     - i need advice on what to eat
     - can you give me a [balanced](diet) diet plan?
     - i want a diet plan
+    - can i have a customized diet meal plan
 - intent: inform_diet
   examples: |
     - [gluten free](diet)
@@ -22,14 +23,14 @@ nlu:
     - [veggie]{"entity": "diet", "value": "vegetarian"}
     - im [veg]{"entity": "diet", "value": "vegetarian"}
     - [pescatarian](diet)
-    - i want a [keto]{"entity":"diet", "value": "ketogenic"} diet
+    - i want a [keto]{"entity": "diet", "value": "ketogenic"} diet
     - [ketogenic](diet) meal plan
     - [paleo](diet) diet
     - [primal](diet) diet
     - [whole30](diet) diet
     - i want a [veg]{"entity": "diet", "value": "vegetarian"} diet
     - [veg]{"entity": "diet", "value": "vegetarian"}
-    - i want a [veg]{"entity": "diet", "value": "vegetarian"} diet
+    - [keto]{"entity": "diet", "value": "ketogenic"} diet
 - intent: inform_allergens
   examples: |
     - im allergic to [peanut](allergen)
@@ -41,4 +42,4 @@ nlu:
     - [seafood](allergen)
     - [nuts](allergen) and [egg](allergen)
     - [egg](allergen) and [sesame](allergen)
-
+    - im allergic to [eggs](allergen)

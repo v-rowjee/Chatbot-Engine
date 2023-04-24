@@ -48,6 +48,8 @@ actions:
 responses:
   utter_default:
   - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  utter_restart:
+  - text: Your conversation has been restarted!
   utter_greet:
   - text: Hi, how can i help you?
   utter_more:
@@ -65,4 +67,5 @@ responses:
   - text: List all your allergies.
   utter_diet_form_slots:
   - text: 'Generating your {diet} diet. Allergies: {allergens}'
+
 

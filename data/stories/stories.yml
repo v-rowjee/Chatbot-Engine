@@ -35,9 +35,9 @@ stories:
   steps:
   - intent: ask_diet_plan
     entities:
-      - diet: vegan
+      - diet: ketogenic
   - slot_was_set:
-      - diet: vegan
+      - diet: ketogenic
   - action: diet_form
   - active_loop: diet_form
   - slot_was_set:
@@ -89,3 +89,38 @@ stories:
   - active_loop: null
   - action: utter_diet_form_slots
   - action: action_generate_diet
+
+- story: diet form with allergen 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_diet_plan
+  - action: diet_form
+  - active_loop: diet_form
+  - slot_was_set:
+    - requested_slot: diet
+  - slot_was_set:
+    - diet: ketogenic
+  - slot_was_set:
+    - diet: Ketogenic
+  - slot_was_set:
+    - requested_slot: ask_allergens
+  - slot_was_set:
+    - ask_allergens: true
+  - slot_was_set:
+    - ask_allergens: true
+  - slot_was_set:
+    - requested_slot: allergens
+  - slot_was_set:
+    - allergens:
+      - eggs
+  - slot_was_set:
+    - allergens:
+      - egg
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_diet_form_slots
+  - action: action_generate_diet
+  - intent: thanks
+  - action: utter_more
