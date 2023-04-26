@@ -58,7 +58,7 @@ class ValidateDietForm(FormValidationAction):
     @staticmethod
     def intolerances_db() -> List[Text]:
         return ["dairy", "egg", "gluten", "grain", "peanut", "seafood",
-                "sesame", "shellfish", "soy", "sulfite", "nut", "wheat"]
+                "sesame", "shellfish", "soy", "sulfite", "tree nut", "wheat"]
 
     async def required_slots(
             self,
