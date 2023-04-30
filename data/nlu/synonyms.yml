@@ -39,3 +39,15 @@
     - diet plan
     - meal plan
     - diet program
+- synonym: male
+  examples: |
+    - m
+    - boy
+    - man
+    - gentleman
+- synonym: female
+  examples: |
+    - f
+    - girl
+    - lady
+    - woman

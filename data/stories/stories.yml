@@ -6,91 +6,12 @@ stories:
   - intent: thanks
   - action: utter_more
 
-- story: diet form with allergens
+- story: start conversation
   steps:
-  - intent: ask_diet_plan
-  - action: diet_form
-  - active_loop: diet_form
-  - slot_was_set:
-    - requested_slot: diet
-  - slot_was_set:
-    - diet: vegetarian
-  - slot_was_set:
-    - requested_slot: ask_allergens
-  - slot_was_set:
-    - ask_allergens: true
-  - slot_was_set:
-    - requested_slot: allergens
-  - intent: inform_allergens
-    entities:
-    - allergen: egg
-    - allergen: sesame
-  - slot_was_set:
-    - requested_slot: null
-  - active_loop: null
-  - action: utter_diet_form_slots
-  - action: action_generate_diet
+    - intent: greet
+    - action: utter_greet
 
-- story: diet form with no allergens
-  steps:
-  - intent: ask_diet_plan
-    entities:
-      - diet: ketogenic
-  - slot_was_set:
-      - diet: ketogenic
-  - action: diet_form
-  - active_loop: diet_form
-  - slot_was_set:
-      - ask_allergens: false
-  - slot_was_set:
-      - requested_slot: null
-  - active_loop: null
-  - action: utter_diet_form_slots
-  - action: action_generate_diet
-  - intent: thanks
-  - action: utter_more
-
-- story: diet form with no allergens 2
-  steps:
-  - intent: inform_diet
-    entities:
-    - diet: vegetarian
-  - slot_was_set:
-    - diet: vegetarian
-  - action: diet_form
-  - active_loop: diet_form
-  - slot_was_set:
-    - requested_slot: ask_allergens
-  - slot_was_set:
-    - ask_allergens: false
-  - active_loop: null
-  - slot_was_set:
-    - requested_slot: null
-  - action: utter_diet_form_slots
-  - action: action_generate_diet
-
-- story: diet form with no allergens 3
-  steps:
-  - intent: inform_diet
-    entities:
-    - diet: vegetarian
-  - slot_was_set:
-    - diet: vegetarian
-  - action: diet_form
-  - active_loop: diet_form
-  - slot_was_set:
-    - diet: Vegetarian
-  - slot_was_set:
-    - requested_slot: ask_allergens
-  - slot_was_set:
-    - ask_allergens: false
-  - slot_was_set:
-    - requested_slot: null
-  - active_loop: null
-  - action: utter_diet_form_slots
-  - action: action_generate_diet
-
-- story: diet form with allergen 2
+- story: weight gain keto diet with no allergens
   steps:
   - intent: greet
   - action: utter_greet
@@ -98,29 +19,53 @@ stories:
   - action: diet_form
   - active_loop: diet_form
   - slot_was_set:
+    - requested_slot: goal
+  - slot_was_set:
+    - goal: gain_weight
+  - slot_was_set:
+    - goal: gain_weight
+  - slot_was_set:
     - requested_slot: diet
   - slot_was_set:
     - diet: ketogenic
   - slot_was_set:
     - diet: Ketogenic
   - slot_was_set:
-    - requested_slot: ask_allergens
+    - requested_slot: has_allergens
   - slot_was_set:
-    - ask_allergens: true
+    - has_allergens: false
   - slot_was_set:
-    - ask_allergens: true
+    - has_allergens: false
   - slot_was_set:
-    - requested_slot: allergens
+    - requested_slot: height
   - slot_was_set:
-    - allergens:
-      - eggs
+    - height: 1m68
   - slot_was_set:
-    - allergens:
-      - egg
+    - weight: 50kg
+  - slot_was_set:
+    - age: '21'
+  - slot_was_set:
+    - gender: female
+  - slot_was_set:
+    - height: 168
+  - slot_was_set:
+    - weight: 50
+  - slot_was_set:
+    - age: '21'
+  - slot_was_set:
+    - gender: female
+  - slot_was_set:
+    - requested_slot: activity_level
+  - slot_was_set:
+    - activity_level: '4'
+  - slot_was_set:
+    - activity_level: 4
+  - slot_was_set:
+    - requested_slot: null
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
-  - action: utter_diet_form_slots
+  - action: action_utter_slot_values
   - action: action_generate_diet
   - intent: thanks
   - action: utter_more

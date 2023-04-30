@@ -8,19 +8,46 @@ intents:
 - deny
 - thanks
 - ask_diet_plan
+- lose_weight
+- gain_weight
+- maintain_weight
 - inform_allergens
 - inform_diet
+- inform_details
+- inform_activity_level
 entities:
 - diet
 - allergen
+- height
+- weight
+- age
+- gender
+- activity_level
 slots:
+  goal:
+    type: categorical
+    values:
+      - lose_weight
+      - gain_weight
+      - maintain_weight
+    influence_conversation: true
+    mappings:
+    - type: from_intent
+      intent: lose_weight
+      value: lose_weight
+    - type: from_intent
+      intent: gain_weight
+      value: gain_weight
+    - type: from_intent
+      intent: maintain_weight
+      value: maintain_weight
   diet:
     type: text
     influence_conversation: true
     mappings:
     - type: from_entity
       entity: diet
-  ask_allergens:
+  has_allergens:
     type: bool
     influence_conversation: true
     mappings:
@@ -36,27 +63,85 @@ slots:
     mappings:
     - type: from_entity
       entity: allergen
+  height:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: height
+  weight:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: weight
+  age:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: age
+  gender:
+    type: categorical
+    values:
+      - male
+      - female
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: gender
+  activity_level:
+    type: float
+    min_value: 1
+    max_value: 5
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: activity_level
 forms:
   diet_form:
     required_slots:
+    - goal
     - diet
-    - ask_allergens
+    - has_allergens
     - allergens
+    - height
+    - weight
+    - age
+    - gender
+    - activity_level
 actions:
   - action_generate_diet
   - validate_diet_form
+  - action_set_goal
+  - action_ask_height
+  - action_ask_weight
+  - action_ask_age
+  - action_ask_gender
+  - action_utter_slot_values
 responses:
   utter_default:
   - text: I'm sorry, I didn't quite understand that. Could you rephrase?
-  utter_restart:
-  - text: Your conversation has been restarted!
   utter_greet:
   - text: Hi, how can i help you?
+    buttons:
+    - payload: /ask_diet_plan
+      title: Create a Meal Plan
   utter_more:
   - text: Is there anything else I can help you with?
+  utter_ask_goal:
+  - text: What is your goal?
+    buttons:
+    - payload: /lose_weight
+      title: Lose weight
+    - payload: /gain_weight
+      title: Gain weight
+    - payload: /maintain_weight
+      title: Maintain weight
   utter_ask_diet:
   - text: What kind of diet are you looking for?
-  utter_ask_ask_allergens:
+  - text: Do you have any diet preferences?
+  utter_ask_has_allergens:
   - text: Do you have any allergies?
     buttons:
     - payload: /affirm
@@ -65,7 +150,6 @@ responses:
       title: No
   utter_ask_allergens:
   - text: List all your allergies.
-  utter_diet_form_slots:
-  - text: 'Generating your {diet} diet. Allergies: {allergens}'
-
+  utter_ask_activity_level:
+  - text: Rate your activity level on a scale of 1 to 5. (1 being sedentary and 5 being very active)
 

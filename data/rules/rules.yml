@@ -15,7 +15,8 @@ rules:
   steps:
     - or:
       - intent: ask_diet_plan
-      - intent: inform_diet
+      - intent: lose_weight
+      - intent: gain_weight
     - action: diet_form
     - active_loop: diet_form
 
@@ -27,5 +28,5 @@ rules:
     - active_loop: null
     - slot_was_set:
         - requested_slot: null
-    - action: utter_diet_form_slots
+    - action: action_utter_slot_values
     - action: action_generate_diet

@@ -31,6 +31,7 @@ nlu:
     - i want a [veg]{"entity": "diet", "value": "vegetarian"} diet
     - [veg]{"entity": "diet", "value": "vegetarian"}
     - [keto]{"entity": "diet", "value": "ketogenic"} diet
+    - [keto]{"entity": "diet", "value": "ketogenic"}
 - intent: inform_allergens
   examples: |
     - im allergic to [peanut](allergen)
@@ -43,3 +44,55 @@ nlu:
     - [nuts](allergen) and [egg](allergen)
     - [egg](allergen) and [sesame](allergen)
     - im allergic to [eggs](allergen)
+- intent: inform_details
+  examples: |
+    - [175cm](height) and [75kg](weight)
+    - [155cm](height) and [55kg](weight) and [25yo]{"entity": "age", "value": "25"}
+    - [1m80](height), [80kg](weight), [18years]{"entity": "age", "value": "18"} [male](gender)
+    - im [1m60](height), i weigh [60kg](weight) i have [23](age) and im a [girl]{"entity": "gender", "value": "female"}
+    - im a [43yr old](age) [man]{"entity": "gender", "value": "male"} and im [1m70](height) and [70.4kg](weight)
+    - [1m70](height) and [70kg](weight) and [20](age) years old
+    - heihgt of [1m69](height)
+    - [65kg](weight)
+    - im [45yo]{"entity": "age", "value": "45"}
+    - my age is [25](age) years old
+    - im [1m69](height) i weigh [45kg](weight) i have [21yo]{"entity": "age", "value": "21"} and im a [girl]{"entity": "gender", "value": "female"}
+    - im [1m68](height) and weigh [50kg](weight). i am [21yo]{"entity": "age", "value": "21"} and im a [girl]{"entity": "gender", "value": "female"}
+- intent: inform_activity_level
+  examples: |
+    - [1](activity_level)
+    - [2](activity_level)
+    - [3](activity_level)
+    - [4](activity_level)
+    - [5](activity_level)
+    - [4](activity_level)
+- intent: lose_weight
+  examples: |
+    - i want to lose weight
+    - i want to burn all my fat
+    - how to burn fat
+    - im obese
+    - im too fat
+    - lose weight
+    - i want to lse weight
+    - help me loss weight
+    - how to loose fat
+    - how to lose weight?
+- intent: gain_weight
+  examples: |
+    - i want to gain weight
+    - i am too skinny
+    - i want som more weight
+    - i need to gain weight fast
+    - im lightweight, how to get more weight
+    - gain weight
+- intent: maintain_weight
+  examples: |
+    - i want to maintain my weight
+    - i want to keep my weight
+    - my weight is good
+    - my weight is fine
+    - im good with my weight
+    - nothing
+    - i dont want to change my weight
+    - i want to stay the same
