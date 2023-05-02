@@ -60,7 +60,7 @@ class ValidateDietForm(FormValidationAction):
 
     @staticmethod
     def diet_db() -> List[Text]:
-        return ["Gluten Free", "Ketogenic", "Vegetarian", "Lacto-Vegetarian", "Ovo-Vegetarian", "Vegan",
+        return ["", "Gluten Free", "Ketogenic", "Vegetarian", "Lacto-Vegetarian", "Ovo-Vegetarian", "Vegan",
                 "Pescetarian", "Paleo", "Primal", "Low FODMAP", "Whole30"]
 
     @staticmethod
@@ -78,13 +78,6 @@ class ValidateDietForm(FormValidationAction):
         updated_slots = domain_slots.copy()
         if tracker.slots.get("has_allergens") is False:
             updated_slots.remove("allergens")
-        if tracker.slots.get("wants_detailed_diet") is False:
-            updated_slots.remove("details")
-            updated_slots.remove("height")
-            updated_slots.remove("weight")
-            updated_slots.remove("age")
-            updated_slots.remove("gender")
-            updated_slots.remove("activity_level")
         return updated_slots
 
     def validate_goal(
@@ -105,20 +98,16 @@ class ValidateDietForm(FormValidationAction):
             tracker: Tracker,
             domain: DomainDict,
     ) -> Dict[Text, Any]:
-        intent = tracker.latest_message["intent"].get("name")
-        if intent == "deny":
+        if tracker.latest_message["intent"].get("name") == "inform_no_diet":
             return {"diet": ""}
-        if intent == "affirm":
-            dispatcher.utter_message(text=f'Please choose from the following diets: {", ".join(self.diet_db())}.')
-            return {"diet": None}
-
-        diet_matches = difflib.get_close_matches(slot_value.lower(), self.diet_db())
-        diet = diet_matches[0] if diet_matches else None
-        if diet in self.diet_db():
-            return {"diet": diet}
         else:
-            dispatcher.utter_message(text=f'Please choose from the following diets: {", ".join(self.diet_db())}.')
-            return {"diet": None}
+            diet_matches = difflib.get_close_matches(slot_value.lower(), self.diet_db())
+            diet = diet_matches[0] if diet_matches else None
+            if diet in self.diet_db():
+                return {"diet": diet}
+            else:
+                dispatcher.utter_message(text=f'Please choose from the following diets: {", ".join(self.diet_db())}.')
+                return {"diet": None}
 
     def validate_has_allergens(
             self,
@@ -129,8 +118,10 @@ class ValidateDietForm(FormValidationAction):
     ) -> Dict[Text, Any]:
         if slot_value is True:
             return {"has_allergens": True}
-        else:
+        elif slot_value is False:
             return {"has_allergens": False}
+        else:
+            return {"has_allergens": None}
 
     def validate_allergens(
             self,

@@ -32,6 +32,17 @@ nlu:
     - [veg]{"entity": "diet", "value": "vegetarian"}
     - [keto]{"entity": "diet", "value": "ketogenic"} diet
     - [keto]{"entity": "diet", "value": "ketogenic"}
+- intent: inform_no_diet
+  examples: |
+    - idk
+    - i dont know
+    - i dont have a diet
+    - i dont have a preference
+    - no pref
+    - no preference
+    - i dont have a specific diet
+    - nothing specific
+    - none
 - intent: inform_allergens
   examples: |
     - im allergic to [peanut](allergen)
@@ -44,8 +55,10 @@ nlu:
     - [nuts](allergen) and [egg](allergen)
     - [egg](allergen) and [sesame](allergen)
     - im allergic to [eggs](allergen)
+    - [peanuts](allergen) allergies
 - intent: inform_details
   examples: |
+    - [182cm](height)
     - [175cm](height) and [75kg](weight)
     - [155cm](height) and [55kg](weight) and [25yo]{"entity": "age", "value": "25"}
     - [1m80](height), [80kg](weight), [18years]{"entity": "age", "value": "18"} [male](gender)
@@ -58,6 +71,9 @@ nlu:
     - my age is [25](age) years old
     - im [1m69](height) i weigh [45kg](weight) i have [21yo]{"entity": "age", "value": "21"} and im a [girl]{"entity": "gender", "value": "female"}
     - im [1m68](height) and weigh [50kg](weight). i am [21yo]{"entity": "age", "value": "21"} and im a [girl]{"entity": "gender", "value": "female"}
+    - im [1m82](height)
+    - [80kg](weight)
+    - im a [21yo]{"entity": "age", "value": "21"} [male](gender)
 - intent: inform_activity_level
   examples: |
     - [1](activity_level)
@@ -78,6 +94,7 @@ nlu:
     - help me loss weight
     - how to loose fat
     - how to lose weight?
+    - i really want to lose weight
 - intent: gain_weight
   examples: |
     - i want to gain weight
@@ -96,3 +113,32 @@ nlu:
     - nothing
     - i dont want to change my weight
     - i want to stay the same
+- synonym: gluten free
+  examples: |
+    - dont eat gluten
+    - no gluten
+- synonym: vegetarian
+  examples: |
+    - veggie
+    - veg
+- synonym: ketogenic
+  examples: |
+    - keto
+- synonym: '25'
+  examples: |
+    - 25yo
+- synonym: '18'
+  examples: |
+    - 18years
+- synonym: female
+  examples: |
+    - girl
+- synonym: male
+  examples: |
+    - man
+- synonym: '45'
+  examples: |
+    - 45yo
+- synonym: '21'
+  examples: |
+    - 21yo

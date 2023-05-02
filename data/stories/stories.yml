@@ -69,3 +69,68 @@ stories:
   - action: action_generate_diet
   - intent: thanks
   - action: utter_more
+
+- story: none specific diet with allergens
+  steps:
+  - intent: ask_diet_plan
+  - action: diet_form
+  - active_loop: diet_form
+  - slot_was_set:
+    - requested_slot: goal
+  - slot_was_set:
+    - goal: lose_weight
+  - slot_was_set:
+    - goal: lose_weight
+  - slot_was_set:
+    - requested_slot: diet
+  - slot_was_set:
+    - diet: ''
+  - slot_was_set:
+    - diet: ''
+  - slot_was_set:
+    - requested_slot: has_allergens
+  - slot_was_set:
+    - has_allergens: true
+  - slot_was_set:
+    - has_allergens: true
+  - slot_was_set:
+    - requested_slot: allergens
+  - slot_was_set:
+    - allergens:
+      - peanuts
+  - slot_was_set:
+    - allergens:
+      - peanut
+  - slot_was_set:
+    - requested_slot: height
+  - slot_was_set:
+    - height: 1m82
+  - slot_was_set:
+    - height: 182
+  - slot_was_set:
+    - requested_slot: weight
+  - slot_was_set:
+    - weight: 80kg
+  - slot_was_set:
+    - weight: 80
+  - slot_was_set:
+    - requested_slot: age
+  - slot_was_set:
+    - age: '21'
+  - slot_was_set:
+    - gender: male
+  - slot_was_set:
+    - age: '21'
+  - slot_was_set:
+    - gender: male
+  - slot_was_set:
+    - requested_slot: activity_level
+  - slot_was_set:
+    - activity_level: '4'
+  - slot_was_set:
+    - activity_level: 4
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_utter_slot_values
+  - action: action_generate_diet
