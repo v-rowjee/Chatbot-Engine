@@ -47,6 +47,12 @@ slots:
     mappings:
     - type: from_entity
       entity: diet
+    - type: from_intent
+      intent: affirm
+      value: yes
+    - type: from_intent
+      intent: deny
+      value: no
   has_allergens:
     type: bool
     influence_conversation: true
@@ -113,7 +119,6 @@ forms:
 actions:
   - action_generate_diet
   - validate_diet_form
-  - action_set_goal
   - action_ask_height
   - action_ask_weight
   - action_ask_age
@@ -139,8 +144,10 @@ responses:
     - payload: /maintain_weight
       title: Maintain weight
   utter_ask_diet:
-  - text: What kind of diet are you looking for?
-  - text: Do you have any diet preferences?
+  - text: What kind of diet are you looking for? (e.g. vegan, vegetarian, keto, etc.)
+    buttons:
+      - payload: /deny
+        title: I don't have a specific diet
   utter_ask_has_allergens:
   - text: Do you have any allergies?
     buttons:

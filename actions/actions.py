@@ -105,6 +105,13 @@ class ValidateDietForm(FormValidationAction):
             tracker: Tracker,
             domain: DomainDict,
     ) -> Dict[Text, Any]:
+        intent = tracker.latest_message["intent"].get("name")
+        if intent == "deny":
+            return {"diet": ""}
+        if intent == "affirm":
+            dispatcher.utter_message(text=f'Please choose from the following diets: {", ".join(self.diet_db())}.')
+            return {"diet": None}
+
         diet_matches = difflib.get_close_matches(slot_value.lower(), self.diet_db())
         diet = diet_matches[0] if diet_matches else None
         if diet in self.diet_db():
@@ -225,25 +232,6 @@ class UtterSlotValues(Action):
             message += "You have no allergens."
         dispatcher.utter_message(text=message)
         return []
-
-
-# class SetSlotGoal(Action):
-#     def name(self) -> Text:
-#         return "action_set_goal"
-#
-#     def run(
-#             self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict
-#     ) -> List[EventType]:
-#         last_intent = tracker.latest_message['intent'].get('name')
-#         if last_intent == "lose_weight":
-#             return [SlotSet("goal", "lose weight")]
-#         elif last_intent == "gain_weight":
-#             return [SlotSet("goal", "gain weight")]
-#         elif last_intent == "maintain_weight":
-#             return [SlotSet("goal", "maintain weight")]
-#         else:
-#             return [SlotSet("goal", None)]
-
 
 class AskForHeight(Action):
     def name(self) -> Text:
