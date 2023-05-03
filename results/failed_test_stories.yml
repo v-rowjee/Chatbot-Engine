@@ -1,1 +1,81 @@
-# None of the test stories failed - all good!
+version: "3.1"
+stories:
+- story: happy path 1 (.\hpvenv\Lib\site-packages\rasa\cli\initial_project\tests\test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great  # predicted: greet: amazing
+  - action: utter_happy  # predicted: diet_form
+- story: happy path 2 (.\hpvenv\Lib\site-packages\rasa\cli\initial_project\tests\test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great  # predicted: greet: amazing
+  - action: utter_happy  # predicted: diet_form
+  - intent: goodbye  # predicted: affirm: bye-bye!
+  - action: utter_goodbye  # predicted: diet_form
+- story: sad path 1 (.\hpvenv\Lib\site-packages\rasa\cli\initial_project\tests\test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy  # predicted: deny: not good
+  - action: utter_cheer_up  # predicted: diet_form
+  - action: utter_did_that_help  # predicted: action_listen
+  - intent: affirm
+  - action: utter_happy  # predicted: diet_form
+- story: sad path 2 (.\hpvenv\Lib\site-packages\rasa\cli\initial_project\tests\test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy  # predicted: deny: not good
+  - action: utter_cheer_up  # predicted: diet_form
+  - action: utter_did_that_help  # predicted: action_listen
+  - intent: deny
+  - action: utter_goodbye  # predicted: utter_greet
+- story: sad path 3 (.\hpvenv\Lib\site-packages\rasa\cli\initial_project\tests\test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy  # predicted: inform_diet: very terrible
+  - action: utter_cheer_up  # predicted: diet_form
+  - action: utter_did_that_help  # predicted: action_listen
+  - intent: deny
+  - action: utter_goodbye  # predicted: utter_greet
+- story: say goodbye (.\hpvenv\Lib\site-packages\rasa\cli\initial_project\tests\test_stories.yml)
+  steps:
+  - intent: goodbye  # predicted: affirm: bye-bye!
+  - action: utter_goodbye  # predicted: diet_form
+- story: bot challenge (.\hpvenv\Lib\site-packages\rasa\cli\initial_project\tests\test_stories.yml)
+  steps:
+  - intent: bot_challenge  # predicted: ask_diet_plan: are you a bot?
+  - action: utter_iamabot  # predicted: diet_form
+- story: Test for weight gain keto diet with no allergens (.\tests\test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_diet_plan
+  - action: diet_form
+  - active_loop: diet_form
+  - active_loop: diet_form
+  - active_loop: diet_form
+  - active_loop: diet_form
+  - active_loop: diet_form
+  - active_loop: null
+  - action: action_utter_slot_values
+  - action: action_generate_diet
+  - intent: thanks  # predicted: thanks: thank you very [mush](allergen)
+  - action: utter_more
+- story: Test to maintain weight, diet with allergic to peanut (.\tests\test_stories.yml)
+  steps:
+  - intent: ask_diet_plan
+  - action: diet_form
+  - active_loop: diet_form
+  - active_loop: diet_form
+  - active_loop: diet_form
+  - active_loop: diet_form
+  - active_loop: diet_form
+  - active_loop: diet_form
+  - active_loop: diet_form
+  - active_loop: null
+  - action: action_utter_slot_values
+  - action: action_generate_diet

@@ -1,5 +1,3 @@
-#### This file contains tests to evaluate that your bot behaves as expected.
-#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
 version: "3.1"
 stories:
 - story: Test for weight gain keto diet with no allergens
@@ -23,7 +21,7 @@ stories:
     intent: inform_diet
   - action: diet_form
   - active_loop: diet_form
-  - user: /deny{{"ask_allergen":"False"}}
+  - user: /deny
     intent: deny
   - action: diet_form
   - active_loop: diet_form
@@ -58,7 +56,7 @@ stories:
     intent: inform_no_diet
   - action: diet_form
   - active_loop: diet_form
-  - user: /affirm{{"ask_allergen":"True"}}
+  - user: /affirm
     intent: affirm
   - action: diet_form
   - active_loop: diet_form

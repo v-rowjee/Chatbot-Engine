@@ -1,122 +1,66 @@
 [
   {
-    "text": "fine",
-    "intent": "affirm",
-    "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.8799175024032593
-    }
-  },
-  {
-    "text": "i dont think so",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "thanks",
-      "confidence": 0.639241635799408
-    }
-  },
-  {
-    "text": "i cant eat nuts",
-    "intent": "inform_allergens",
-    "intent_prediction": {
-      "name": "ask_diet_plan",
-      "confidence": 0.5920212864875793
-    }
-  },
-  {
-    "text": "hello",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.767371416091919
-    }
-  },
-  {
-    "text": "let's go",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.9037878513336182
-    }
-  },
-  {
-    "text": "i want a diet plan",
-    "intent": "ask_diet_plan",
-    "intent_prediction": {
-      "name": "inform_diet",
-      "confidence": 0.9874795079231262
-    }
-  },
-  {
-    "text": "tes",
-    "intent": "affirm",
-    "intent_prediction": {
-      "name": "thanks",
-      "confidence": 0.5893519520759583
-    }
-  },
-  {
-    "text": "never",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "greet",
-      "confidence": 0.379705011844635
-    }
-  },
-  {
-    "text": "i want a keto diet",
-    "intent": "inform_diet",
-    "intent_prediction": {
-      "name": "ask_diet_plan",
-      "confidence": 0.8667750358581543
-    }
-  },
-  {
-    "text": "ketogenic meal plan",
-    "intent": "inform_diet",
-    "intent_prediction": {
-      "name": "ask_diet_plan",
-      "confidence": 0.9992384910583496
-    }
-  },
-  {
-    "text": "good afternoon",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.8938137888908386
-    }
-  },
-  {
-    "text": "no thanks",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "thanks",
-      "confidence": 0.9832335114479065
-    }
-  },
-  {
-    "text": "negative",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "inform_diet",
-      "confidence": 0.36249008774757385
-    }
-  },
-  {
-    "text": "im allergic to peanut",
-    "intent": "inform_allergens",
-    "intent_prediction": {
-      "name": "inform_diet",
-      "confidence": 0.9834892749786377
-    }
-  },
-  {
     "text": "hi",
     "intent": "greet",
     "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.34646180272102356
+    }
+  },
+  {
+    "text": "ok",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "thanks",
+      "confidence": 0.5431169271469116
+    }
+  },
+  {
+    "text": "none",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "inform_no_diet",
+      "confidence": 0.9992781281471252
+    }
+  },
+  {
+    "text": "non",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "inform_no_diet",
+      "confidence": 0.8045631051063538
+    }
+  },
+  {
+    "text": "thank you so much",
+    "intent": "thanks",
+    "intent_prediction": {
       "name": "deny",
-      "confidence": 0.4853733777999878
+      "confidence": 0.7474592328071594
+    }
+  },
+  {
+    "text": "my age is 25 years old",
+    "intent": "inform_details",
+    "intent_prediction": {
+      "name": "inform_activity_level",
+      "confidence": 0.44959011673927307
+    }
+  },
+  {
+    "text": "nothing",
+    "intent": "maintain_weight",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.9391666054725647
+    }
+  },
+  {
+    "text": "no thank you",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "thanks",
+      "confidence": 0.7964346408843994
     }
   },
   {
@@ -124,23 +68,175 @@
     "intent": "deny",
     "intent_prediction": {
       "name": "affirm",
-      "confidence": 0.6519721150398254
+      "confidence": 0.9232119917869568
     }
   },
   {
-    "text": "whole30 diet",
+    "text": "nothing specific",
+    "intent": "inform_no_diet",
+    "intent_prediction": {
+      "name": "maintain_weight",
+      "confidence": 0.6232226490974426
+    }
+  },
+  {
+    "text": "none",
+    "intent": "inform_no_diet",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.9993115663528442
+    }
+  },
+  {
+    "text": "im lightweight, how to get more weight",
+    "intent": "gain_weight",
+    "intent_prediction": {
+      "name": "lose_weight",
+      "confidence": 0.6225055456161499
+    }
+  },
+  {
+    "text": "negative",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "inform_diet",
+      "confidence": 0.6741304397583008
+    }
+  },
+  {
+    "text": "ty",
+    "intent": "thanks",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.9852493405342102
+    }
+  },
+  {
+    "text": "tysm",
+    "intent": "thanks",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.9500723481178284
+    }
+  },
+  {
+    "text": "im obese",
+    "intent": "lose_weight",
+    "intent_prediction": {
+      "name": "inform_details",
+      "confidence": 0.3474324941635132
+    }
+  },
+  {
+    "text": "i dont think so",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "inform_no_diet",
+      "confidence": 0.9619091749191284
+    }
+  },
+  {
+    "text": "thank you",
+    "intent": "thanks",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.8323773145675659
+    }
+  },
+  {
+    "text": "thank again",
+    "intent": "thanks",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.32867833971977234
+    }
+  },
+  {
+    "text": "help me to creat a diet",
+    "intent": "ask_diet_plan",
+    "intent_prediction": {
+      "name": "lose_weight",
+      "confidence": 0.49543988704681396
+    }
+  },
+  {
+    "text": "ketogenic meal plan",
     "intent": "inform_diet",
     "intent_prediction": {
       "name": "ask_diet_plan",
-      "confidence": 0.6149689555168152
+      "confidence": 0.9831085801124573
     }
   },
   {
-    "text": "dairy products",
-    "intent": "inform_allergens",
+    "text": "i need to gain weight fast",
+    "intent": "gain_weight",
+    "intent_prediction": {
+      "name": "maintain_weight",
+      "confidence": 0.8218885660171509
+    }
+  },
+  {
+    "text": "let's go",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "inform_diet",
+      "confidence": 0.4487604796886444
+    }
+  },
+  {
+    "text": "good afternoon",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.9941816926002502
+    }
+  },
+  {
+    "text": "fine",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "maintain_weight",
+      "confidence": 0.49018973112106323
+    }
+  },
+  {
+    "text": "never",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.3451066017150879
+    }
+  },
+  {
+    "text": "no thanks",
+    "intent": "deny",
     "intent_prediction": {
       "name": "thanks",
-      "confidence": 0.497610479593277
+      "confidence": 0.7735257148742676
+    }
+  },
+  {
+    "text": "idk",
+    "intent": "inform_no_diet",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.6858062744140625
+    }
+  },
+  {
+    "text": "i am too skinny",
+    "intent": "gain_weight",
+    "intent_prediction": {
+      "name": "lose_weight",
+      "confidence": 0.7721048593521118
+    }
+  },
+  {
+    "text": "i want to stay the same",
+    "intent": "maintain_weight",
+    "intent_prediction": {
+      "name": "inform_allergens",
+      "confidence": 0.1734735071659088
     }
   }
 ]
