@@ -16,5 +16,5 @@
 - Run rasa server using `rasa run --enable-api --cors="*"` on one terminal
 - Run rasa action server using `rasa run actions` on the other terminal
 
-## Deployment Using Ngrok
+## Deploy Using Ngrok
 - Open a third terminal and run `ngrok http 5005`
