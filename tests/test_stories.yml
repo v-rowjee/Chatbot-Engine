@@ -2,38 +2,60 @@
 #### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
 version: "3.1"
 stories:
-- story: Test for diet with no allergen
+- story: Test for weight gain keto diet with no allergens
   steps:
   - user: |
       hello
     intent: greet
   - action: utter_greet
   - user: |
-     can i get a [veg]{"entity": "diet", "value": "vegetarian"} meal plan for today?
+       can i get a meal plan for today?
+    intent: ask_diet_plan
+  - action: diet_form
+  - active_loop: diet_form
+  - user: |
+       i want to gain weight
+    intent: gain_weight
+  - action: diet_form
+  - active_loop: diet_form
+  - user: |
+      i want a keto diet
     intent: inform_diet
   - action: diet_form
   - active_loop: diet_form
   - user: /deny{{"ask_allergen":"False"}}
     intent: deny
   - action: diet_form
-  - active_loop: null
-  - action: utter_diet_form_slots
-  - action: action_generate_diet
+  - active_loop: diet_form
   - user: |
-      thanks
-    intent: thanks
-  - action: utter_more
-
-- story: Test for diet with two allergens
-  steps:
-  - user: |
-     i want a diet plan
-    intent: ask_diet_plan
+      im 1m68 tall, weigh 45kg and im a 19 year old girl.
+    intent: inform_details
   - action: diet_form
   - active_loop: diet_form
   - user: |
-      paleo diet
-    intent: inform_diet
+      2
+    intent: inform_activity_level
+  - action: diet_form
+  - active_loop: null
+  - action: action_utter_slot_values
+  - action: action_generate_diet
+  - user: |
+      thank you very mush
+    intent: thanks
+  - action: utter_more
+
+- story: Test to maintain weight, diet with allergic to peanut
+  steps:
+  - user: /ask_diet_plan
+    intent: ask_diet_plan
+  - action: diet_form
+  - active_loop: diet_form
+  - user: /gain_weight
+    intent: gain_weight
+  - action: diet_form
+  - active_loop: diet_form
+  - user: /inform_no_diet
+    intent: inform_no_diet
   - action: diet_form
   - active_loop: diet_form
   - user: /affirm{{"ask_allergen":"True"}}
@@ -41,9 +63,24 @@ stories:
   - action: diet_form
   - active_loop: diet_form
   - user: |
-      im allergic to [dairy](allergen) products and [eggs](allergen)
-      intent: inform_allergens
+      im 1m88
+    intent: inform_details
+  - action: diet_form
+  - active_loop: diet_form
+  - user: |
+      im 82kg
+    intent: inform_details
+  - action: diet_form
+  - active_loop: diet_form
+  - user: |
+      36yrs old man
+    intent: inform_details
+  - action: diet_form
+  - active_loop: diet_form
+  - user: |
+      2
+    intent: inform_activity_level
   - action: diet_form
   - active_loop: null
-  - action: utter_diet_form_slots
+  - action: action_utter_slot_values
   - action: action_generate_diet

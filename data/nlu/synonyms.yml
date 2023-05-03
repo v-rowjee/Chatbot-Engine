@@ -1,3 +1,5 @@
+version: "3.1"
+nlu:
 - synonym: dairy free
   examples: |
     - no dairy
