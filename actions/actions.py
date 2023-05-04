@@ -231,6 +231,20 @@ class UtterSlotValues(Action):
         dispatcher.utter_message(text=message)
         return []
 
+
+class AskForDetails(Action):
+    def name(self) -> Text:
+        return "action_ask_details"
+
+    def run(
+            self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict
+    ) -> List[EventType]:
+        slots = ['height', 'weight', 'age', 'gender']
+        requested_slots = [slot for slot in slots if tracker.slots.get(slot) is None]
+        dispatcher.utter_message(text="Provide the following information: " + ", ".join(requested_slots))
+        return []
+
+
 class AskForHeight(Action):
     def name(self) -> Text:
         return "action_ask_height"
@@ -238,17 +252,7 @@ class AskForHeight(Action):
     def run(
             self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict
     ) -> List[EventType]:
-        requested_slots = []
-        if tracker.slots.get("height") is None:
-            requested_slots.append('height')
-        if tracker.slots.get("weight") is None:
-            requested_slots.append('weight')
-        if tracker.slots.get("age") is None:
-            requested_slots.append('age')
-        if tracker.slots.get("gender") is None:
-            requested_slots.append('gender')
-        dispatcher.utter_message(text="Provide the following information: " + ", ".join(requested_slots))
-        return []
+        return AskForDetails().run(dispatcher, tracker, domain)
 
 
 class AskForWeight(Action):
@@ -258,17 +262,7 @@ class AskForWeight(Action):
     def run(
             self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict
     ) -> List[EventType]:
-        requested_slots = []
-        if tracker.slots.get("height") is None:
-            requested_slots.append('height')
-        if tracker.slots.get("weight") is None:
-            requested_slots.append('weight')
-        if tracker.slots.get("age") is None:
-            requested_slots.append('age')
-        if tracker.slots.get("gender") is None:
-            requested_slots.append('gender')
-        dispatcher.utter_message(text="Provide the following information: " + ", ".join(requested_slots))
-        return []
+        return AskForDetails().run(dispatcher, tracker, domain)
 
 
 class AskForAge(Action):
@@ -278,17 +272,7 @@ class AskForAge(Action):
     def run(
             self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict
     ) -> List[EventType]:
-        requested_slots = []
-        if tracker.slots.get("height") is None:
-            requested_slots.append('height')
-        if tracker.slots.get("weight") is None:
-            requested_slots.append('weight')
-        if tracker.slots.get("age") is None:
-            requested_slots.append('age')
-        if tracker.slots.get("gender") is None:
-            requested_slots.append('gender')
-        dispatcher.utter_message(text="Provide the following information: " + ", ".join(requested_slots))
-        return []
+        return AskForDetails().run(dispatcher, tracker, domain)
 
 
 class AskForGender(Action):
@@ -298,14 +282,4 @@ class AskForGender(Action):
     def run(
             self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict
     ) -> List[EventType]:
-        requested_slots = []
-        if tracker.slots.get("height") is None:
-            requested_slots.append('height')
-        if tracker.slots.get("weight") is None:
-            requested_slots.append('weight')
-        if tracker.slots.get("age") is None:
-            requested_slots.append('age')
-        if tracker.slots.get("gender") is None:
-            requested_slots.append('gender')
-        dispatcher.utter_message(text="Provide the following information: " + ", ".join(requested_slots))
-        return []
+        return AskForDetails().run(dispatcher, tracker, domain)
