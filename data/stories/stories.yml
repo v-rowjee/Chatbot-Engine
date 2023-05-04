@@ -134,3 +134,60 @@ stories:
   - active_loop: null
   - action: action_utter_slot_values
   - action: action_generate_diet
+
+- story: interactive_story_1
+  steps:
+  - intent: inform_diet
+    entities:
+    - diet: vegetarian
+  - slot_was_set:
+    - diet: vegetarian
+  - action: diet_form
+  - active_loop: diet_form
+  - slot_was_set:
+    - diet: Vegetarian
+  - slot_was_set:
+    - diet: Vegetarian
+  - slot_was_set:
+    - requested_slot: goal
+  - slot_was_set:
+    - goal: maintain_weight
+  - slot_was_set:
+    - goal: maintain_weight
+  - slot_was_set:
+    - requested_slot: has_allergens
+  - slot_was_set:
+    - has_allergens: false
+  - slot_was_set:
+    - has_allergens: false
+  - slot_was_set:
+    - requested_slot: height
+  - slot_was_set:
+    - height: 1m75
+  - slot_was_set:
+    - weight: 66kg
+  - slot_was_set:
+    - age: '25'
+  - slot_was_set:
+    - gender: male
+  - slot_was_set:
+    - height: 175
+  - slot_was_set:
+    - weight: 66
+  - slot_was_set:
+    - age: '25'
+  - slot_was_set:
+    - gender: male
+  - slot_was_set:
+    - requested_slot: activity_level
+  - slot_was_set:
+    - activity_level: '1'
+  - slot_was_set:
+    - activity_level: 1
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_utter_slot_values
+  - action: action_generate_diet

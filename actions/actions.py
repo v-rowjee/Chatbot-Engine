@@ -1,6 +1,4 @@
 import difflib
-import re
-import requests
 
 from random import choice
 from typing import Text, List, Any, Dict, Optional
@@ -46,9 +44,18 @@ class GenerateDiet(Action):
         data_meal = await API.generate_meal_plan(diet, intolerances, calories)
         meals = data_meal['meals']
         meals_title = [meal['title'] for meal in meals]
+        meals_url = [meal['sourceUrl'] for meal in meals]
         nutrients = data_meal['nutrients']
-        message = f'Your meal plan consists of: {", ".join(meals_title)} to be taken at breakfast, lunch and dinner respectively. '
-        message += f'The meal for the day amounts to {nutrients["calories"]} calories (carbohydrates: {nutrients["carbohydrates"]}, protein: {nutrients["protein"]}, fat: {nutrients["fat"]})'
+
+        if meals:
+            meals_string = ', '.join([f"{a}({b})" for a, b in zip(meals_title, meals_url)])
+            meals_string = meals_string.rsplit(', ', 1)  # split the last comma and space
+            meals_string = ' and '.join(meals_string)  # join the last two elements with 'and'
+        else:
+            meals_string = 'No meals found.'
+        message = f'Your meal plan consists of the following meals to be taken at breakfast, lunch and dinner respectively: '
+        message += f'{meals_string}. '
+        message += f'The meal for the day amounts to {nutrients["calories"]} calories (carbohydrates: {nutrients["carbohydrates"]}g, protein: {nutrients["protein"]}g, fat: {nutrients["fat"]}g)'
         dispatcher.utter_message(text=message)
 
         return [LoopInterrupted(True, None)]

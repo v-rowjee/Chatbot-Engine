@@ -15,6 +15,7 @@ rules:
   steps:
     - or:
       - intent: ask_diet_plan
+      - intent: inform_diet
       - intent: lose_weight
       - intent: gain_weight
     - action: diet_form
@@ -30,3 +31,11 @@ rules:
         - requested_slot: null
     - action: action_utter_slot_values
     - action: action_generate_diet
+
+- rule: Interruption in form
+  condition:
+      - active_loop: diet_form
+  steps:
+      - action: action_default_fallback
+      - action: diet_form
+      - active_loop: diet_form
