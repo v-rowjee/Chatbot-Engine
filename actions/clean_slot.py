@@ -73,5 +73,5 @@ class CleanSlot:
 
         years = re.search(r"\d+", age)
         if years:
-            return int(years.group())
+            return int(years.group(1))
         return None

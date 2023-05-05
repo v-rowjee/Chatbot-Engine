@@ -48,14 +48,14 @@ class GenerateDiet(Action):
         nutrients = data_meal['nutrients']
 
         if meals:
-            meals_string = ', '.join([f"{a}({b})" for a, b in zip(meals_title, meals_url)])
+            meals_string = ', \n'.join([f"{a} ({b})" for a, b in zip(meals_title, meals_url)])
             meals_string = meals_string.rsplit(', ', 1)  # split the last comma and space
             meals_string = ' and '.join(meals_string)  # join the last two elements with 'and'
         else:
             meals_string = 'No meals found.'
-        message = f'Your meal plan consists of the following meals to be taken at breakfast, lunch and dinner respectively: '
-        message += f'{meals_string}. '
-        message += f'The meal for the day amounts to {nutrients["calories"]} calories (carbohydrates: {nutrients["carbohydrates"]}g, protein: {nutrients["protein"]}g, fat: {nutrients["fat"]}g)'
+        message = f'Your meal plan consists of the following meals to be taken at breakfast, lunch and dinner respectively: \n'
+        message += f'{meals_string}. \n'
+        message += f'The meal for the day amounts to {nutrients["calories"]} calories (carbohydrates: {int(nutrients["carbohydrates"])}g, protein: {int(nutrients["protein"])}g, fat: {int(nutrients["fat"])}g)'
         dispatcher.utter_message(text=message)
 
         return [LoopInterrupted(True, None)]
@@ -215,6 +215,7 @@ class UtterSlotValues(Action):
     def run(
             self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict
     ) -> List[EventType]:
+        goal = tracker.slots.get("goal")
         diet = tracker.slots.get("diet")
         height = tracker.slots.get("height")
         weight = tracker.slots.get("weight")
@@ -222,12 +223,12 @@ class UtterSlotValues(Action):
         gender = tracker.slots.get("gender")
         activity_level = tracker.slots.get("activity_level")
 
-        message = f"Generating a {diet} diet for a {age} year old {gender} who is {height}cm tall and weighs {weight}kg. You are also rated {activity_level}/5 active. "
+        message = f"Generating a {diet} diet designed to {goal.replace('_',' ')} for a {age} year old {gender} who is {height}cm tall and weighs {weight}kg. You are also rated {activity_level}/5 active "
         if tracker.slots.get("has_allergens") is True:
             allergens = tracker.slots.get("allergens")
-            message += f"You also have the following allergens: {', '.join(allergens)}."
+            message += f"and have the following allergens: {', '.join(allergens)}."
         else:
-            message += "You have no allergens."
+            message += "and have no allergens."
         dispatcher.utter_message(text=message)
         return []
 
