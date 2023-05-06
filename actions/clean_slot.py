@@ -71,7 +71,7 @@ class CleanSlot:
         except ValueError:
             pass
 
-        years = re.search(r"\d+", age)
+        years = re.search(r"(\d+)", age)
         if years:
             return int(years.group(1))
         return None

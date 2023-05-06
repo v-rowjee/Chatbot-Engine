@@ -182,7 +182,7 @@ class ValidateDietForm(FormValidationAction):
             domain: DomainDict,
     ) -> Dict[Text, Any]:
         age = CleanSlot.age(slot_value)
-        return {"age": slot_value}
+        return {"age": age}
 
     def validate_gender(
             self,
