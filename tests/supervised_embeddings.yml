@@ -1,0 +1,20 @@
+recipe: default.v1
+language: en
+
+pipeline:
+- name: "SpacyNLP"
+  model: "en_core_web_md"
+- name: "SpacyTokenizer"
+- name: "SpacyFeaturizer"
+- name: "RegexFeaturizer"
+- name: "CRFEntityExtractor"
+- name: "EntitySynonymMapper"
+- name: "SklearnIntentClassifier"
+- name: "FallbackClassifier"
+
+policies:
+- name: MemoizationPolicy
+- name: RulePolicy
+- name: TEDPolicy
+
+assistant_id: 20230505-140653-annoying-grenade

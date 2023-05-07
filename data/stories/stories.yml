@@ -135,7 +135,7 @@ stories:
   - action: action_utter_slot_values
   - action: action_generate_diet
 
-- story: interactive_story_1
+- story: form starting with inform diet
   steps:
   - intent: inform_diet
     entities:
