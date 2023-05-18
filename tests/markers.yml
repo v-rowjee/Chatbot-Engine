@@ -1,0 +1,47 @@
+marker_diet_provided:
+  slot_was_set: diet
+marker_goal_provided:
+  slot_was_set: goal
+marker_allergens_provided:
+  slot_was_set: allergens
+marker_height_provided:
+  slot_was_set: height
+marker_weight_provided:
+  slot_was_set: weight
+marker_age_provided:
+  slot_was_set: age
+marker_gender_provided:
+  slot_was_set: gender
+marker_activity_level_provided:
+  slot_was_set: activity_level
+
+marker_diet_expressed:
+  or:
+    - intent: inform_diet
+    - intent: inform_no_diet
+
+marker_goal_expressed:
+  or:
+    - intent: lose_weight
+    - intent: gain_weight
+    - intent: maintain_weight
+
+marker_allergens_expressed:
+  seq:
+    - action: utter_ask_has_allergens
+    - intent: affirm
+    - action: utter_ask_allergens
+    - intent: inform_allergens
+
+marker_no_allergens_expressed:
+  seq:
+    - action: utter_ask_has_allergens
+    - intent: deny
+
+marker_no_greeting:
+  never:
+    - intent: greet
+
+marker_generate_diet_attempted:
+  at_least_once:
+    - action: action_generate_diet

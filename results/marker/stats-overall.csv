@@ -1,0 +1,100 @@
+sender_id,session_idx,marker,statistic,value
+all,nan,-,total_number_of_sessions,1
+all,nan,marker_activity_level_provided,number_of_sessions_where_marker_applied_at_least_once,1
+all,nan,marker_activity_level_provided,percentage_of_sessions_where_marker_applied_at_least_once,100.0
+all,nan,marker_age_provided,number_of_sessions_where_marker_applied_at_least_once,1
+all,nan,marker_age_provided,percentage_of_sessions_where_marker_applied_at_least_once,100.0
+all,nan,marker_allergens_expressed,number_of_sessions_where_marker_applied_at_least_once,0
+all,nan,marker_allergens_expressed,percentage_of_sessions_where_marker_applied_at_least_once,0.0
+all,nan,marker_allergens_provided,number_of_sessions_where_marker_applied_at_least_once,1
+all,nan,marker_allergens_provided,percentage_of_sessions_where_marker_applied_at_least_once,100.0
+all,nan,marker_diet_expressed,number_of_sessions_where_marker_applied_at_least_once,1
+all,nan,marker_diet_expressed,percentage_of_sessions_where_marker_applied_at_least_once,100.0
+all,nan,marker_diet_provided,number_of_sessions_where_marker_applied_at_least_once,1
+all,nan,marker_diet_provided,percentage_of_sessions_where_marker_applied_at_least_once,100.0
+all,nan,marker_gender_provided,number_of_sessions_where_marker_applied_at_least_once,1
+all,nan,marker_gender_provided,percentage_of_sessions_where_marker_applied_at_least_once,100.0
+all,nan,marker_generate_diet_attempted,number_of_sessions_where_marker_applied_at_least_once,1
+all,nan,marker_generate_diet_attempted,percentage_of_sessions_where_marker_applied_at_least_once,100.0
+all,nan,marker_goal_expressed,number_of_sessions_where_marker_applied_at_least_once,1
+all,nan,marker_goal_expressed,percentage_of_sessions_where_marker_applied_at_least_once,100.0
+all,nan,marker_goal_provided,number_of_sessions_where_marker_applied_at_least_once,1
+all,nan,marker_goal_provided,percentage_of_sessions_where_marker_applied_at_least_once,100.0
+all,nan,marker_height_provided,number_of_sessions_where_marker_applied_at_least_once,1
+all,nan,marker_height_provided,percentage_of_sessions_where_marker_applied_at_least_once,100.0
+all,nan,marker_no_allergens_expressed,number_of_sessions_where_marker_applied_at_least_once,0
+all,nan,marker_no_allergens_expressed,percentage_of_sessions_where_marker_applied_at_least_once,0.0
+all,nan,marker_no_greeting,number_of_sessions_where_marker_applied_at_least_once,1
+all,nan,marker_no_greeting,percentage_of_sessions_where_marker_applied_at_least_once,100.0
+all,nan,marker_weight_provided,number_of_sessions_where_marker_applied_at_least_once,1
+all,nan,marker_weight_provided,percentage_of_sessions_where_marker_applied_at_least_once,100.0
+all,nan,marker_activity_level_provided,count(number of preceding user turns),65
+all,nan,marker_activity_level_provided,mean(number of preceding user turns),10.231
+all,nan,marker_activity_level_provided,median(number of preceding user turns),10.0
+all,nan,marker_activity_level_provided,min(number of preceding user turns),8
+all,nan,marker_activity_level_provided,max(number of preceding user turns),12
+all,nan,marker_age_provided,count(number of preceding user turns),77
+all,nan,marker_age_provided,mean(number of preceding user turns),9.727
+all,nan,marker_age_provided,median(number of preceding user turns),10.0
+all,nan,marker_age_provided,min(number of preceding user turns),7
+all,nan,marker_age_provided,max(number of preceding user turns),12
+all,nan,marker_allergens_expressed,count(number of preceding user turns),0
+all,nan,marker_allergens_expressed,mean(number of preceding user turns),nan
+all,nan,marker_allergens_expressed,median(number of preceding user turns),nan
+all,nan,marker_allergens_expressed,min(number of preceding user turns),nan
+all,nan,marker_allergens_expressed,max(number of preceding user turns),nan
+all,nan,marker_allergens_provided,count(number of preceding user turns),87
+all,nan,marker_allergens_provided,mean(number of preceding user turns),9.322
+all,nan,marker_allergens_provided,median(number of preceding user turns),10.0
+all,nan,marker_allergens_provided,min(number of preceding user turns),6
+all,nan,marker_allergens_provided,max(number of preceding user turns),12
+all,nan,marker_diet_expressed,count(number of preceding user turns),1
+all,nan,marker_diet_expressed,mean(number of preceding user turns),3.0
+all,nan,marker_diet_expressed,median(number of preceding user turns),3.0
+all,nan,marker_diet_expressed,min(number of preceding user turns),3
+all,nan,marker_diet_expressed,max(number of preceding user turns),3
+all,nan,marker_diet_provided,count(number of preceding user turns),103
+all,nan,marker_diet_provided,mean(number of preceding user turns),8.573
+all,nan,marker_diet_provided,median(number of preceding user turns),9.0
+all,nan,marker_diet_provided,min(number of preceding user turns),4
+all,nan,marker_diet_provided,max(number of preceding user turns),12
+all,nan,marker_gender_provided,count(number of preceding user turns),76
+all,nan,marker_gender_provided,mean(number of preceding user turns),9.763
+all,nan,marker_gender_provided,median(number of preceding user turns),10.0
+all,nan,marker_gender_provided,min(number of preceding user turns),7
+all,nan,marker_gender_provided,max(number of preceding user turns),12
+all,nan,marker_generate_diet_attempted,count(number of preceding user turns),1
+all,nan,marker_generate_diet_attempted,mean(number of preceding user turns),8.0
+all,nan,marker_generate_diet_attempted,median(number of preceding user turns),8.0
+all,nan,marker_generate_diet_attempted,min(number of preceding user turns),8
+all,nan,marker_generate_diet_attempted,max(number of preceding user turns),8
+all,nan,marker_goal_expressed,count(number of preceding user turns),1
+all,nan,marker_goal_expressed,mean(number of preceding user turns),2.0
+all,nan,marker_goal_expressed,median(number of preceding user turns),2.0
+all,nan,marker_goal_expressed,min(number of preceding user turns),2
+all,nan,marker_goal_expressed,max(number of preceding user turns),2
+all,nan,marker_goal_provided,count(number of preceding user turns),111
+all,nan,marker_goal_provided,mean(number of preceding user turns),8.171
+all,nan,marker_goal_provided,median(number of preceding user turns),8.0
+all,nan,marker_goal_provided,min(number of preceding user turns),3
+all,nan,marker_goal_provided,max(number of preceding user turns),12
+all,nan,marker_height_provided,count(number of preceding user turns),79
+all,nan,marker_height_provided,mean(number of preceding user turns),9.658
+all,nan,marker_height_provided,median(number of preceding user turns),10.0
+all,nan,marker_height_provided,min(number of preceding user turns),7
+all,nan,marker_height_provided,max(number of preceding user turns),12
+all,nan,marker_no_allergens_expressed,count(number of preceding user turns),0
+all,nan,marker_no_allergens_expressed,mean(number of preceding user turns),nan
+all,nan,marker_no_allergens_expressed,median(number of preceding user turns),nan
+all,nan,marker_no_allergens_expressed,min(number of preceding user turns),nan
+all,nan,marker_no_allergens_expressed,max(number of preceding user turns),nan
+all,nan,marker_no_greeting,count(number of preceding user turns),1
+all,nan,marker_no_greeting,mean(number of preceding user turns),0.0
+all,nan,marker_no_greeting,median(number of preceding user turns),0.0
+all,nan,marker_no_greeting,min(number of preceding user turns),0
+all,nan,marker_no_greeting,max(number of preceding user turns),0
+all,nan,marker_weight_provided,count(number of preceding user turns),78
+all,nan,marker_weight_provided,mean(number of preceding user turns),9.692
+all,nan,marker_weight_provided,median(number of preceding user turns),10.0
+all,nan,marker_weight_provided,min(number of preceding user turns),7
+all,nan,marker_weight_provided,max(number of preceding user turns),12
