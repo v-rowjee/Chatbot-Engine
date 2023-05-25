@@ -12,6 +12,12 @@ nlu:
     - i need advice on what to eat
     - i want a diet plan
     - can i have a customized diet meal plan
+    - I'm looking for a personalized diet plan. Can you create a meal plan tailored to my specific needs and goals?
+    - Could you provide me with a comprehensive diet plan that includes breakfast, lunch, dinner, and snacks?
+    - I need help with meal planning. Can you assist me in creating a well-balanced diet plan?
+    - What are the food I should consider when developing a diet plan for myself?
+    - Can you suggest a sample diet plan that aligns with my dietary preferences and health goals?
+    - Can you suggest some healthy recipes or resources I can use to supplement a diet plan?
 - intent: inform_diet
   examples: |
     - [gluten free](diet)
@@ -96,6 +102,12 @@ nlu:
     - how to loose fat
     - how to lose weight?
     - i really want to lose weight
+    - i dont want to be fat
+    - loss fat quickly
+    - Can you recommend some effective strategies for weight loss?
+    - I'm struggling to lose weight. What dietary changes do you suggest?
+    - I'm trying to lose weight. What are some healthy ways to do so?
+    - Could you provide me with a weight loss meal plan or some guidance on creating one?
 - intent: gain_weight
   examples: |
     - i want to gain weight
@@ -104,6 +116,19 @@ nlu:
     - i need to gain weight fast
     - im lightweight, how to get more weight
     - gain weight
+    - i want to be heavier
+    - i want to gain weight fast
+    - how do i gain weight
+    - can i get more mass
+    - i want to be bigger
+    - bigger
+    - i want to gain muscles
+    - i want to gain muscle mass
+    - bigger muscles
+    - How can I maintain a balanced diet while still focusing on gaining weight?
+    - Could you suggest some high-calorie foods or snacks that I can incorporate into my diet?
+    - What r some healthy ways to gain weight?
+    - im trying to gain weight. What are some healthy ways to do so?
 - intent: maintain_weight
   examples: |
     - i want to maintain my weight
@@ -114,3 +139,9 @@ nlu:
     - nothing
     - i dont want to change my weight
     - i want to stay the same
+    - weight is good
+    - I want to maintain my current weight, but I'd like a diet plan that supports overall health. Can you help me with that?
+    - I'm happy with my weight, but I'd like to eat healthier. Can you help me with that?
+    - Could you provide me with a balanced diet plan that ensures I maintain my weight without any significant fluctuations?
+    - Are there specific portion sizes or calorie ranges I should aim for to sustain my current weight?
+    - Could you provide some examples of a typical day's meal plan for weight maintenance, including breakfast, lunch and dinner?
