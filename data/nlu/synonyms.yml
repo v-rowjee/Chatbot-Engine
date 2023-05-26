@@ -1,46 +1,55 @@
 version: "3.1"
 nlu:
-- synonym: dairy free
+- synonym: dairy
   examples: |
-    - no dairy
-    - cant drink dairy
+    - dairy
+    - milk
     - lactose intolerant
-- synonym: egg free
+- synonym: egg
   examples: |
-    - no egg
-    - cant eat egg
+    - eggs
     - egg-less
-- synonym: gluten free
+    - omlete
+- synonym: gluten
   examples: |
-    - no ingredient containing gluten
-    - gluten free' diet
-    - no gluten
-    - dont eat gluten
-    - no gluten
+    - cereal
+    - grass
+    - durum
+    - semolina
+    - spelt
 - synonym: ketogenic
   examples: |
     - keto friendly
     - keto
-- synonym: peanut-free
+- synonym: peanut
   examples: |
-    - allergic to peanut
-    - no peanut
-    - peanut-free
-- synonym: pecatarian
-  examples: |
-    - does not contain meat or meat based products but can contain dairy and fish
-    - no meat but can contain milk or fish
+    - nut
 - synonym: vegetarian
   examples: |
     - veg
     - vege
     - vegetarian
     - veggie
-- synonym: diet plan
+- synonym: seafood
   examples: |
-    - diet plan
-    - meal plan
-    - diet program
+    - fish
+    - crustaceans
+    - mollusks
+    - marine food
+    - prawn
+    - salmon
+    - sardines
+    - tuna
+    - carp
+- synonym: shellfood
+  examples: |
+    - shrimp
+    - crayfish
+    - crab
+    - lobster
+    - clams
+    - mussel
+    - oyster
 - synonym: male
   examples: |
     - m

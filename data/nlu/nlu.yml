@@ -38,6 +38,9 @@ nlu:
     - [keto]{"entity": "diet", "value": "ketogenic"} diet
     - [keto]{"entity": "diet", "value": "ketogenic"}
     - i want a [veg]{"entity": "diet", "value": "vegetarian"} diet
+    - I'm looking for a [vegan](diet) diet plan.
+    - a [keto]{"entity": "diet", "value": "ketogenic"}-friendly meal plan would be great.
+    -
 - intent: inform_no_diet
   examples: |
     - idk
@@ -49,6 +52,11 @@ nlu:
     - i dont have a specific diet
     - nothing specific
     - none
+    - I prefer a balanced diet that includes a variety of food groups.
+    - idk
+    - balanced
+    - balance diet
+    - im not following any specific diet, but i want a healthy and sustainable meal plan.
 - intent: inform_allergens
   examples: |
     - im allergic to [peanut](allergen)
