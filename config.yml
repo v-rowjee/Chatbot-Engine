@@ -8,12 +8,14 @@ pipeline:
 - name: RegexFeaturizer
 - name: LexicalSyntacticFeaturizer
 - name: CountVectorsFeaturizer
+  analyzer: word
 - name: CountVectorsFeaturizer
   analyzer: char_wb
-  min_ngram: 1
+  min_ngram: 2
   max_ngram: 4
 - name: DIETClassifier
   epochs: 100
+  use_masked_language_model: true
   constrain_similarities: true
 - name: EntitySynonymMapper
 - name: FallbackClassifier

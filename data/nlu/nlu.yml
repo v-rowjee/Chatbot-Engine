@@ -39,8 +39,7 @@ nlu:
     - [keto]{"entity": "diet", "value": "ketogenic"}
     - i want a [veg]{"entity": "diet", "value": "vegetarian"} diet
     - I'm looking for a [vegan](diet) diet plan.
-    - a [keto]{"entity": "diet", "value": "ketogenic"}-friendly meal plan would be great.
-    -
+    - a [keto-friendly]{"entity": "diet", "value": "ketogenic"} meal plan would be great.
 - intent: inform_no_diet
   examples: |
     - idk
