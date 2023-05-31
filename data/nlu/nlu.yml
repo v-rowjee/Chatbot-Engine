@@ -18,6 +18,7 @@ nlu:
     - What are the food I should consider when developing a diet plan for myself?
     - Can you suggest a sample diet plan that aligns with my dietary preferences and health goals?
     - Can you suggest some healthy recipes or resources I can use to supplement a diet plan?
+    - hello i want a diet plan plz
 - intent: inform_diet
   examples: |
     - [gluten free](diet)
@@ -37,7 +38,6 @@ nlu:
     - [veg]{"entity": "diet", "value": "vegetarian"}
     - [keto]{"entity": "diet", "value": "ketogenic"} diet
     - [keto]{"entity": "diet", "value": "ketogenic"}
-    - i want a [veg]{"entity": "diet", "value": "vegetarian"} diet
     - I'm looking for a [vegan](diet) diet plan.
     - a [keto-friendly]{"entity": "diet", "value": "ketogenic"} meal plan would be great.
 - intent: inform_no_diet
@@ -52,7 +52,6 @@ nlu:
     - nothing specific
     - none
     - I prefer a balanced diet that includes a variety of food groups.
-    - idk
     - balanced
     - balance diet
     - im not following any specific diet, but i want a healthy and sustainable meal plan.
@@ -69,6 +68,7 @@ nlu:
     - [egg](allergen) and [sesame](allergen)
     - im allergic to [eggs](allergen)
     - [peanuts](allergen) allergies
+    - [eggs]{"entity": "allergen", "value": "egg"} and [peanut](allergen)
 - intent: inform_details
   examples: |
     - [182cm](height)
@@ -88,6 +88,7 @@ nlu:
     - [80kg](weight)
     - im a [21yo]{"entity": "age", "value": "21"} [male](gender)
     - [1m75](height) [66kg](weight) [25yo]{"entity": "age", "value": "25"} [male](gender)
+    - im [1m80](height), [70kg](weight) [21year](age) old and im a [man]{"entity": "gender", "value": "male"}
 - intent: inform_activity_level
   examples: |
     - [1](activity_level)
@@ -95,7 +96,12 @@ nlu:
     - [3](activity_level)
     - [4](activity_level)
     - [5](activity_level)
-    - [1](activity_level)
+    - [3](activity_level)
+    - [one]{ "entity": "activity_level", "value": "1" }
+    - [two]{ "entity": "activity_level", "value": "2" }
+    - [three]{ "entity": "activity_level", "value": "3" }
+    - [four]{ "entity": "activity_level", "value": "4" }
+    - [five]{ "entity": "activity_level", "value": "5" }
 - intent: lose_weight
   examples: |
     - i want to lose weight

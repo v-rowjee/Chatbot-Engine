@@ -125,6 +125,11 @@ actions:
 responses:
   utter_default:
   - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  utter_welcome:
+  - text: Welcome, I'm CiboBot! I can help you create a personalized meal plan.
+    buttons:
+      - payload: /ask_diet_plan
+        title: Create a Meal Plan
   utter_greet:
   - text: Hi, how can i help you?
     buttons:

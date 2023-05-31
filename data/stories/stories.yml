@@ -191,3 +191,88 @@ stories:
   - active_loop: null
   - action: action_utter_slot_values
   - action: action_generate_diet
+
+- story: start with form with no diet, 2 allergens
+  steps:
+  - intent: ask_diet_plan
+  - action: diet_form
+  - active_loop: diet_form
+  - slot_was_set:
+    - requested_slot: goal
+  - intent: lose_weight
+  - slot_was_set:
+    - goal: lose_weight
+  - action: diet_form
+  - slot_was_set:
+    - goal: lose_weight
+  - slot_was_set:
+    - requested_slot: diet
+  - intent: inform_no_diet
+  - slot_was_set:
+    - diet: ''
+  - action: diet_form
+  - slot_was_set:
+    - diet: ''
+  - slot_was_set:
+    - requested_slot: has_allergens
+  - intent: affirm
+  - slot_was_set:
+    - has_allergens: true
+  - action: diet_form
+  - slot_was_set:
+    - has_allergens: true
+  - slot_was_set:
+    - requested_slot: allergens
+  - intent: inform_allergens
+    entities:
+    - allergen: egg
+    - allergen: peanut
+  - slot_was_set:
+    - allergens:
+      - egg
+      - peanut
+  - action: diet_form
+  - slot_was_set:
+    - allergens:
+      - peanut
+      - egg
+  - slot_was_set:
+    - requested_slot: height
+  - intent: inform_details
+    entities:
+    - height: 1m80
+    - weight: 70kg
+    - age: 21year
+    - gender: male
+  - slot_was_set:
+    - height: 1m80
+  - slot_was_set:
+    - weight: 70kg
+  - slot_was_set:
+    - age: 21year
+  - slot_was_set:
+    - gender: male
+  - action: diet_form
+  - slot_was_set:
+    - height: 180
+  - slot_was_set:
+    - weight: 70
+  - slot_was_set:
+    - age: 21
+  - slot_was_set:
+    - gender: male
+  - slot_was_set:
+    - requested_slot: activity_level
+  - intent: inform_activity_level
+    entities:
+    - activity_level: '3'
+  - slot_was_set:
+    - activity_level: '3'
+  - action: diet_form
+  - slot_was_set:
+    - activity_level: 3
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_utter_slot_values
+  - action: action_generate_diet
