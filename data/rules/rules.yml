@@ -1,12 +1,6 @@
 version: "3.1"
 
 rules:
-- rule: welcome
-  conversation_start: true
-  steps:
-    - intent: greet
-    - action: utter_welcome
-
 - rule: greetings
   steps:
     - intent: greet
