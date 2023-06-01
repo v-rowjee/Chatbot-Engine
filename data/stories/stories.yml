@@ -38,18 +38,6 @@ stories:
     - slot_was_set:
         - diet: ''
 
-- story: partial user informs diet
-  steps:
-    - slot_was_set:
-        - requested_slot: diet
-    - intent: inform_diet
-      entities:
-        - diet: gluten free
-    - slot_was_set:
-        - diet: gluten free
-    - slot_was_set:
-        - diet: Gluten Free
-
 - story: partial user informs activity level
   steps:
     - slot_was_set:
@@ -377,7 +365,6 @@ stories:
   - active_loop: diet_form
   - slot_was_set:
     - requested_slot: goal
-  - intent: lose_weight
   - intent: lose_weight
   - slot_was_set:
     - goal: lose_weight
