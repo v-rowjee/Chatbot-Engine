@@ -19,6 +19,7 @@ nlu:
     - Can you suggest a sample diet plan that aligns with my dietary preferences and health goals?
     - Can you suggest some healthy recipes or resources I can use to supplement a diet plan?
     - hello i want a diet plan plz
+    - hello there how do i get my meal plan?
 - intent: inform_diet
   examples: |
     - [gluten free](diet)
@@ -40,6 +41,7 @@ nlu:
     - [keto]{"entity": "diet", "value": "ketogenic"}
     - I'm looking for a [vegan](diet) diet plan.
     - a [keto-friendly]{"entity": "diet", "value": "ketogenic"} meal plan would be great.
+    - im looking for a [paleo](diet) diet
 - intent: inform_no_diet
   examples: |
     - idk
@@ -89,6 +91,9 @@ nlu:
     - im a [21yo]{"entity": "age", "value": "21"} [male](gender)
     - [1m75](height) [66kg](weight) [25yo]{"entity": "age", "value": "25"} [male](gender)
     - im [1m80](height), [70kg](weight) [21year](age) old and im a [man]{"entity": "gender", "value": "male"}
+    - im [168cm](height) and i weigh [60.5kg](weight)
+    - im [168cm](height) tall and weighs [61.5kg](weight)
+    - yes and im a [19](age) years old [girl]{"entity": "gender", "value": "female"}
 - intent: inform_activity_level
   examples: |
     - [1](activity_level)
@@ -96,12 +101,13 @@ nlu:
     - [3](activity_level)
     - [4](activity_level)
     - [5](activity_level)
-    - [3](activity_level)
-    - [one]{ "entity": "activity_level", "value": "1" }
-    - [two]{ "entity": "activity_level", "value": "2" }
-    - [three]{ "entity": "activity_level", "value": "3" }
-    - [four]{ "entity": "activity_level", "value": "4" }
-    - [five]{ "entity": "activity_level", "value": "5" }
+    - [one]{"entity": "activity_level", "value": "1"}
+    - [two]{"entity": "activity_level", "value": "2"}
+    - [three]{"entity": "activity_level", "value": "3"}
+    - [four]{"entity": "activity_level", "value": "4"}
+    - [five]{"entity": "activity_level", "value": "5"}
+    - i would say maybe [4](activity_level)
+    - [3](activity_level) maybe
 - intent: lose_weight
   examples: |
     - i want to lose weight
@@ -121,6 +127,7 @@ nlu:
     - I'm struggling to lose weight. What dietary changes do you suggest?
     - I'm trying to lose weight. What are some healthy ways to do so?
     - Could you provide me with a weight loss meal plan or some guidance on creating one?
+    - i want to lose the maximum weight in [1](age) month
 - intent: gain_weight
   examples: |
     - i want to gain weight

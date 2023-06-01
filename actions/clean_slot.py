@@ -6,7 +6,7 @@ class CleanSlot:
     @staticmethod
     def height(height):
         try:
-            int(height)
+            int(float(height))
             return height
         except ValueError:
             pass
@@ -27,28 +27,28 @@ class CleanSlot:
 
         if m_cm:
             if m_cm.group(1):
-                output = int(m_cm.group(1)) * 100
+                output = float(m_cm.group(1)) * 100
             if m_cm.group(2):
-                output += int(m_cm.group(2)) * 100
+                output += float(m_cm.group(2)) * 100
             if m_cm.group(3):
-                output += int(m_cm.group(3))
-            return output
+                output += float(m_cm.group(3))
+            return int(output)
         if cm:
-            return int(cm.group(1))
+            return int(float(cm.group(1)))
 
         if foot_inch:
             if foot_inch.group(1):
-                output = int(foot_inch.group(1)) * 30.48
+                output = float(foot_inch.group(1)) * 30.48
             if foot_inch.group(2):
-                output += int(foot_inch.group(2)) * 2.54
-            return output
+                output += float(foot_inch.group(2)) * 2.54
+            return int(output)
         if inch:
-            return int(inch.group(1))
+            return int(float(inch.group(1)))
 
     @staticmethod
     def weight(weight):
         try:
-            int(weight)
+            int(float(weight))
             return weight
         except ValueError:
             pass
@@ -58,20 +58,20 @@ class CleanSlot:
         kg = re.search(r"(\d+(\.\d+)?)(?:kg)", weight)
         pound = re.search(r"(\d+(\.\d+)?)(?:pound)", weight)
         if kg:
-            return int(kg.group(1))
+            return int(float(kg.group(1)))
         if pound:
-            return int(pound.group(1)) * 0.45359237
+            return int(float(pound.group(1) * 0.45359237))
         return None
 
     @staticmethod
     def age(age):
         try:
-            int(age)
+            int(float(age))
             return age
         except ValueError:
             pass
 
         years = re.search(r"(\d+)", age)
         if years:
-            return int(years.group(1))
+            return int(float(years.group(1)))
         return None

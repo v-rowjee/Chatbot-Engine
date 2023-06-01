@@ -11,6 +11,99 @@ stories:
     - intent: greet
     - action: utter_greet
 
+- story: partial user has allergen
+  steps:
+    - slot_was_set:
+        - requested_slot: has_allergens
+    - slot_was_set:
+        - has_allergens: true
+    - slot_was_set:
+        - has_allergens: true
+    - slot_was_set:
+        - requested_slot: allergens
+    - slot_was_set:
+        - allergens:
+            - sea food
+    - slot_was_set:
+        - allergens:
+            - seafood
+
+- story: partial user has no specific diet
+  steps:
+    - slot_was_set:
+        - requested_slot: diet
+    - intent: inform_no_diet
+    - slot_was_set:
+        - diet: ''
+    - slot_was_set:
+        - diet: ''
+
+- story: partial user informs diet
+  steps:
+    - slot_was_set:
+        - requested_slot: diet
+    - intent: inform_diet
+      entities:
+        - diet: gluten free
+    - slot_was_set:
+        - diet: gluten free
+    - slot_was_set:
+        - diet: Gluten Free
+
+- story: partial user informs activity level
+  steps:
+    - slot_was_set:
+        - requested_slot: activity_level
+    - intent: inform_activity_level
+      entities:
+        - activity_level: '4'
+    - slot_was_set:
+        - activity_level: '4'
+    - slot_was_set:
+        - activity_level: 4
+
+- story: partial user informs details directly
+  steps:
+    - slot_was_set:
+        - requested_slot: height
+    - intent: inform_details
+      entities:
+        - height: 198cm
+        - weight: 108.4kg
+    - slot_was_set:
+        - height: 198cm
+    - slot_was_set:
+        - weight: 108.4kg
+    - slot_was_set:
+        - age: '21'
+    - slot_was_set:
+        - gender: girl
+    - slot_was_set:
+        - height: 198
+    - slot_was_set:
+        - weight: 108
+    - slot_was_set:
+        - age: '21'
+    - slot_was_set:
+        - gender: female
+
+- story: partial user informs height and weight only
+  steps:
+    - slot_was_set:
+        - requested_slot: height
+    - intent: inform_details
+      entities:
+        - height: 158cm
+        - weight: 60.3kg
+    - slot_was_set:
+        - height: 158cm
+    - slot_was_set:
+        - weight: 60.3kg
+    - slot_was_set:
+        - height: 158
+    - slot_was_set:
+        - weight: 60
+
 - story: weight gain keto diet with no allergens
   steps:
   - intent: greet
@@ -271,6 +364,131 @@ stories:
   - action: diet_form
   - slot_was_set:
     - activity_level: 3
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_utter_slot_values
+  - action: action_generate_diet
+
+- story: diet form with decimal weight
+  steps:
+  - intent: ask_diet_plan
+  - action: diet_form
+  - active_loop: diet_form
+  - slot_was_set:
+    - requested_slot: goal
+  - intent: lose_weight
+  - intent: lose_weight
+  - slot_was_set:
+    - goal: lose_weight
+  - action: diet_form
+  - slot_was_set:
+    - goal: lose_weight
+  - slot_was_set:
+    - requested_slot: diet
+  - intent: inform_diet
+    entities:
+    - diet: paleo
+  - slot_was_set:
+    - diet: paleo
+  - action: diet_form
+  - slot_was_set:
+    - diet: Paleo
+  - slot_was_set:
+    - requested_slot: has_allergens
+  - intent: deny
+  - slot_was_set:
+    - has_allergens: false
+  - action: diet_form
+  - slot_was_set:
+    - has_allergens: false
+  - slot_was_set:
+    - requested_slot: height
+  - intent: inform_details
+    entities:
+    - height: 168cm
+    - weight: 61.5kg
+  - slot_was_set:
+    - height: 168cm
+  - slot_was_set:
+    - weight: 61.5kg
+  - action: diet_form
+  - slot_was_set:
+    - height: 168
+  - slot_was_set:
+    - weight: 61
+  - slot_was_set:
+    - requested_slot: gender
+  - intent: inform_details
+    entities:
+    - age: '19'
+    - gender: female
+  - slot_was_set:
+    - age: '19'
+  - slot_was_set:
+    - gender: female
+  - action: diet_form
+  - slot_was_set:
+    - age: '19'
+  - slot_was_set:
+    - gender: female
+  - slot_was_set:
+    - requested_slot: activity_level
+  - intent: inform_activity_level
+    entities:
+    - age: '3'
+  - intent: inform_activity_level
+    entities:
+    - activity_level: '3'
+  - slot_was_set:
+    - age: '3'
+  - action: diet_form
+  - slot_was_set:
+    - goal: lose_weight
+  - slot_was_set:
+    - age: '3'
+  - slot_was_set:
+    - diet: Paleo
+  - slot_was_set:
+    - has_allergens: false
+  - slot_was_set:
+    - height: 168
+  - slot_was_set:
+    - weight: 61
+  - slot_was_set:
+    - gender: female
+  - slot_was_set:
+    - requested_slot: activity_level
+  - intent: inform_activity_level
+    entities:
+    - activity_level: '3'
+    - gender: maybe
+  - slot_was_set:
+    - gender: maybe
+  - slot_was_set:
+    - activity_level: '3'
+  - intent: inform_activity_level
+    entities:
+    - activity_level: '3'
+  - action: diet_form
+  - slot_was_set:
+    - goal: lose_weight
+  - slot_was_set:
+    - age: '3'
+  - slot_was_set:
+    - diet: Paleo
+  - slot_was_set:
+    - has_allergens: false
+  - slot_was_set:
+    - height: 168
+  - slot_was_set:
+    - weight: 61
+  - slot_was_set:
+    - gender: male
+  - slot_was_set:
+    - activity_level: 3
+  - slot_was_set:
+    - requested_slot: null
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
