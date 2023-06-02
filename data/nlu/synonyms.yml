@@ -50,6 +50,11 @@ nlu:
     - clams
     - mussel
     - oyster
+- synonym: tree nut
+  examples: |
+    - almond
+    - walnut
+    - cashew
 - synonym: male
   examples: |
     - m

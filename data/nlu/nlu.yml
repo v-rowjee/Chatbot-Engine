@@ -42,6 +42,13 @@ nlu:
     - I'm looking for a [vegan](diet) diet plan.
     - a [keto-friendly]{"entity": "diet", "value": "ketogenic"} meal plan would be great.
     - im looking for a [paleo](diet) diet
+    - [Mediterranean](diet) Diet
+    - im looking for a [mediteranean]{"entity": "diet", "value": "mediterranean"} diet
+    - [intermittent fasting](diet)
+    - [dash](diet) diet
+    - [Dietary Approaches to Stop Hypertension]{"entity": "diet", "value": "dash"}
+    - [flexitarian](diet) diet
+    - [greek](diet) diet
 - intent: inform_no_diet
   examples: |
     - idk
@@ -71,6 +78,21 @@ nlu:
     - im allergic to [eggs](allergen)
     - [peanuts](allergen) allergies
     - [eggs]{"entity": "allergen", "value": "egg"} and [peanut](allergen)
+    - [tree nut](allergen)
+    - im allergic to [sulfite](allergen)
+    - [sulfite](allergen)
+    - [wheat](allergen)
+    - [grain](allergen)
+    - [soy](allergen)
+    - [sesame](allergen)
+    - [sesame](allergen) and [egg](allergen)
+    - [sesame](allergen) [wheat](allergen) and [peanut](allergen)
+    - [sesame](allergen) and [tree nut](allergen)
+    - [sesame](allergen) and [soy](allergen)
+    - [lupin](allergen) and [wheat](allergen)
+    - [mollusks](allergen)
+    - [celery](allergen)
+    - [brocoli](allergen)
 - intent: inform_details
   examples: |
     - [182cm](height)
