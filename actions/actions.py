@@ -105,7 +105,7 @@ class ValidateDietForm(FormValidationAction):
             tracker: Tracker,
             domain: DomainDict,
     ) -> Dict[Text, Any]:
-        if tracker.latest_message["intent"].get("name") == "inform_no_diet":
+        if tracker.get_intent_of_latest_message() in ["inform_no_diet", "deny"]:
             return {"diet": ""}
         else:
             diet_matches = difflib.get_close_matches(slot_value.lower(), self.diet_db())

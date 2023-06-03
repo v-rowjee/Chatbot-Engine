@@ -51,6 +51,9 @@ slots:
     - type: from_intent
       intent: inform_no_diet
       value: ""
+    - type: from_intent
+      intent: deny
+      value: ""
   has_allergens:
     type: bool
     influence_conversation: true
