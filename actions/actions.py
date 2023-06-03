@@ -182,6 +182,9 @@ class ValidateDietForm(FormValidationAction):
             domain: DomainDict,
     ) -> Dict[Text, Any]:
         age = CleanSlot.age(slot_value)
+        if 0 > age > 120:
+            dispatcher.utter_message(text=f'There might have been a typo. Please provide a valid age.')
+            return {"age": None}
         return {"age": age}
 
     def validate_gender(
@@ -192,6 +195,7 @@ class ValidateDietForm(FormValidationAction):
             domain: DomainDict,
     ) -> Dict[Text, Any]:
         if slot_value not in ["male", "female"]:
+            # dispatcher.utter_message(text=f'Please provide a valid gender. (male or female)')
             return {"gender": choice(["male", "female"])}
         return {"gender": slot_value}
 

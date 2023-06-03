@@ -61,30 +61,49 @@ slots:
     - type: from_intent
       intent: deny
       value: false
+      conditions:
+        - active_loop: diet_form
+          requested_slot: has_allergens
   allergens:
     type: list
     influence_conversation: true
     mappings:
     - type: from_entity
       entity: allergen
+      conditions:
+        - active_loop: diet_form
+          requested_slot: allergens
   height:
     type: text
     influence_conversation: true
     mappings:
     - type: from_entity
       entity: height
+      conditions:
+          - active_loop: diet_form
   weight:
     type: text
     influence_conversation: true
     mappings:
     - type: from_entity
       entity: weight
+      conditions:
+        - active_loop: diet_form
   age:
     type: text
     influence_conversation: true
     mappings:
       - type: from_entity
         entity: age
+        conditions:
+          - active_loop: diet_form
+            requested_slot: height
+          - active_loop: diet_form
+            requested_slot: weight
+          - active_loop: diet_form
+            requested_slot: gender
+          - active_loop: diet_form
+            requested_slot: age
   gender:
     type: categorical
     values:
@@ -94,6 +113,9 @@ slots:
     mappings:
       - type: from_entity
         entity: gender
+        conditions:
+          - active_loop: diet_form
+            requested_slot: gender
   activity_level:
     type: float
     min_value: 1
@@ -102,6 +124,9 @@ slots:
     mappings:
       - type: from_entity
         entity: activity_level
+        conditions:
+          - active_loop: diet_form
+            requested_slot: activity_level
 forms:
   diet_form:
     required_slots:

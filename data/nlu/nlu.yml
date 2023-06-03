@@ -100,14 +100,13 @@ nlu:
     - [155cm](height) and [55kg](weight) and [25yo]{"entity": "age", "value": "25"}
     - [1m80](height), [80kg](weight), [18years]{"entity": "age", "value": "18"} [male](gender)
     - im [1m60](height), i weigh [60kg](weight) i have [23](age) and im a [girl]{"entity": "gender", "value": "female"}
-    - im a [43yr old](age) [man]{"entity": "gender", "value": "male"} and im [1m70](height) and [70.4kg](weight)
+    - im a [43yr](age) old [man]{"entity": "gender", "value": "male"} and im [1m70](height) and [70.4kg](weight)
     - [1m70](height) and [70kg](weight) and [20](age) years old
     - heihgt of [1m69](height)
     - [65kg](weight)
     - im [45yo]{"entity": "age", "value": "45"}
     - my age is [25](age) years old
-    - im [1m69](height) i weigh [45kg](weight) i have [21yo]{"entity": "age", "value": "21"} and im a [girl]{"entity": "gender", "value": "female"}
-    - im [1m68](height) and weigh [50kg](weight). i am [21yo]{"entity": "age", "value": "21"} and im a [girl]{"entity": "gender", "value": "female"}
+    - im [1m69](height) i weigh [45kg](weight) i have [21yo](age) and im a [girl]{"entity": "gender", "value": "female"}
     - im [1m82](height)
     - [80kg](weight)
     - im a [21yo]{"entity": "age", "value": "21"} [male](gender)
@@ -116,6 +115,8 @@ nlu:
     - im [168cm](height) and i weigh [60.5kg](weight)
     - im [168cm](height) tall and weighs [61.5kg](weight)
     - yes and im a [19](age) years old [girl]{"entity": "gender", "value": "female"}
+    - I'm [6 feet](height) tall, weigh [180 pounds](weight), identify as [male](gender), and I'm [28 years](age) old.
+    - im arounnd [5 feet 10 inches](height), weigh [200 pounds](weight), [non-binary](gender), and [22 years](age) old
 - intent: inform_activity_level
   examples: |
     - [1](activity_level)
@@ -130,6 +131,9 @@ nlu:
     - [five]{"entity": "activity_level", "value": "5"}
     - i would say maybe [4](activity_level)
     - [3](activity_level) maybe
+    - say [1](activity_level)
+    - [0](activity_level)
+    - [1](activity_level) or [2](activity_level)
 - intent: lose_weight
   examples: |
     - i want to lose weight
