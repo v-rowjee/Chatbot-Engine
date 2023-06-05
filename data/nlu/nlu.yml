@@ -27,6 +27,8 @@ nlu:
     - [no gluten]{"entity": "diet", "value": "gluten free"}
     - i am [vegan](diet)
     - [vegetarian](diet)
+    - [non-vegetarian](diet)
+    - [non-veg](diet)
     - [veggie]{"entity": "diet", "value": "vegetarian"}
     - im [veg]{"entity": "diet", "value": "vegetarian"}
     - [pescatarian](diet)
