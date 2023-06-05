@@ -116,6 +116,13 @@ nlu:
     - yes and im a [19](age) years old [girl]{"entity": "gender", "value": "female"}
     - I'm [6 feet](height) tall, weigh [180 pounds](weight), identify as [male](gender), and I'm [28 years](age) old.
     - im arounnd [5 feet 10 inches](height), weigh [200 pounds](weight), [non-binary](gender), and [22 years](age) old
+    - height: [1m75](height)
+    - weight : [75kg](weight)
+    - age = [20](age)
+    - gender [male](gender)
+    - age [34](age)
+    - age: [51](age)
+
 - intent: inform_activity_level
   examples: |
     - [1](activity_level)
@@ -133,6 +140,8 @@ nlu:
     - say [1](activity_level)
     - [0](activity_level)
     - [1](activity_level) or [2](activity_level)
+    - activity: [1](activity_level)
+    - activity level: [2](activity_level)
 - intent: lose_weight
   examples: |
     - i want to lose weight
@@ -153,6 +162,8 @@ nlu:
     - I'm trying to lose weight. What are some healthy ways to do so?
     - Could you provide me with a weight loss meal plan or some guidance on creating one?
     - i want to lose the maximum weight in [1](age) month
+    - my goal is to loose weight
+    - goal: loose weight
 - intent: gain_weight
   examples: |
     - i want to gain weight
@@ -174,6 +185,8 @@ nlu:
     - Could you suggest some high-calorie foods or snacks that I can incorporate into my diet?
     - What r some healthy ways to gain weight?
     - im trying to gain weight. What are some healthy ways to do so?
+    - my goal is to gain weight
+    - goal: gain weight
 - intent: maintain_weight
   examples: |
     - i want to maintain my weight
@@ -190,3 +203,5 @@ nlu:
     - Could you provide me with a balanced diet plan that ensures I maintain my weight without any significant fluctuations?
     - Are there specific portion sizes or calorie ranges I should aim for to sustain my current weight?
     - Could you provide some examples of a typical day's meal plan for weight maintenance, including breakfast, lunch and dinner?
+    - my goal is to maintain my weight
+    - goal: maintain weight
