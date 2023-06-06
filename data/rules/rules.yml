@@ -29,7 +29,6 @@ rules:
     - active_loop: null
     - slot_was_set:
         - requested_slot: null
-    - action: action_utter_slot_values
     - action: action_generate_diet
 
 - rule: Interruption in form
@@ -37,5 +36,14 @@ rules:
       - active_loop: diet_form
   steps:
       - action: action_default_fallback
+      - action: diet_form
+      - active_loop: diet_form
+
+
+- rule: Interruption in form with no allergen
+  condition:
+      - active_loop: diet_form
+  steps:
+      - action: action_no_allergens
       - action: diet_form
       - active_loop: diet_form

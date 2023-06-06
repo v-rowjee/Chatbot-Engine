@@ -16,6 +16,7 @@ intents:
 - inform_no_diet
 - inform_details
 - inform_activity_level
+- inform_no_allergens
 entities:
 - diet
 - allergen
@@ -61,6 +62,9 @@ slots:
     - type: from_intent
       intent: affirm
       value: true
+      conditions:
+        - active_loop: diet_form
+          requested_slot: has_allergens
     - type: from_intent
       intent: deny
       value: false
@@ -76,6 +80,9 @@ slots:
       conditions:
         - active_loop: diet_form
           requested_slot: allergens
+    - type: from_intent
+      intent: inform_no_allergens
+      value: []
   height:
     type: text
     influence_conversation: true
@@ -130,6 +137,16 @@ slots:
         conditions:
           - active_loop: diet_form
             requested_slot: activity_level
+  confirm:
+    type: bool
+    influence_conversation: true
+    mappings:
+      - type: from_intent
+        intent: affirm
+        value: true
+        conditions:
+          - active_loop: diet_form
+            requested_slot: confirm
 forms:
   diet_form:
     required_slots:
@@ -142,6 +159,7 @@ forms:
     - age
     - gender
     - activity_level
+    - confirm
 actions:
   - action_generate_diet
   - validate_diet_form
@@ -149,7 +167,7 @@ actions:
   - action_ask_weight
   - action_ask_age
   - action_ask_gender
-  - action_utter_slot_values
+  - action_ask_confirm
 responses:
   utter_default:
   - text: I'm sorry, I didn't quite understand that. Could you rephrase?
@@ -165,6 +183,8 @@ responses:
       title: Create another Meal Plan
   utter_ask_goal:
   - text: What is your goal?
+  - text: In terms of weight goals, are you primarily interested in weight loss, weight gain or maintaining your current weight?
+  - text: When it comes to weight management, are you aiming to lose weight, gain weight, or maintain your current weight?
     buttons:
     - payload: /lose_weight
       title: Lose weight
@@ -174,18 +194,23 @@ responses:
       title: Maintain weight
   utter_ask_diet:
   - text: What kind of diet are you looking for? (e.g. vegan, vegetarian, keto, etc.)
+  - text: What specific type of diet are you interested in following? For example, are you considering a vegan, vegetarian, keto, or any other specific type of diet?
     buttons:
       - payload: /inform_no_diet
         title: I don't have a specific diet
   utter_ask_has_allergens:
   - text: Do you have any allergies?
+  - text: Please let me know if you have any allergies other than food allergies, such as allergies to seafood, dairy or peanut. This information will help me provide you with the most appropriate dietary recommendations.
     buttons:
     - payload: /affirm
       title: Yes
     - payload: /deny
       title: No
   utter_ask_allergens:
-  - text: List all your allergies.
+  - text: Could you please provide me with a list of any food allergies or intolerances you have?
+  - text: Could you please specify which foods or ingredients you are allergic to?
+  - text: To ensure your safety and well-being, could you please provide more details about the specific foods or ingredients you are allergic to?
   utter_ask_activity_level:
   - text: Rate your activity level on a scale of 1 to 5. (1 being sedentary and 5 being very active)
-
+  - text: On a scale of 1 to 5, with 1 being sedentary and 5 being very active, how would you rate your current level of physical activity?
+  - text: To better understand your current physical activity level, please rate it on a scale of 1 to 5, where 1 signifies a sedentary lifestyle and 5 signifies a highly active lifestyle.

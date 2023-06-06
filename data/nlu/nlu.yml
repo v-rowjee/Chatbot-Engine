@@ -36,6 +36,7 @@ nlu:
     - [ketogenic](diet) meal plan
     - [paleo](diet) diet
     - [primal](diet) diet
+    - i want a [primal](diet) diet type
     - [whole30](diet) diet
     - i want a [veg]{"entity": "diet", "value": "vegetarian"} diet
     - [veg]{"entity": "diet", "value": "vegetarian"}
@@ -57,6 +58,7 @@ nlu:
     - i dont know
     - i dont have a diet
     - i dont have a preference
+    - i do not have a specific diet yet
     - no pref
     - no preference
     - i dont have a specific diet
@@ -94,6 +96,21 @@ nlu:
     - [mollusks](allergen)
     - [celery](allergen)
     - [brocoli](allergen)
+- intent: inform_no_allergens
+  examples: |
+    - i dont have any allergies
+    - can you correct the fact that i do not have any allergies
+    - i dont have any food allergies
+    - no food allergies
+    - no allergies
+    - no allergen
+    - no allergy
+    - no dietary restrictions
+    - i do not have any restriction on my food
+    - btw i dont have any allegies anymore
+    - correction: no allergies
+    - i dont have allergies!
+    - allergies: none
 - intent: inform_details
   examples: |
     - [182cm](height)
@@ -124,7 +141,6 @@ nlu:
     - gender [male](gender)
     - age [34](age)
     - age: [51](age)
-
 - intent: inform_activity_level
   examples: |
     - [1](activity_level)
@@ -144,6 +160,7 @@ nlu:
     - [1](activity_level) or [2](activity_level)
     - activity: [1](activity_level)
     - activity level: [2](activity_level)
+    - [3](activity_level) /5
 - intent: lose_weight
   examples: |
     - i want to lose weight
@@ -166,6 +183,9 @@ nlu:
     - i want to lose the maximum weight in [1](age) month
     - my goal is to loose weight
     - goal: loose weight
+    - i want to diet to help me lose weight
+    - can you give me a diet plan to lose weight fast
+    - how can i reduce my weight?
 - intent: gain_weight
   examples: |
     - i want to gain weight
@@ -179,7 +199,7 @@ nlu:
     - how do i gain weight
     - can i get more mass
     - i want to be bigger
-    - bigger
+    - to be bigger
     - i want to gain muscles
     - i want to gain muscle mass
     - bigger muscles
@@ -189,6 +209,8 @@ nlu:
     - im trying to gain weight. What are some healthy ways to do so?
     - my goal is to gain weight
     - goal: gain weight
+    - help me with a diet plan to gain weight
+    - i need a meal plan to lose weight quickly
 - intent: maintain_weight
   examples: |
     - i want to maintain my weight
@@ -207,3 +229,5 @@ nlu:
     - Could you provide some examples of a typical day's meal plan for weight maintenance, including breakfast, lunch and dinner?
     - my goal is to maintain my weight
     - goal: maintain weight
+    - i want a balanced diet to keep my weight steady
+    - i want a healthy diet to stay at my current weight

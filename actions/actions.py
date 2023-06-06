@@ -208,10 +208,18 @@ class ValidateDietForm(FormValidationAction):
             return {"activity_level": activity_level}
         return {"activity_level": None}
 
+    def validate_confirm(
+            self,
+            slot_value: Any,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: DomainDict,
+    ) -> Dict[Text, Any]:
+        return {"confirm": slot_value}
 
-class UtterSlotValues(Action):
+class AskForConfirmation(Action):
     def name(self) -> Text:
-        return "action_utter_slot_values"
+        return "action_ask_confirm"
 
     def run(
             self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict
@@ -224,13 +232,17 @@ class UtterSlotValues(Action):
         gender = tracker.slots.get("gender")
         activity_level = tracker.slots.get("activity_level")
 
-        message = f"Generating a {diet} diet designed to {goal.replace('_',' ')} for a {age} year old {gender} who is {height}cm tall and weighs {weight}kg. You are also rated {activity_level}/5 active "
+        message = f"Generating a {diet} diet designed to {goal.replace('_', ' ')} for a {age} year old {gender} who is {height}cm tall and weighs {weight}kg. You are also rated {activity_level}/5 active "
         if tracker.slots.get("has_allergens") is True:
             allergens = tracker.slots.get("allergens")
-            message += f"and have the following allergens: {', '.join(allergens)}."
+            if allergens not in [None, []]:
+                message += f"and have the following allergens: {', '.join(allergens)}."
+            else:
+                message += "and have no allergens."
         else:
             message += "and have no allergens."
-        dispatcher.utter_message(text=message)
+        message += " Do you want to continue? If not, please specify any changes you would like to make before generating the meal plan."
+        dispatcher.utter_message(text=message, buttons=[{"title": "Yes", "payload": "/affirm"}])
         return []
 
 
@@ -285,3 +297,15 @@ class AskForGender(Action):
             self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict
     ) -> List[EventType]:
         return AskForDetails().run(dispatcher, tracker, domain)
+
+
+class ActionConfirmSlotValues(Action):
+    def name(self) -> Text:
+        return "action_confirm_slot_values"
+
+    def run(
+            self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict
+    ) -> List[EventType]:
+        if tracker.get_slot("allergens") is []:
+            return [SlotSet("has_allergens", False), SlotSet("allergens", None)]
+        return []

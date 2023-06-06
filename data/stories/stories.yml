@@ -51,11 +51,16 @@ stories:
   - slot_was_set:
     - activity_level: 4
   - slot_was_set:
+      - requested_slot: confirm
+  - slot_was_set:
+      - confirm: true
+  - slot_was_set:
+      - confirm: true
+  - slot_was_set:
     - requested_slot: null
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
-  - action: action_utter_slot_values
   - action: action_generate_diet
   - intent: thanks
   - action: utter_more
@@ -120,9 +125,14 @@ stories:
   - slot_was_set:
     - activity_level: 4
   - slot_was_set:
+      - requested_slot: confirm
+  - slot_was_set:
+      - confirm: true
+  - slot_was_set:
+      - confirm: true
+  - slot_was_set:
     - requested_slot: null
   - active_loop: null
-  - action: action_utter_slot_values
   - action: action_generate_diet
 
 - story: form starting with inform diet
@@ -175,11 +185,16 @@ stories:
   - slot_was_set:
     - activity_level: 1
   - slot_was_set:
+      - requested_slot: confirm
+  - slot_was_set:
+      - confirm: true
+  - slot_was_set:
+      - confirm: true
+  - slot_was_set:
     - requested_slot: null
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
-  - action: action_utter_slot_values
   - action: action_generate_diet
 
 - story: start with form with no diet, 2 allergens
@@ -262,9 +277,14 @@ stories:
   - slot_was_set:
     - activity_level: 3
   - slot_was_set:
+      - requested_slot: confirm
+  - slot_was_set:
+      - confirm: true
+  - slot_was_set:
+      - confirm: true
+  - slot_was_set:
     - requested_slot: null
   - active_loop: null
-  - action: action_utter_slot_values
   - action: action_generate_diet
 
 - story: diet form with decimal weight
@@ -384,9 +404,17 @@ stories:
   - slot_was_set:
     - activity_level: 3
   - slot_was_set:
+      - requested_slot: confirm
+  - intent: inform_no_allergens
+  - slot_was_set:
+      - has_allergens: false
+  - slot_was_set:
+      - requested_slot: confirm
+  - slot_was_set:
+      - confirm: true
+  - slot_was_set:
     - requested_slot: null
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
-  - action: action_utter_slot_values
   - action: action_generate_diet
