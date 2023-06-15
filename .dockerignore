@@ -1,0 +1,8 @@
+tests/*
+models/*
+actions/*
+**/*.md
+hpvenv
+
+results/*
+train_test_split/*

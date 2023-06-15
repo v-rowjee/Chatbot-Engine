@@ -1,0 +1,22 @@
+version: '3.0'
+
+services:
+  rasa:
+    image: rasa/rasa:3.5.6-full
+    networks: ['rasa-network']
+    ports:
+    - "5005:5005"
+    volumes:
+    - "./cibochatbot/:/app/"
+    command:
+    - run
+
+  action_server:
+    image: rasa/rasa-sdk:3.5.1
+    networks: ['rasa-network']
+    ports:
+    - "5055:5055"
+    volumes:
+    - "./cibochatbot/actions:/app/actions"
+
+networks: {rasa-network: {}}
