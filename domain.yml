@@ -182,8 +182,14 @@ responses:
     - payload: /ask_diet_plan
       title: Create another Meal Plan
   utter_ask_goal:
-  - text: What is your goal?
   - text: In terms of weight goals, are you primarily interested in weight loss, weight gain or maintaining your current weight?
+    buttons:
+      - payload: /lose_weight
+        title: Lose weight
+      - payload: /gain_weight
+        title: Gain weight
+      - payload: /maintain_weight
+        title: Maintain weight
   - text: When it comes to weight management, are you aiming to lose weight, gain weight, or maintain your current weight?
     buttons:
     - payload: /lose_weight
@@ -194,18 +200,20 @@ responses:
       title: Maintain weight
   utter_ask_diet:
   - text: What kind of diet are you looking for? (e.g. vegan, vegetarian, keto, etc.)
+    buttons:
+      - payload: /inform_no_diet
+        title: I don't have a specific diet
   - text: What specific type of diet are you interested in following? For example, are you considering a vegan, vegetarian, keto, or any other specific type of diet?
     buttons:
       - payload: /inform_no_diet
         title: I don't have a specific diet
   utter_ask_has_allergens:
   - text: Do you have any allergies?
-  - text: Please let me know if you have any allergies other than food allergies, such as allergies to seafood, dairy or peanut. This information will help me provide you with the most appropriate dietary recommendations.
     buttons:
-    - payload: /affirm
-      title: Yes
-    - payload: /deny
-      title: No
+      - payload: /affirm
+        title: Yes
+      - payload: /deny
+        title: No
   utter_ask_allergens:
   - text: Could you please provide me with a list of any food allergies or intolerances you have?
   - text: Could you please specify which foods or ingredients you are allergic to?
