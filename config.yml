@@ -17,7 +17,6 @@ pipeline:
   epochs: 100
   use_masked_language_model: true
   constrain_similarities: true
-#  model_confidence: softmax
 - name: EntitySynonymMapper
 - name: FallbackClassifier
   threshold: 0.5

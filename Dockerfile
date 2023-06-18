@@ -1,24 +1,18 @@
-# use a python container as a starting point
-FROM python:3.10.2
+# Use the Rasa image with version 3.5.6-full as the base image
+FROM rasa/rasa:3.5.6-full
 
-# install dependencies of interest
-RUN python -m pip install rasa-3.5.6-full
-
-# set workdir and copy data files from disk
-# note the latter command uses .dockerignore
+# Set the working directory inside the container
 WORKDIR /app
-COPY . .
 
-# train a new rasa model
-RUN rasa train
+# Copy the contents of your local Rasa project to the container
+COPY . /app
 
-# set the user to run, don't run as root
-USER 1001
+# Install any additional dependencies specific to your project
+# RUN pip install <your_additional_dependencies>
+RUN pip install --no-cache-dir requests==2.26.0
 
+# Expose the necessary port for Rasa API
 EXPOSE 5005
 
-# set entrypoint for interactive shells
-ENTRYPOINT ["rasa"]
-
-# command to run when container is called to run
-CMD ["run", "--enable-api", "--cors", "*"]
+# Set the default command to run Rasa
+CMD ["run", "--enable-api", "--cors", "\"*\""]
