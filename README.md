@@ -8,8 +8,8 @@
 ## Installation
 - Add python path to environment variable
 - Configure interpreter in PyCharm
-- Run `pip install rasa`
-- Run `pip install rasa-sdk`
+- Run `pip install rasa==3.5.6`
+- Run `pip install rasa-sdk==3.5.1`
 
 ## Getting Started
 - Open two terminals

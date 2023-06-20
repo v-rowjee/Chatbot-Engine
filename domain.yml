@@ -202,7 +202,7 @@ responses:
   - text: What kind of diet are you looking for? (e.g. vegan, vegetarian, keto, etc.)
     buttons:
       - payload: /inform_no_diet
-        title: I don't have a specific diet
+        title: No specific diet
   - text: What specific type of diet are you interested in following? For example, are you considering a vegan, vegetarian, keto, or any other specific type of diet?
     buttons:
       - payload: /inform_no_diet
