@@ -11,12 +11,12 @@ intents:
 - lose_weight
 - gain_weight
 - maintain_weight
-- inform_allergens
 - inform_diet
 - inform_no_diet
+- inform_allergens
+- inform_no_allergens
 - inform_details
 - inform_activity_level
-- inform_no_allergens
 entities:
 - diet
 - allergen
@@ -125,7 +125,6 @@ slots:
         entity: gender
         conditions:
           - active_loop: diet_form
-            requested_slot: gender
   activity_level:
     type: float
     min_value: 1
