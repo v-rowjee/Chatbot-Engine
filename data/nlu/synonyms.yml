@@ -67,3 +67,11 @@ nlu:
     - girl
     - lady
     - woman
+
+- regex: age
+  examples: |
+    - \d{1,3}
+
+- regex: activity_level
+  examples: |
+    - [1-5]

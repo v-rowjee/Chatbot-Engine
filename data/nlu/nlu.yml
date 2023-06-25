@@ -141,6 +141,9 @@ nlu:
     - gender [male](gender)
     - age [34](age)
     - age: [51](age)
+    - [1m75](height) [69kg](weight) [22](age) [male](gender)
+    - [179cm](height) [70kg](weight) [39](age) [female](gender)
+    - [168cm](height) , [65kg](weight) , [40](age) , [female](gender)
 - intent: inform_activity_level
   examples: |
     - [1](activity_level)

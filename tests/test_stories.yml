@@ -34,6 +34,11 @@ stories:
       2
     intent: inform_activity_level
   - action: diet_form
+  - active_loop: diet_form
+  - user: |
+      yes
+    intent: confirm
+  - action: diet_form
   - active_loop: null
   - action: action_utter_slot_values
   - action: action_generate_diet
@@ -78,6 +83,16 @@ stories:
   - user: |
       2
     intent: inform_activity_level
+  - action: diet_form
+  - active_loop: diet_form
+  - user: |
+      im 83kg
+    intent: inform_details
+  - action: diet_form
+  - active_loop: diet_form
+  - user: |
+      yes
+    intent: confirm
   - action: diet_form
   - active_loop: null
   - action: action_utter_slot_values
