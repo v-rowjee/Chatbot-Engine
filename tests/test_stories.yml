@@ -90,9 +90,8 @@ stories:
     intent: inform_details
   - action: diet_form
   - active_loop: diet_form
-  - user: |
-      yes
-    intent: confirm
+  - user: /affirm
+    intent: affirm
   - action: diet_form
   - active_loop: null
   - action: action_utter_slot_values

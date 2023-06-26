@@ -1,92 +1,250 @@
 version: "3.1"
 nlu:
-- intent: inform_allergens
-  examples: |
-    - im allergic to [peanut](allergen)
-    - [egg](allergen) and [sesame](allergen)
-    - [seafood](allergen)
-    - [nuts](allergen) and [egg](allergen)
-    - [meat](allergen), [sea food](allergen) and [egg](allergen)
-    - [dairy](allergen) products
-    - [egg](allergen)
-- intent: ask_diet_plan
-  examples: |
-    - can i get a diet plan
-    - i want a diet plan
-    - i need a diet
-    - can you recomand me a diet
-    - i need advice on what to eat
-    - recommend me a mean plan
-    - give me a planned meal
-    - help me to creat a diet
 - intent: greet
   examples: |
-    - let's go
-    - hey there
     - good morning
-    - hey
-    - goodmorning
-    - good evening
-    - hi
-    - hey dude
+    - hey there
     - good afternoon
+    - moin
+    - hey dude
+    - hi
     - hello there
+    - hey
+    - good evening
+    - goodmorning
+- intent: inform_no_diet
+  examples: |
+    - no pref
+    - no preference
+    - balance diet
+    - i do not have a specific diet yet
+    - idk
+    - i dont have a preference
+    - I prefer a balanced diet that includes a variety of food groups.
+    - i dont have a specific diet
+    - nothing specific
+    - i dont know
+- intent: inform_no_allergens
+  examples: |
+    - i do not have any restriction on my food
+    - no allergies
+    - i dont have any food allergies
+    - i dont have any allergies
+    - i dont have allergies!
+    - no allergy
+    - correction: no allergies
+    - allergies: none
+    - btw i dont have any allegies anymore
+    - no allergen
+    - no food allergies
 - intent: deny
   examples: |
-    - not at all
-    - non
-    - never
-    - no thank you
-    - nope
-    - no thanks
-    - none
-    - nah
-    - negative
     - not really
+    - nope
     - no im not
+    - i dont think so
+    - no thank you
+    - non
+    - no way
+    - not at all
+    - no thanks
+    - never
+    - none
 - intent: affirm
   examples: |
-    - yes
-    - fine
-    - yea
-    - sure
-    - yess
-    - okay
-    - yeah
-    - ofc
-    - yeaah
+    - all good
+    - good
     - of course
-    - yep
+    - fine
     - tes
-- intent: inform_diet
-  examples: |
-    - im [veg]{"entity": "diet", "value": "vegetarian"}
-    - [veg]{"entity": "diet", "value": "vegetarian"}
-    - [vegetarian](diet)
-    - [gluten free](diet)
-    - [pescatarian](diet)
-    - [ketogenic](diet) meal plan
-    - i want a [veg]{"entity": "diet", "value": "vegetarian"} diet
-    - [primal](diet) diet
-    - [paleo](diet) diet
-    - i [dont eat gluten]{"entity": "diet", "value": "gluten free"}
-    - i am [vegan](diet)
-    - [whole30](diet) diet
+    - yes
+    - yep
+    - yeaah
+    - yea
+    - ofc
+    - sure
+    - yeah
 - intent: thanks
   examples: |
-    - tenks
-    - thanx
-    - tanku
-    - sanks
-    - tanks
-    - fanks
-    - thatwas very helpful thank you
-    - thank you so much
-    - thank again
-    - thanks!
+    - tysm
     - thks
+    - thank again
+    - thank you so much
+    - tanks
+    - thank1
+    - tanku
     - thank you
-    - thanks for the help
+    - sanks
+    - thanks!
+    - fanks
+    - ty
+    - thatwas very helpful thank you
+- intent: ask_diet_plan
+  examples: |
+    - Can you suggest some healthy recipes or resources I can use to supplement a diet plan?
+    - i need advice on what to eat
+    - I'm looking for a personalized diet plan. Can you create a meal plan tailored to my specific needs and goals?
+    - give me a planned meal
+    - i need a diet
+    - help me to creat a diet
+    - recommend me a mean plan
+    - Can you suggest a sample diet plan that aligns with my dietary preferences and health goals?
+    - What are the food I should consider when developing a diet plan for myself?
+    - can i get a diet plan
+    - hello i want a diet plan plz
+    - can you recomand me a diet
+    - Could you provide me with a comprehensive diet plan that includes breakfast, lunch, dinner, and snacks?
+    - i want a diet plan
+- intent: inform_activity_level
+  examples: |
+    - [3](activity_level)
+    - [3](activity_level) maybe
+    - [3](activity_level) /5
+    - [two]{"entity": "activity_level", "value": "2"}
+    - [4](activity_level)
+    - activity: [1](activity_level)
+    - [1](activity_level) or [2](activity_level)
+    - [one]{"entity": "activity_level", "value": "1"}
+    - [five]{"entity": "activity_level", "value": "5"}
+    - say [1](activity_level)
+    - [5](activity_level)
+    - [three]{"entity": "activity_level", "value": "3"}
+    - [1](activity_level)
+    - activity level: [2](activity_level)
+    - [four]{"entity": "activity_level", "value": "4"}
+- intent: maintain_weight
+  examples: |
+    - i want to maintain my weight
+    - my goal is to maintain my weight
+    - i want a balanced diet to keep my weight steady
+    - nothing
+    - goal: maintain weight
+    - i want to keep my weight
+    - i dont want to change my weight
+    - weight is good
+    - my weight is good
+    - Could you provide some examples of a typical day's meal plan for weight maintenance, including breakfast, lunch and dinner?
+    - i want a healthy diet to stay at my current weight
+    - im good with my weight
+    - I'm happy with my weight, but I'd like to eat healthier. Can you help me with that?
+    - my weight is fine
+- intent: lose_weight
+  examples: |
+    - how can i reduce my weight?
+    - i want to lose weight
+    - can you give me a diet plan to lose weight fast
+    - my goal is to loose weight
+    - how to lose weight?
+    - loss fat quickly
+    - i want to lse weight
+    - i want to lose the maximum weight in [1](age) month
+    - help me loss weight
+    - I'm struggling to lose weight. What dietary changes do you suggest?
+    - im too fat
+    - i want to burn all my fat
+    - how to loose fat
+    - how to burn fat
+    - goal: loose weight
+    - lose weight
+    - im obese
+    - Can you recommend some effective strategies for weight loss?
+- intent: gain_weight
+  examples: |
+    - i need a meal plan to lose weight quickly
+    - How can I maintain a balanced diet while still focusing on gaining weight?
+    - i am too skinny
+    - goal: gain weight
+    - gain weight
+    - im trying to gain weight. What are some healthy ways to do so?
+    - my goal is to gain weight
+    - i want som more weight
+    - i want to be bigger
+    - Could you suggest some high-calorie foods or snacks that I can incorporate into my diet?
+    - What r some healthy ways to gain weight?
+    - im lightweight, how to get more weight
+    - how do i gain weight
+    - i want to gain muscles
+    - can i get more mass
+    - i want to gain muscle mass
+    - i want to gain weight
+    - i want to gain weight fast
+    - help me with a diet plan to gain weight
+- intent: inform_allergens
+  examples: |
+    - [sesame](allergen) and [tree nut](allergen)
+    - [grain](allergen)
+    - [dairy](allergen) products
+    - [peanuts](allergen) allergies
+    - im allergic to [eggs](allergen)
+    - [egg](allergen) and [sesame](allergen)
+    - [sesame](allergen)
+    - [sesame](allergen) and [egg](allergen)
+    - im allergic to [sulfite](allergen)
+    - [nuts](allergen) and [egg](allergen)
+    - [seafood](allergen)
+    - [soy](allergen)
+    - [lupin](allergen) and [wheat](allergen)
+    - no [fish](allergen) and [egg](allergen)
+    - [tree nut](allergen)
+    - [sulfite](allergen)
+    - [wheat](allergen)
+    - [mollusks](allergen)
+    - [sesame](allergen) [wheat](allergen) and [peanut](allergen)
+    - i cant eat [nuts](allergen)
+    - [eggs]{"entity": "allergen", "value": "egg"} and [peanut](allergen)
+- intent: inform_diet
+  examples: |
+    - [flexitarian](diet) diet
+    - [Dietary Approaches to Stop Hypertension]{"entity": "diet", "value": "dash"}
+    - i am [vegan](diet)
+    - im [veg]{"entity": "diet", "value": "vegetarian"}
+    - [greek](diet) diet
+    - i want a [veg]{"entity": "diet", "value": "vegetarian"} diet
+    - im looking for a [paleo](diet) diet
+    - [whole30](diet) diet
+    - im looking for a [mediteranean]{"entity": "diet", "value": "mediterranean"} diet
+    - [non-vegetarian](diet)
+    - [pescatarian](diet)
+    - [non-veg](diet)
+    - [primal](diet) diet
+    - [intermittent fasting](diet)
+    - [keto]{"entity": "diet", "value": "ketogenic"}
+    - [veggie]{"entity": "diet", "value": "vegetarian"}
+    - [dash](diet) diet
+    - [Mediterranean](diet) Diet
+    - [vegetarian](diet)
+    - a [keto-friendly]{"entity": "diet", "value": "ketogenic"} meal plan would be great.
+    - i want a [keto]{"entity": "diet", "value": "ketogenic"} diet
+    - [keto]{"entity": "diet", "value": "ketogenic"} diet
+    - [ketogenic](diet) meal plan
+    - [veg]{"entity": "diet", "value": "vegetarian"}
+- intent: inform_details
+  examples: |
+    - [168cm](height) , [65kg](weight) , [40](age) , [female](gender)
+    - im a [43yr](age) old [man]{"entity": "gender", "value": "male"} and im [1m70](height) and [70.4kg](weight)
+    - my age is [25](age) years old
+    - im arounnd [5 feet 10 inches](height), weigh [200 pounds](weight), [non-binary](gender), and [22 years](age) old
+    - heihgt of [1m69](height)
+    - im [45yo]{"entity": "age", "value": "45"}
+    - [182cm](height)
+    - im [1m80](height), [70kg](weight) [21year](age) old and im a [man]{"entity": "gender", "value": "male"}
+    - im a [21yo]{"entity": "age", "value": "21"} [male](gender)
+    - im [1m60](height), i weigh [60kg](weight) i have [23](age) and im a [girl]{"entity": "gender", "value": "female"}
+    - age: [51](age)
+    - I'm [6 feet](height) tall, weigh [180 pounds](weight), identify as [male](gender), and I'm [28 years](age) old.
+    - im [1m82](height)
+    - [1m70](height) and [70kg](weight) and [20](age) years old
+    - [65kg](weight)
+    - [1m75](height) [69kg](weight) [22](age) [male](gender)
+    - im [1m69](height) i weigh [45kg](weight) i have [21yo](age) and im a [girl]{"entity": "gender", "value": "female"}
+    - [179cm](height) [70kg](weight) [39](age) [female](gender)
+    - height: [1m75](height)
+    - [1m80](height), [80kg](weight), [18years]{"entity": "age", "value": "18"} [male](gender)
+    - age [34](age)
+    - gender [male](gender)
+    - age = [20](age)
+    - weight : [75kg](weight)
+    - yes and im a [19](age) years old [girl]{"entity": "gender", "value": "female"}
 - synonym: gluten free
   examples: |
     - dont eat gluten
@@ -95,3 +253,106 @@ nlu:
   examples: |
     - veggie
     - veg
+    - vege
+    - vegetarian
+- synonym: ketogenic
+  examples: |
+    - keto
+    - keto-friendly
+    - keto friendly
+- synonym: mediterranean
+  examples: |
+    - mediteranean
+- synonym: dash
+  examples: |
+    - Dietary Approaches to Stop Hypertension
+- synonym: egg
+  examples: |
+    - eggs
+    - egg-less
+    - omlete
+- synonym: '25'
+  examples: |
+    - 25yo
+- synonym: '18'
+  examples: |
+    - 18years
+- synonym: female
+  examples: |
+    - girl
+    - f
+    - lady
+    - woman
+- synonym: male
+  examples: |
+    - man
+    - m
+    - boy
+    - gentleman
+- synonym: '45'
+  examples: |
+    - 45yo
+- synonym: '21'
+  examples: |
+    - 21yo
+- synonym: '1'
+  examples: |
+    - one
+- synonym: '2'
+  examples: |
+    - two
+- synonym: '3'
+  examples: |
+    - three
+- synonym: '4'
+  examples: |
+    - four
+- synonym: '5'
+  examples: |
+    - five
+- synonym: dairy
+  examples: |
+    - dairy
+    - milk
+    - lactose intolerant
+- synonym: gluten
+  examples: |
+    - cereal
+    - grass
+    - durum
+    - semolina
+    - spelt
+- synonym: peanut
+  examples: |
+    - nut
+- synonym: seafood
+  examples: |
+    - fish
+    - crustaceans
+    - mollusks
+    - marine food
+    - prawn
+    - salmon
+    - sardines
+    - tuna
+    - carp
+- synonym: shellfood
+  examples: |
+    - shrimp
+    - crayfish
+    - crab
+    - lobster
+    - clams
+    - mussel
+    - oyster
+- synonym: tree nut
+  examples: |
+    - almond
+    - walnut
+    - cashew
+- regex: activity_level
+  examples: |
+    - [1-5]
+- regex: age
+  examples: |
+    - \d{1,3}
