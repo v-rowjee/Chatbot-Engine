@@ -1,3 +1,5 @@
 .rasa
 .idea
+.config
+.keras
 hpvenv

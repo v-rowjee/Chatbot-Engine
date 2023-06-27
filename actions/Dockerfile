@@ -11,14 +11,14 @@ WORKDIR /app
 USER root
 
 # Install extra requirements for actions code, if necessary (uncomment next line)
-RUN pip install --no-cache-dir requests==2.26.0
+RUN pip install requests
 
 # Copy actions folder to working directory
-COPY ./actions /app/actions
+COPY . /app/actions
 
 # By best practices, don't run the code with root user
 USER 1001
 
 EXPOSE 5055
 
-CMD ["rasa", "run", "actions"]
+CMD ["run", "actions"]

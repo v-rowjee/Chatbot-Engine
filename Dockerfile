@@ -9,7 +9,7 @@ COPY . /app
 
 # Install any additional dependencies specific to your project
 # RUN pip install <your_additional_dependencies>
-RUN pip install --no-cache-dir requests==2.26.0
+#RUN pip install --no-cache-dir requests==2.26.0
 
 # Expose the necessary port for Rasa API
 EXPOSE 5005
