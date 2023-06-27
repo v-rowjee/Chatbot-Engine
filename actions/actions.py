@@ -203,7 +203,7 @@ class ValidateDietForm(FormValidationAction):
             tracker: Tracker,
             domain: DomainDict,
     ) -> Dict[Text, Any]:
-        activity_level = int(slot_value)
+        activity_level = int(float(slot_value))
         if activity_level in [1, 2, 3, 4, 5]:
             return {"activity_level": activity_level}
         return {"activity_level": None}
@@ -216,6 +216,7 @@ class ValidateDietForm(FormValidationAction):
             domain: DomainDict,
     ) -> Dict[Text, Any]:
         return {"confirm": slot_value}
+
 
 class AskForConfirmation(Action):
     def name(self) -> Text:
