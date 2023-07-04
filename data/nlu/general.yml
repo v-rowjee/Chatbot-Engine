@@ -33,6 +33,13 @@ nlu:
     - good
     - all good
     - fine
+    - continue
+    - you may continue
+    - please continue
+    - affirm
+    - ye
+    - cont
+    - continu
 
 - intent: deny
   examples: |

@@ -49,20 +49,18 @@ class GenerateDiet(Action):
         nutrients = data_meal['nutrients']
 
         if meals:
-            meals_string = ', \n'.join([f"{a} ({b})" for a, b in zip(meals_title, meals_url)])
-            meals_string = meals_string.rsplit(', ', 1)  # split the last comma and space
-            meals_string = ' and '.join(meals_string)  # join the last two elements with 'and'
-
-            message = f'Your meal plan consists of the following meals to be taken at breakfast, lunch and dinner respectively: \n'
-            message += f'{meals_string}. \n'
+            message = f'Your meal plan consists of the following meals to be taken at breakfast, lunch and dinner respectively.\n'
             message += f'The meal for the day amounts to {nutrients["calories"]} calories (carbohydrates: {int(nutrients["carbohydrates"])}g, protein: {int(nutrients["protein"])}g, fat: {int(nutrients["fat"])}g)'
+            dispatcher.utter_message(text=message)
+
+            for index, (meal_id, meal_title, meal_url) in enumerate(zip(meals_id, meals_title, meals_url), 1):
+                img_url = await API.get_recipe_card(meal_id)
+                meal_string = f'{index}. {meal_title} ({meal_url})\n'
+                dispatcher.utter_message(image=img_url, text=meal_string)
+
         else:
             message = 'No meals found. Please try again.'
-        dispatcher.utter_message(text=message)
-
-        for meal_id in meals_id:
-            img_url = await API.get_recipe_card(meal_id)
-            dispatcher.utter_message(image=img_url)
+            dispatcher.utter_message(text=message)
 
         return [LoopInterrupted(True, None)]
 

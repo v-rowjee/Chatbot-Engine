@@ -20,6 +20,8 @@ nlu:
     - Can you suggest some healthy recipes or resources I can use to supplement a diet plan?
     - hello i want a diet plan plz
     - hello there how do i get my meal plan?
+    - i want another diet
+    - can i get another diet plan please
 - intent: inform_diet
   examples: |
     - [gluten free](diet)
@@ -159,6 +161,7 @@ nlu:
     - [1m 64](height)
     - [1m 78](height)
     - [1m 80](height) [69kg](weight) [45](age) [male](gender)
+    - im [43](age) and [170cm](height) [52kg](weight)
 - intent: inform_activity_level
   examples: |
     - [1](activity_level)
@@ -223,6 +226,7 @@ nlu:
     - give me a [keto]{"entity": "diet", "value": "ketogenic"} diet to lose weight
     - i want a [paleolithic]{"entity": "diet", "value": "paleo"} diet to loss weight
     - i want a [low carb]{"entity": "diet", "value": "low carb"} diet for weight loss
+    - i need a [keto](diet) meal plan to lose weight
 - intent: gain_weight
   examples: |
     - i want to gain weight
@@ -251,6 +255,9 @@ nlu:
     - I'm trying to gain weight.
     - im hoping to gain 5 pounds of muscle
     - im currently underweight
+    - i want a [paleo](diet) meal plan to gain weight
+    - i want a [vegetarian](diet) diet plan to gain muscles mass
+    - i want a [high protein](diet) diet to gain mass
 - intent: maintain_weight
   examples: |
     - i want to maintain my weight
@@ -273,3 +280,5 @@ nlu:
     - i want a healthy diet to stay at my current weight
     - I'm happy with my current weight and just want to maintain it.
     - i need to balance my weight
+    - i want to maintain my weight with a [vegetarian](diet) diet
+    - i want a [keto](diet) diet to maintain my weight
