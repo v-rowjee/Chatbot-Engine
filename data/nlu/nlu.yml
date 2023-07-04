@@ -52,6 +52,14 @@ nlu:
     - [Dietary Approaches to Stop Hypertension]{"entity": "diet", "value": "dash"}
     - [flexitarian](diet) diet
     - [greek](diet) diet
+    - I'm looking for a [vegan](diet) diet.
+    - I've been reading about [intermittent](diet) fasting and I'm wondering if it would be a good option for me
+    - I'm looking for a diet that's based on whole foods and i think the [paleo](diet) diet might be a good fit.
+    - I'm looking for a diet that's based on the [Mediterranean](diet) diet. I've heard it's good for my heart health
+    - looking for a diet that's good for my blood pressure. I've heard the [DASH](diet) diet is a good option
+    - i'm interested in the [plant-based](diet) diet because I think it's healthier for me.
+    - i will need a [whole30](diet) diet
+    - maybe a diet called [primal](diet) diet
 - intent: inform_no_diet
   examples: |
     - idk
@@ -67,6 +75,9 @@ nlu:
     - balanced
     - balance diet
     - im not following any specific diet, but i want a healthy and sustainable meal plan.
+    - whatever
+    - i dont know tbh
+    - i havent yet decided
 - intent: inform_allergens
   examples: |
     - im allergic to [peanut](allergen)
@@ -111,6 +122,7 @@ nlu:
     - correction: no allergies
     - i dont have allergies!
     - allergies: none
+    - no allergens for now
 - intent: inform_details
   examples: |
     - [182cm](height)
@@ -144,6 +156,9 @@ nlu:
     - [1m75](height) [69kg](weight) [22](age) [male](gender)
     - [179cm](height) [70kg](weight) [39](age) [female](gender)
     - [168cm](height) , [65kg](weight) , [40](age) , [female](gender)
+    - [1m 64](height)
+    - [1m 78](height)
+    - [1m 80](height) [69kg](weight) [45](age) [male](gender)
 - intent: inform_activity_level
   examples: |
     - [1](activity_level)
@@ -164,6 +179,13 @@ nlu:
     - activity: [1](activity_level)
     - activity level: [2](activity_level)
     - [3](activity_level) /5
+    - [7](activity_level) /10
+    - [2](activity_level) /5
+    - [1](activity_level)
+    - [2](activity_level)
+    - [3](activity_level)
+    - [4](activity_level)
+    - [5](activity_level)
 - intent: lose_weight
   examples: |
     - i want to lose weight
@@ -189,6 +211,18 @@ nlu:
     - i want to diet to help me lose weight
     - can you give me a diet plan to lose weight fast
     - how can i reduce my weight?
+    - I'm looking to lose weight.
+    - I'm trying to lose weight.
+    - I want to lose 10kg by next month
+    - i want to lose 5 kg
+    - I'm tired of being overweight and I'm ready to make a change
+    - im overweight
+    - I'm looking for a diet that can help me lose weight.
+    - i need a [vegan](diet) diet to lsoe weight
+    - i want a [vegetarian](diet) diet to lose weight
+    - give me a [keto]{"entity": "diet", "value": "ketogenic"} diet to lose weight
+    - i want a [paleolithic]{"entity": "diet", "value": "paleo"} diet to loss weight
+    - i want a [low carb]{"entity": "diet", "value": "low carb"} diet for weight loss
 - intent: gain_weight
   examples: |
     - i want to gain weight
@@ -214,6 +248,9 @@ nlu:
     - goal: gain weight
     - help me with a diet plan to gain weight
     - i need a meal plan to lose weight quickly
+    - I'm trying to gain weight.
+    - im hoping to gain 5 pounds of muscle
+    - im currently underweight
 - intent: maintain_weight
   examples: |
     - i want to maintain my weight
@@ -234,3 +271,5 @@ nlu:
     - goal: maintain weight
     - i want a balanced diet to keep my weight steady
     - i want a healthy diet to stay at my current weight
+    - I'm happy with my current weight and just want to maintain it.
+    - i need to balance my weight

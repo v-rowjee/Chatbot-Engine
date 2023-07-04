@@ -11,6 +11,11 @@ rules:
     - intent: thanks
     - action: utter_more
 
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default
+
 - rule: Activate diet_form
   steps:
     - or:
@@ -18,6 +23,7 @@ rules:
       - intent: inform_diet
       - intent: lose_weight
       - intent: gain_weight
+      - intent: maintain_weight
     - action: diet_form
     - active_loop: diet_form
 

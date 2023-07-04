@@ -1,0 +1,36 @@
+recipe: default.v1
+language: en
+
+pipeline:
+- name: WhitespaceTokenizer
+  intent_tokenization_flag: true
+  intent_split_symbol: "+"
+- name: RegexFeaturizer
+- name: LexicalSyntacticFeaturizer
+- name: CountVectorsFeaturizer
+  analyzer: word
+- name: CountVectorsFeaturizer
+  analyzer: char_wb
+  min_ngram: {min_ngram}
+  max_ngram: {max_ngram}
+- name: DIETClassifier
+  epochs: {epochs_diet}
+  use_masked_language_model: true
+  constrain_similarities: true
+- name: EntitySynonymMapper
+- name: FallbackClassifier
+  threshold: {threshold}
+  ambiguity_threshold: {ambiguity_threshold}
+
+policies:
+- name: MemoizationPolicy
+- name: RulePolicy
+- name: UnexpecTEDIntentPolicy
+  max_history: {max_history}
+  epochs: {epochs_unexpected}
+- name: TEDPolicy
+  max_history: {max_history}
+  epochs: {epochs_ted}
+  constrain_similarities: true
+
+assistant_id: 20230505-140653-annoying-grenade

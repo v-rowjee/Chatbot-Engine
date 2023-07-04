@@ -21,6 +21,11 @@ nlu:
   examples: |
     - keto friendly
     - keto
+- synonym: paleo
+  examples: |
+    - paleo friendly
+    - paleo
+    - paleolithic
 - synonym: peanut
   examples: |
     - nut

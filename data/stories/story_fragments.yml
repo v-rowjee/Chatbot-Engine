@@ -91,3 +91,15 @@ stories:
         - height: 158
     - slot_was_set:
         - weight: 60
+
+- story: user informs height only
+  steps:
+    - slot_was_set:
+        - requested_slot: height
+    - intent: inform_details
+      entities:
+        - height: 1m 64
+    - slot_was_set:
+        - height: 1m 64
+    - slot_was_set:
+        - height: 164

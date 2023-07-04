@@ -31,3 +31,16 @@ class API:
         response = requests.get(url, headers=headers, params=params)
 
         return response.json()
+
+    @staticmethod
+    async def get_recipe_card(recipe_id):
+        url = f'https://api.spoonacular.com/recipes/{recipe_id}/card'
+        api_key = '3bc2008b2a0647d48ef82793932f96f5'
+        params = {
+            'apiKey': api_key
+        }
+        response = requests.get(url, params=params)
+        data = response.json()
+
+        if data["status"] == "success":
+            return data["url"]
