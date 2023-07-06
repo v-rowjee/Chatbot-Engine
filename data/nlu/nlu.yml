@@ -227,6 +227,7 @@ nlu:
     - i want a [paleolithic]{"entity": "diet", "value": "paleo"} diet to loss weight
     - i want a [low carb]{"entity": "diet", "value": "low carb"} diet for weight loss
     - i need a [keto](diet) meal plan to lose weight
+    - i want a [keto](diet) to lose weigh
 - intent: gain_weight
   examples: |
     - i want to gain weight

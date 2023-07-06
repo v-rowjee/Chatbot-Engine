@@ -103,3 +103,15 @@ stories:
         - height: 1m 64
     - slot_was_set:
         - height: 164
+
+- story: user set allergy when confirming
+  steps:
+    - slot_was_set:
+        - requested_slot: confirm
+    - intent: inform_allergens
+      entities:
+        - allergen: seafood
+    - slot_was_set:
+        - allergens: ['seafood']
+    - slot_was_set:
+        - has_allergens: true

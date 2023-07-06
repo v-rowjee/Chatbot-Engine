@@ -49,7 +49,6 @@ slots:
     mappings:
     - type: from_entity
       entity: diet
-      intent: inform_diet
     - type: from_intent
       intent: inform_no_diet
       value: ""
@@ -78,10 +77,8 @@ slots:
     mappings:
     - type: from_entity
       entity: allergen
-      intent: inform_allergens
       conditions:
         - active_loop: diet_form
-          requested_slot: allergens
     - type: from_intent
       intent: inform_no_allergens
       value: []
@@ -110,6 +107,7 @@ slots:
       - type: from_entity
         entity: age
         intent: inform_details
+        not_intent: inform_activity_level
         conditions:
           - active_loop: diet_form
             requested_slot: height
@@ -140,6 +138,7 @@ slots:
       - type: from_entity
         entity: activity_level
         intent: inform_activity_level
+        not_intent: inform_details
         conditions:
           - active_loop: diet_form
             requested_slot: activity_level

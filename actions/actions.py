@@ -62,7 +62,7 @@ class GenerateDiet(Action):
             message = 'No meals found. Please try again.'
             dispatcher.utter_message(text=message)
 
-        return [LoopInterrupted(True, None)]
+        return [SlotSet("confirm", None), LoopInterrupted(True, None)]
 
 
 class ValidateDietForm(FormValidationAction):
@@ -117,7 +117,8 @@ class ValidateDietForm(FormValidationAction):
             if diet in self.diet_db():
                 return {"diet": diet}
             else:
-                dispatcher.utter_message(text=f'Please choose from the following diets: {", ".join(self.diet_db())}.')
+                dispatcher.utter_message(
+                    text=f'Please choose from the following diets: {", ".join(self.diet_db()[1:])}.')
                 return {"diet": None}
 
     def validate_has_allergens(
@@ -141,7 +142,6 @@ class ValidateDietForm(FormValidationAction):
             tracker: Tracker,
             domain: DomainDict,
     ) -> Dict[Text, Any]:
-
         matching_allergens = []
         for item in slot_value:
             matches = difflib.get_close_matches(item, self.intolerances_db(), n=len(self.intolerances_db()), cutoff=0.6)
@@ -152,7 +152,7 @@ class ValidateDietForm(FormValidationAction):
         matching_allergens = list(set(matching_allergens))
 
         if all(allergen in self.intolerances_db() for allergen in matching_allergens):
-            return {"allergens": matching_allergens}
+            return {"has_allergens": True, "allergens": matching_allergens}
         else:
             dispatcher.utter_message(
                 text=f'Unfortunately, we only cater for the following allergens: {", ".join(self.intolerances_db())}.')
@@ -237,16 +237,14 @@ class AskForConfirmation(Action):
         gender = tracker.slots.get("gender")
         activity_level = tracker.slots.get("activity_level")
 
-        message = f"Generating a {diet} diet designed to {goal.replace('_', ' ')} for a {age} year old {gender} who is {height}cm tall and weighs {weight}kg. You are also rated {activity_level}/5 active "
-        if tracker.slots.get("has_allergens") is True:
-            allergens = tracker.slots.get("allergens")
-            if allergens not in [None, []]:
-                message += f"and have the following allergens: {', '.join(allergens)}."
-            else:
-                message += "and have no allergens."
+        message = f"Great! I can now generate a customised diet plan for you. Based on the information you provided, I will create a {diet} diet designed to help you {goal.replace('_', ' ')} at {age} years old. As per your physical attributes, you mentioned being a {gender} standing at {height}cm tall, weighing {weight}kg and being {activity_level * 20}% active. "
+        allergens = tracker.slots.get("allergens")
+        if allergens not in [None, []]:
+            message += f"I will also consider that you are allergic to {', '.join(allergens)}."
         else:
-            message += "and have no allergens."
-        message += " Do you want to continue? If not, please specify any changes you would like to make before generating the meal plan."
+            message += "You also confirm not having any allergies."
+
+        message += "\nDo you want to continue? If not, please specify any changes you would like to make before generating the meal plan."
         dispatcher.utter_message(text=message, buttons=[{"title": "Continue", "payload": "/affirm"}])
         return []
 
@@ -260,7 +258,12 @@ class AskForDetails(Action):
     ) -> List[EventType]:
         slots = ['height', 'weight', 'age', 'gender']
         requested_slots = [slot for slot in slots if tracker.slots.get(slot) is None]
-        dispatcher.utter_message(text="Provide the following information: " + ", ".join(requested_slots))
+        if len(requested_slots) > 1:
+            message = f"Please provide your {', '.join(requested_slots[:-1])} and {requested_slots[-1]}."
+            dispatcher.utter_message(text=message)
+        elif len(requested_slots) == 1:
+            message = f"Please provide your {requested_slots[0]}."
+            dispatcher.utter_message(text=message)
         return []
 
 
