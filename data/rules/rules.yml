@@ -44,3 +44,17 @@ rules:
       - action: action_default_fallback
       - action: diet_form
       - active_loop: diet_form
+
+- rule: respond to FAQs
+  steps:
+  - intent: faq
+  - action: utter_faq
+
+- rule: Form Interruption by FAQs
+  condition:
+      - active_loop: diet_form
+  steps:
+      - intent: faq
+      - action: utter_faq
+      - action: diet_form
+      - active_loop: diet_form

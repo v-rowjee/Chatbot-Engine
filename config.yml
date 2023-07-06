@@ -18,6 +18,10 @@ pipeline:
   use_masked_language_model: true
   constrain_similarities: true
 - name: EntitySynonymMapper
+- name: ResponseSelector
+  epochs: 100
+  constrain_similarities: true
+  retrieval_intent: faq
 - name: FallbackClassifier
   threshold: 0.5518021400481513
   ambiguity_threshold: 0.1979748412038714

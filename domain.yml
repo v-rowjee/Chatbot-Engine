@@ -3,28 +3,29 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- greet
-- affirm
-- deny
-- thanks
-- ask_diet_plan
-- lose_weight
-- gain_weight
-- maintain_weight
-- inform_diet
-- inform_no_diet
-- inform_allergens
-- inform_no_allergens
-- inform_details
-- inform_activity_level
+  - greet
+  - affirm
+  - deny
+  - thanks
+  - ask_diet_plan
+  - lose_weight
+  - gain_weight
+  - maintain_weight
+  - inform_diet
+  - inform_no_diet
+  - inform_allergens
+  - inform_no_allergens
+  - inform_details
+  - inform_activity_level
+  - faq
 entities:
-- diet
-- allergen
-- height
-- weight
-- age
-- gender
-- activity_level
+  - diet
+  - allergen
+  - height
+  - weight
+  - age
+  - gender
+  - activity_level
 slots:
   goal:
     type: categorical
@@ -154,17 +155,19 @@ slots:
             requested_slot: confirm
 forms:
   diet_form:
+    ignored_intents:
+      - faq
     required_slots:
-    - goal
-    - diet
-    - has_allergens
-    - allergens
-    - height
-    - weight
-    - age
-    - gender
-    - activity_level
-    - confirm
+      - goal
+      - diet
+      - has_allergens
+      - allergens
+      - height
+      - weight
+      - age
+      - gender
+      - activity_level
+      - confirm
 actions:
   - action_generate_diet
   - validate_diet_form
@@ -227,3 +230,14 @@ responses:
   - text: Rate your activity level on a scale of 1 to 5. (1 being sedentary and 5 being very active)
   - text: On a scale of 1 to 5, with 1 being sedentary and 5 being very active, how would you rate your current level of physical activity?
   - text: To better understand your current physical activity level, please rate it on a scale of 1 to 5, where 1 signifies a sedentary lifestyle and 5 signifies a highly active lifestyle.
+  utter_faq/ask_is_bot:
+  - text: Hello there, I am an AI-powered chatbot designed to assist you with your diet planning.
+  - text: Hi, I'm your diet recommendation chatbot. You may ask me any query you have regarding your diet.
+  utter_faq/what_can_do:
+  - text: As you diet assistant I can help you build a custom meal plan. Lets get started by creating a meal plan.
+    buttons:
+      - payload: /ask_diet_plan
+        title: Create a Meal Plan
+  utter_faq/high_protein:
+  - text: "Some examples of high protein foods are: \nLean meats \nChicken \nEggs \nNuts \nBeans \nTofu \nDairy Products \n Fish and Seafood"
+  - text: "Here are some examples: \nChicken Breast \nFish \nEgg \nNuts and Seeds \nTofu \nMilk"
