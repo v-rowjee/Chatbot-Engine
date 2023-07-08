@@ -17,4 +17,4 @@
 - Run rasa action server using `rasa run actions` on the other terminal
 
 ## Deploy Using Ngrok
-- Open a third terminal and run `ngrok http --domain=9c13e46fcc38-15980982744599944965.ngrok-free.app 80`
+- Open a third terminal and run `ngrok http --domain=9c13e46fcc38-15980982744599944965.ngrok-free.app 5005`
