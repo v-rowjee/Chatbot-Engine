@@ -1,88 +1,136 @@
 version: "3.1"
 nlu:
+- intent: faq/low_carb
+  examples: |
+    - What are the benefits of a low-carb diet?
+    - what are some low carb food
+- intent: faq/what_can_do
+  examples: |
+    - what can you do?
+    - how do i get started
+- intent: faq/eating_disorder
+  examples: |
+    - How can I stop binge eating?
+- intent: faq/cholesterol
+  examples: |
+    - What is cholesterol, and how does it impact my health?
+    - Can you provide guidance on cholesterol-lowering medications?
+- intent: faq/ask_is_bot
+  examples: |
+    - are you an ai
+    - you are human
+    - is you a real person?
+- intent: faq/diet_options
+  examples: |
+    - can you give me a list of all diets that you have?
+    - what r the diet plans you offer
+- intent: faq/water
+  examples: |
+    - how much water should a man drink daily?
+    - water intake recommendation
+- intent: faq/low_fat
+  examples: |
+    - What are the benefits of a low-fat diet?
+    - Are there any low-fat food sources?
+- intent: faq/high_protein
+  examples: |
+    - How can I increase my protein intake?
+    - what meals are high in protein?
+    - top 5 food with high protein
 - intent: greet
   examples: |
-    - goodevening
-    - hello
-    - let's go
-- intent: inform_no_diet
-  examples: |
-    - im not following any specific diet, but i want a healthy and sustainable meal plan.
-    - i dont have a diet
-    - balanced
-- intent: inform_no_allergens
-  examples: |
-    - can you correct the fact that i do not have any allergies
-    - no dietary restrictions
+    - good morning
+    - moin
+    - hey dude
 - intent: deny
   examples: |
-    - nah
-    - no
+    - non
+    - not at all
     - negative
-- intent: affirm
+- intent: inform_no_allergens
   examples: |
-    - okay
-    - ok
-    - yess
+    - i do not have any restriction on my food
+    - allergies: none
+    - no allergies
 - intent: thanks
   examples: |
-    - tenks
     - thanks for the help
-    - thanx
-- intent: ask_diet_plan
+    - thks
+    - ty
+- intent: inform_no_diet
   examples: |
-    - hello there how do i get my meal plan?
-    - can i have a customized diet meal plan
-    - I need help with meal planning. Can you assist me in creating a well-balanced diet plan?
-    - i need a meal plan
+    - balance diet
+    - balanced
+    - no preference
 - intent: inform_activity_level
   examples: |
-    - i would say maybe [4](activity_level)
-    - [2](activity_level)
-    - [0](activity_level)
+    - [4](activity_level)
+    - [3](activity_level)
+    - [1](activity_level)
+    - [four]{"entity": "activity_level", "value": "4"}
+- intent: affirm
+  examples: |
+    - fine
+    - ye
+    - you may continue
+    - yeah
 - intent: maintain_weight
   examples: |
-    - I want to maintain my current weight, but I'd like a diet plan that supports overall health. Can you help me with that?
+    - my goal is to maintain my weight
     - i want to stay the same
-    - Are there specific portion sizes or calorie ranges I should aim for to sustain my current weight?
-    - Could you provide me with a balanced diet plan that ensures I maintain my weight without any significant fluctuations?
-- intent: lose_weight
+    - I'm happy with my current weight and just want to maintain it.
+    - i want a balanced diet to keep my weight steady
+    - i want to maintain my weight
+- intent: ask_diet_plan
   examples: |
-    - Could you provide me with a weight loss meal plan or some guidance on creating one?
-    - i really want to lose weight
-    - i dont want to be fat
-    - i want to diet to help me lose weight
-    - I'm trying to lose weight. What are some healthy ways to do so?
-- intent: gain_weight
-  examples: |
-    - i need to gain weight fast
-    - bigger muscles
-    - to be bigger
-    - i want to be heavier
+    - I'm looking for a personalized diet plan. Can you create a meal plan tailored to my specific needs and goals?
+    - How can I create a healthy meal plan?
+    - i need a diet
+    - hello there how do i get my meal plan?
+    - Can you suggest a sample diet plan that aligns with my dietary preferences and health goals?
 - intent: inform_allergens
   examples: |
-    - [meat](allergen), [sea food](allergen) and [egg](allergen)
-    - [egg](allergen)
-    - [celery](allergen)
-    - im allergic to [peanut](allergen)
-    - [brocoli](allergen)
+    - [sesame](allergen)
+    - [seafood](allergen)
+    - im allergic to [eggs](allergen)
     - [sesame](allergen) and [soy](allergen)
-- intent: inform_diet
+    - [brocoli](allergen)
+    - [sesame](allergen) [wheat](allergen) and [peanut](allergen)
+- intent: gain_weight
   examples: |
-    - i want a [primal](diet) diet type
-    - [no gluten]{"entity": "diet", "value": "gluten free"}
-    - I'm looking for a [vegan](diet) diet plan.
-    - i [dont eat gluten]{"entity": "diet", "value": "gluten free"}
-    - [paleo](diet) diet
-    - [gluten free](diet)
+    - I'm trying to gain weight.
+    - goal: gain weight
+    - to be bigger
+    - bigger muscles
+    - help me with a diet plan to gain weight
 - intent: inform_details
   examples: |
-    - [1m75](height) [66kg](weight) [25yo]{"entity": "age", "value": "25"} [male](gender)
+    - [1m80](height), [80kg](weight), [18years]{"entity": "age", "value": "18"} [male](gender)
+    - [179cm](height) [70kg](weight) [39](age) [female](gender)
+    - my age is [25](age) years old
     - [175cm](height) and [75kg](weight)
-    - [80kg](weight)
-    - im [168cm](height) tall and weighs [61.5kg](weight)
-    - [155cm](height) and [55kg](weight) and [25yo]{"entity": "age", "value": "25"}
-    - im [168cm](height) and i weigh [60.5kg](weight)
+    - age = [20](age)
+    - height: [1m75](height)
+    - im [45yo]{"entity": "age", "value": "45"}
+- intent: lose_weight
+  examples: |
+    - i want to lose the maximum weight in [1](age) month
+    - i need a [vegan](diet) diet to lsoe weight
+    - i want a [vegetarian](diet) diet to lose weight
+    - I'm struggling to lose weight. What dietary changes do you suggest?
+    - i want to burn all my fat
+    - Can you recommend some effective strategies for weight loss?
+    - give me a [keto]{"entity": "diet", "value": "ketogenic"} diet to lose weight
+    - I'm looking for a diet that can help me lose weight.
+- intent: inform_diet
+  examples: |
+    - [intermittent fasting](diet)
+    - [dash](diet) diet
+    - i am [vegan](diet)
+    - I'm looking for a [vegan](diet) diet.
+    - maybe a diet called [primal](diet) diet
+    - I've been reading about [intermittent](diet) fasting and I'm wondering if it would be a good option for me
+    - [non-veg](diet)
 - synonym: gluten free
   examples: |
     - dont eat gluten
@@ -148,6 +196,11 @@ nlu:
 - synonym: '5'
   examples: |
     - five
+- synonym: paleo
+  examples: |
+    - paleolithic
+    - paleo friendly
+    - paleo
 - synonym: dairy
   examples: |
     - dairy
