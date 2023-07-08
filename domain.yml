@@ -178,14 +178,14 @@ actions:
   - action_ask_confirm
 responses:
   utter_default:
-  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?🤔
   utter_greet:
-  - text: Hi, how can i help you?
+  - text: Hi, how can i help you?👋
     buttons:
     - payload: /ask_diet_plan
       title: Create a Meal Plan
   utter_more:
-  - text: Is there anything else I can help you with?
+  - text: Is there anything else I can help you with?🫡
     buttons:
     - payload: /ask_diet_plan
       title: Create another Meal Plan
@@ -231,13 +231,26 @@ responses:
   - text: On a scale of 1 to 5, with 1 being sedentary and 5 being very active, how would you rate your current level of physical activity?
   - text: To better understand your current physical activity level, please rate it on a scale of 1 to 5, where 1 signifies a sedentary lifestyle and 5 signifies a highly active lifestyle.
   utter_faq/ask_is_bot:
-  - text: Hello there, I am an AI-powered chatbot designed to assist you with your diet planning.
-  - text: Hi, I'm your diet recommendation chatbot. You may ask me any query you have regarding your diet.
+  - text: Hello there, I am an AI-powered chatbot designed to assist you with your diet planning.🤖
+  - text: Hi, I'm your diet recommendation chatbot. You may ask me any query you have regarding your diet.🤖
   utter_faq/what_can_do:
-  - text: As you diet assistant I can help you build a custom meal plan. Lets get started by creating a meal plan.
+  - text: As you diet assistant I can help you build a custom meal plan. Lets get started by creating a meal plan.🤖
     buttons:
       - payload: /ask_diet_plan
         title: Create a Meal Plan
+  utter_faq/diet_options:
+  - text: "There are several popular diet options that people follow but here are the ones I know: Keto, Vegetarian, Lacto-Vegetarian, Ovo-Vegetarian, Vegan, Gluten-free, Paleo, Primal, Pescetarian, Low FODMAP and Whole30."
   utter_faq/high_protein:
   - text: "Some examples of high protein foods are: \nLean meats \nChicken \nEggs \nNuts \nBeans \nTofu \nDairy Products \n Fish and Seafood"
   - text: "Here are some examples: \nChicken Breast \nFish \nEgg \nNuts and Seeds \nTofu \nMilk"
+  - text: "Here are some examples of high-protein foods: lean meats like chicken and turkey, fish such as salmon and tuna, eggs, Greek yogurt, cottage cheese, tofu, lentils, quinoa, nuts, and seeds. These foods are excellent sources of protein and can be incorporated into your meals and snacks."
+  utter_faq/low_carb:
+  - text: "When it comes to low-carb options, you can consider foods like non-starchy vegetables (broccoli, cauliflower), lean meats (chicken breast, lean beef), fish, eggs, avocados, nuts and seeds, healthy fats (olive oil, coconut oil), and low-carb fruits (berries). These choices can help you reduce your carbohydrate intake while still enjoying a variety of nutritious foods."
+  utter_faq/low_fat:
+  - text: "Here are some examples of low-fat food options: skinless chicken breast, fish (such as cod, haddock, or sole), beans and legumes, non-fat or low-fat dairy products (like skim milk and Greek yogurt), tofu, egg whites, fresh fruits and vegetables, whole grains, and lean cuts of meat (such as turkey or sirloin steak). These choices can help you reduce your fat intake while still enjoying a balanced and nutritious diet."
+  utter_faq/water:
+  - text: "Experts recommend that males consume 15.5 cups (3.7 liters) of water daily and females 11.5 cups (2.7 liters). However, environmental factors, physical activity, health and diet may affect your water needs."
+  utter_faq/eating_disorder:
+  - text: "Eating disorders can have severe physical and emotional impacts. It's crucial to seek professional help from a therapist or registered dietitian experienced in eating disorders. Treatment focuses on restoring a healthy relationship with food, addressing underlying emotional factors, and creating balanced meal plans tailored to individual needs."
+  utter_faq/cholesterol:
+  - text: "Cholesterol plays a crucial role in our bodies, but high levels of LDL (bad) cholesterol can increase the risk of heart disease and other health complications. Lifestyle changes, including a heart-healthy diet rich in fiber, healthy fats, and regular physical activity, can help manage cholesterol levels. Medications may be prescribed in some cases."

@@ -1,0 +1,42 @@
+recipe: default.v1
+language: en
+
+pipeline:
+- name: WhitespaceTokenizer
+  intent_tokenization_flag: true
+  intent_split_symbol: "+"
+- name: RegexFeaturizer
+- name: LexicalSyntacticFeaturizer
+- name: CountVectorsFeaturizer
+  analyzer: word
+- name: CountVectorsFeaturizer
+  analyzer: char_wb
+  min_ngram: 2
+  max_ngram: 3
+- name: DIETClassifier
+  epochs: 114
+  use_masked_language_model: true
+  constrain_similarities: true
+- name: EntitySynonymMapper
+- name: ResponseSelector
+  epochs: 74
+  constrain_similarities: true
+  retrieval_intent: faq
+- name: FallbackClassifier
+  threshold: 0.6405888913023852
+  ambiguity_threshold: 0.21525288495953082
+
+policies:
+- name: MemoizationPolicy
+- name: RulePolicy
+- name: UnexpecTEDIntentPolicy
+  max_history: 3
+  epochs: 82
+- name: TEDPolicy
+  max_history: 8
+  epochs: 62
+  split_entities_by_comma:
+    allergen: true
+  constrain_similarities: true
+
+assistant_id: 20230505-140653-annoying-grenade

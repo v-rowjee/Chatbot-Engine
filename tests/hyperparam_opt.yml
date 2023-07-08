@@ -14,23 +14,29 @@ pipeline:
   min_ngram: {min_ngram}
   max_ngram: {max_ngram}
 - name: DIETClassifier
-  epochs: {epochs_diet}
+  epochs: {epochs}
   use_masked_language_model: true
   constrain_similarities: true
 - name: EntitySynonymMapper
+- name: ResponseSelector
+  epochs: {epochs_response_selector}
+  constrain_similarities: true
+  retrieval_intent: faq
 - name: FallbackClassifier
   threshold: {threshold}
-  ambiguity_threshold: {ambiguity_threshold}
+  ambiguity_threshold: {ambiguity}
 
 policies:
 - name: MemoizationPolicy
 - name: RulePolicy
 - name: UnexpecTEDIntentPolicy
-  max_history: {max_history}
+  max_history: {max_history_unexpected}
   epochs: {epochs_unexpected}
 - name: TEDPolicy
-  max_history: {max_history}
+  max_history: {max_history_ted}
   epochs: {epochs_ted}
+  split_entities_by_comma:
+    allergen: true
   constrain_similarities: true
 
 assistant_id: 20230505-140653-annoying-grenade

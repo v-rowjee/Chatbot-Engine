@@ -10,6 +10,9 @@ nlu:
     - r you a human or a bot?
     - am i taking to a chatbot or a real person
     - are you an actual person?
+    - what is your name?
+    - are you a real person or a computer?
+    - is you a real person?
 
 - intent: faq/what_can_do
   examples: |
@@ -23,6 +26,20 @@ nlu:
     - can you help me use the chatbot
     - how do i proceed
 
+- intent: faq/diet_options
+  examples: |
+    - what are the diet options?
+    - what r the diet plans?
+    - what are the diet plans available?
+    - wat are the meal plans you have
+    - what r the diet plans you offer
+    - what are the meal plans you provide?
+    - What are some popular diet options?
+    - Can you tell me about different types of diets?
+    - what diets can i choose?
+    - can you give me a list of all diets that you have?
+    - diet options please
+
 - intent: faq/high_protein
   examples: |
     - can you give me example of food with high protein?
@@ -31,4 +48,78 @@ nlu:
     - food high in protein
     - high protein food
     - i need food with a lot of protein
-    - top 5 food with high protein value
+    - top 5 food with high protein 
+    - Can you give me examples of food with high protein?
+    - What are some high protein food recommendations?
+    - What meals are high in protein?
+    - What are the best sources of protein?
+    - Are there any protein-rich snacks I can have?
+    - How can I increase my protein intake?
+    - Can you suggest some high protein recipe
+    - What are good sources of protein?
+    
+- intent: faq/low_carb
+  examples: |
+    - what are some low carb food
+    - What are some low-carb meal options?
+    - Can you recommend low-carb snacks?
+    - How can I reduce my carbohydrate intake?
+    - Are there any low-carb bread alternatives?
+    - What are the benefits of a low-carb diet?
+    - How can I manage cravings on a low-carb diet?
+
+- intent: faq/low_fat
+  examples: |
+    - what are some low fat food
+    - What are some low-fat meal options?
+    - Can you recommend low-fat snacks?
+    - How can I reduce my fat intake?
+    - Are there any low-fat bread alternatives?
+    - What are the benefits of a low-fat diet?
+    - How can I manage cravings on a low-fat diet?
+    - What are some low-fat food options?
+    - What are some low-fat food options?
+    - Can you recommend low-fat snacks?
+    - How can I reduce the fat content in my meals?
+    - Are there any low-fat cooking techniques I should use?
+    - Can you suggest low-fat dairy alternatives?
+    - Are there any low-fat food sources?
+
+- intent: faq/water
+  examples: |
+    - how much water shoudl i drink?
+    - how much liters should a girl drink?
+    - do i need to drink 4L of water daily?
+    - how much liquid do i need to drink to be healthy
+    - what is the healthy amount of water to drink?
+    - how much water should i drink daily
+    - for a man how much glasses of water do i need?
+    - water consumption
+    - water intake recommendation
+    - how much water should i drink?
+    - how much water should a man drink daily?
+
+- intent: faq/eating_disorder
+  examples: |
+    - What are the signs and symptoms of an eating disorder?
+    - How can i develop a healthier relationship with food?
+    - How can i overcome emotional eating habits?
+    - How can I stop binge eating?
+    - How can I stop purging?
+    - How can i stop restricting my food intake?
+    - i dont want to eat sometimes, what should i do?
+    - what to eat as a person with eating disorder?
+    - how does eatign disorder affect me?
+
+- intent: faq/cholesterol
+  examples: |
+    - What is cholesterol, and how does it impact my health?
+    - What are the differences between LDL and HDL cholesterol?
+    - How can I lower my LDL (bad) cholesterol levels?
+    - Are there any specific foods that can help improve cholesterol levels?
+    - Can you provide guidance on cholesterol-lowering medications?
+    - what can i eat if i have cholesterol?
+    - what can i eat if i have high cholesterol?
+    - what do you recommend for a person with high cholesterol?
+    - having cholesterol, what should i eat?
+    - How does dietary cholesterol impact my blood cholesterol levels?

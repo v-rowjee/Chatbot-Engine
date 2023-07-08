@@ -22,6 +22,13 @@ nlu:
     - hello there how do i get my meal plan?
     - i want another diet
     - can i get another diet plan please
+    - How can I create a healthy meal plan?
+    - Can you provide me with a sample meal plan?
+    - What should a balanced meal consist of?
+    - How can I meal prep for the week?
+    - Are there any meal planning apps you recommend?
+    - Can you suggest meal planning resources?
+    - What are some quick and easy meal ideas?
 - intent: inform_diet
   examples: |
     - [gluten free](diet)

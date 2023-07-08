@@ -418,3 +418,10 @@ stories:
     - requested_slot: null
   - active_loop: null
   - action: action_generate_diet
+
+- story: faq
+  steps:
+    - intent: faq
+    - action: utter_faq
+    - intent: thanks
+    - action: utter_more

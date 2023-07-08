@@ -61,8 +61,8 @@ stories:
     intent: inform_no_diet
   - action: diet_form
   - active_loop: diet_form
-  - user: /affirm
-    intent: affirm
+  - user: /deny
+    intent: deny
   - action: diet_form
   - active_loop: diet_form
   - user: |
@@ -81,18 +81,55 @@ stories:
   - action: diet_form
   - active_loop: diet_form
   - user: |
-      2
-    intent: inform_activity_level
+      im 83kg
+    intent: inform_details
   - action: diet_form
   - active_loop: diet_form
   - user: |
-      im 83kg
-    intent: inform_details
+      2
+    intent: inform_activity_level
   - action: diet_form
   - active_loop: diet_form
   - user: /affirm
     intent: affirm
   - action: diet_form
   - active_loop: null
-  - action: action_utter_slot_values
+  - action: action_generate_diet
+
+- story: Testing trigger form with goal and diet type
+  steps:
+  - user: |
+      can i have a keto diet to lose weight?
+    intent: lose_weight
+  - action: diet_form
+  - active_loop: diet_form
+  - user: /affirm
+    intent: affirm
+  - action: diet_form
+  - active_loop: diet_form
+  - user: |
+      im allergic to egg and seafood
+    intent: inform_allergens
+  - action: diet_form
+  - active_loop: diet_form
+  - user: |
+      1m60 50kg 30yrs old female
+    intent: inform_details
+  - action: diet_form
+  - active_loop: diet_form
+  - user: |
+      2
+    intent: inform_activity_level
+  - action: diet_form
+  - active_loop: diet_form
+  - user: |
+      im allergic to egg only
+    intent: inform_allergens
+  - action: diet_form
+  - active_loop: diet_form
+  - user: |
+      yes
+    intent: affirm
+  - action: diet_form
+  - active_loop: null
   - action: action_generate_diet
