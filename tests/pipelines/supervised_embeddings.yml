@@ -10,7 +10,7 @@ pipeline:
 - name: CountVectorsFeaturizer
 - name: CountVectorsFeaturizer
   analyzer: char_wb
-  min_ngram: 1
+  min_ngram: 2
   max_ngram: 4
 - name: DIETClassifier
   epochs: 100
@@ -21,7 +21,7 @@ pipeline:
   constrain_similarities: true
   retrieval_intent: faq
 - name: FallbackClassifier
-  threshold: 0.7
+  threshold: 0.6
   ambiguity_threshold: 0.1
 
 policies:

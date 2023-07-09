@@ -1,34 +1,58 @@
 version: "3.1"
 stories:
+- story: Testing trigger form with goal and diet type (.\tests\test_stories.yml)
+  steps:
+  - intent: lose_weight  # predicted: lose_weight: can i have a [keto]{"entity": "diet", "value": "ketogenic"} diet to lose weight?
+  - action: diet_form
+  - active_loop: diet_form
+  - intent: affirm
+  - action: diet_form
+  - active_loop: diet_form
+  - intent: inform_allergens  # predicted: inform_allergens: im allergic to [egg](allergen) and [seafood](allergen)
+  - action: diet_form
+  - active_loop: diet_form
+  - intent: inform_details  # predicted: inform_details: [1m60](height) [50kg](weight) [30yrs](age) old [female](gender)
+  - action: diet_form
+  - active_loop: diet_form
+  - intent: inform_activity_level  # predicted: inform_activity_level: [2](activity_level)
+  - action: diet_form
+  - active_loop: diet_form
+  - intent: inform_allergens  # predicted: inform_allergens: im allergic to [egg](allergen) only
+  - action: diet_form
+  - active_loop: diet_form
+  - intent: affirm
+  - action: diet_form
+  - active_loop: null
+  - action: action_generate_diet
 - story: happy path 1 (.\hpvenv\Lib\site-packages\rasa\cli\initial_project\tests\test_stories.yml)
   steps:
   - intent: greet
   - action: utter_greet
   - intent: mood_great  # predicted: nlu_fallback: amazing
-  - action: utter_happy  # predicted: action_listen
+  - action: utter_happy  # predicted: action_default_fallback
 - story: happy path 2 (.\hpvenv\Lib\site-packages\rasa\cli\initial_project\tests\test_stories.yml)
   steps:
   - intent: greet
   - action: utter_greet
   - intent: mood_great  # predicted: nlu_fallback: amazing
-  - action: utter_happy  # predicted: action_listen
+  - action: utter_happy  # predicted: action_default_fallback
   - intent: goodbye  # predicted: affirm: bye-bye!
-  - action: utter_goodbye  # predicted: action_listen
+  - action: utter_goodbye  # predicted: action_default_fallback
 - story: sad path 1 (.\hpvenv\Lib\site-packages\rasa\cli\initial_project\tests\test_stories.yml)
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_unhappy  # predicted: deny: not good
-  - action: utter_cheer_up  # predicted: action_listen
+  - intent: mood_unhappy  # predicted: nlu_fallback: not good
+  - action: utter_cheer_up  # predicted: action_default_fallback
   - action: utter_did_that_help  # predicted: action_listen
   - intent: affirm
-  - action: utter_happy  # predicted: action_listen
+  - action: utter_happy  # predicted: action_default_fallback
 - story: sad path 2 (.\hpvenv\Lib\site-packages\rasa\cli\initial_project\tests\test_stories.yml)
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_unhappy  # predicted: deny: not good
-  - action: utter_cheer_up  # predicted: action_listen
+  - intent: mood_unhappy  # predicted: nlu_fallback: not good
+  - action: utter_cheer_up  # predicted: action_default_fallback
   - action: utter_did_that_help  # predicted: action_listen
   - intent: deny
   - action: utter_goodbye  # predicted: diet_form
@@ -36,8 +60,8 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_unhappy  # predicted: inform_diet: very terrible
-  - action: utter_cheer_up  # predicted: action_listen
+  - intent: mood_unhappy  # predicted: inform_diet: very [terrible](diet)
+  - action: utter_cheer_up  # predicted: action_default_fallback
   - action: utter_did_that_help  # predicted: action_listen
   - intent: deny
   - action: utter_goodbye  # predicted: diet_form
@@ -47,7 +71,7 @@ stories:
   - action: utter_goodbye  # predicted: action_listen
 - story: bot challenge (.\hpvenv\Lib\site-packages\rasa\cli\initial_project\tests\test_stories.yml)
   steps:
-  - intent: bot_challenge  # predicted: nlu_fallback: are you a bot?
+  - intent: bot_challenge  # predicted: faq/ask_is_bot: are you a bot?
   - action: utter_iamabot  # predicted: action_listen
 - story: Test for weight gain keto diet with no allergens (.\tests\test_stories.yml)
   steps:
@@ -65,7 +89,7 @@ stories:
   - intent: deny
   - action: diet_form
   - active_loop: diet_form
-  - intent: inform_details  # predicted: inform_details: im [1m68](height) tall, weigh [45kg](weight) and im a [19 year](age) old [girl]{"entity": "gender", "value": "female"}.
+  - intent: inform_details  # predicted: inform_details: im [1m68](height) tall, weigh [45kg](weight) and im a [19](age) year old [girl]{"entity": "gender", "value": "female"}.
   - action: diet_form
   - active_loop: diet_form
   - intent: inform_activity_level  # predicted: inform_activity_level: [2](activity_level)
@@ -89,7 +113,7 @@ stories:
   - intent: inform_no_diet
   - action: diet_form
   - active_loop: diet_form
-  - intent: affirm
+  - intent: deny
   - action: diet_form
   - active_loop: diet_form
   - intent: inform_details  # predicted: inform_details: im [1m88](height)
@@ -98,17 +122,16 @@ stories:
   - intent: inform_details  # predicted: inform_details: im [82kg](weight)
   - action: diet_form
   - active_loop: diet_form
-  - intent: inform_details  # predicted: inform_details: [36yrs](age) old [man]{"entity": "gender", "value": "male"}
-  - action: diet_form
-  - active_loop: diet_form
-  - intent: inform_activity_level  # predicted: inform_activity_level: [2](activity_level)
+  - intent: inform_details  # predicted: inform_details: [36yrs](height) old [man]{"entity": "gender", "value": "male"}
   - action: diet_form
   - active_loop: diet_form
   - intent: inform_details  # predicted: inform_details: im [83kg](weight)
   - action: diet_form
   - active_loop: diet_form
-  - intent: confirm  # predicted: affirm: yes
+  - intent: inform_activity_level  # predicted: inform_activity_level: [2](activity_level)
+  - action: diet_form
+  - active_loop: diet_form
+  - intent: affirm
   - action: diet_form
   - active_loop: null
-  - action: action_utter_slot_values  # predicted: action_generate_diet
-  - action: action_generate_diet  # predicted: action_listen
+  - action: action_generate_diet

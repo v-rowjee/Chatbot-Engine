@@ -1,0 +1,137 @@
+version: "3.1"
+stories:
+- story: Testing trigger form with goal and diet type (.\tests\test_stories.yml)
+  steps:
+  - intent: lose_weight  # predicted: lose_weight: can i have a [keto]{"entity": "diet", "value": "ketogenic"} diet to lose weight?
+  - action: diet_form
+  - active_loop: diet_form
+  - intent: affirm
+  - action: diet_form
+  - active_loop: diet_form
+  - intent: inform_allergens  # predicted: inform_allergens: im allergic to [egg](allergen) and [seafood](allergen)
+  - action: diet_form
+  - active_loop: diet_form
+  - intent: inform_details  # predicted: inform_details: [1m60](height) [50kg](weight) [30yrs](age) old [female](gender)
+  - action: diet_form
+  - active_loop: diet_form
+  - intent: inform_activity_level  # predicted: inform_activity_level: [2](activity_level)
+  - action: diet_form
+  - active_loop: diet_form
+  - intent: inform_allergens  # predicted: inform_allergens: im allergic to [egg](allergen) [only](allergen)
+  - action: diet_form
+  - active_loop: diet_form
+  - intent: affirm
+  - action: diet_form
+  - active_loop: null
+  - action: action_generate_diet
+- story: happy path 1 (.\hpvenv\Lib\site-packages\rasa\cli\initial_project\tests\test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great  # predicted: nlu_fallback: amazing
+  - action: utter_happy  # predicted: utter_faq
+- story: happy path 2 (.\hpvenv\Lib\site-packages\rasa\cli\initial_project\tests\test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great  # predicted: nlu_fallback: amazing
+  - action: utter_happy  # predicted: utter_faq
+  - intent: goodbye  # predicted: affirm: bye-bye!
+  - action: utter_goodbye  # predicted: action_default_fallback
+- story: sad path 1 (.\hpvenv\Lib\site-packages\rasa\cli\initial_project\tests\test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy  # predicted: deny: not good
+  - action: utter_cheer_up  # predicted: utter_faq
+  - action: utter_did_that_help  # predicted: action_listen
+  - intent: affirm
+  - action: utter_happy  # predicted: action_listen
+- story: sad path 2 (.\hpvenv\Lib\site-packages\rasa\cli\initial_project\tests\test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy  # predicted: deny: not good
+  - action: utter_cheer_up  # predicted: utter_faq
+  - action: utter_did_that_help  # predicted: action_listen
+  - intent: deny
+  - action: utter_goodbye  # predicted: utter_faq/ask_is_bot
+- story: sad path 3 (.\hpvenv\Lib\site-packages\rasa\cli\initial_project\tests\test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy  # predicted: inform_diet: very terrible
+  - action: utter_cheer_up  # predicted: utter_faq
+  - action: utter_did_that_help  # predicted: action_listen
+  - intent: deny
+  - action: utter_goodbye  # predicted: utter_faq/what_can_do
+- story: say goodbye (.\hpvenv\Lib\site-packages\rasa\cli\initial_project\tests\test_stories.yml)
+  steps:
+  - intent: goodbye  # predicted: affirm: bye-bye!
+  - action: utter_goodbye  # predicted: action_default_fallback
+- story: bot challenge (.\hpvenv\Lib\site-packages\rasa\cli\initial_project\tests\test_stories.yml)
+  steps:
+  - intent: bot_challenge  # predicted: faq/ask_is_bot: are you a bot?
+  - action: utter_iamabot  # predicted: action_default_fallback
+- story: Test for weight gain keto diet with no allergens (.\tests\test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_diet_plan
+  - action: diet_form
+  - active_loop: diet_form
+  - intent: gain_weight
+  - action: diet_form
+  - active_loop: diet_form
+  - intent: inform_diet  # predicted: inform_diet: i want a [keto]{"entity": "diet", "value": "ketogenic"} diet
+  - action: diet_form
+  - active_loop: diet_form
+  - intent: deny
+  - action: diet_form
+  - active_loop: diet_form
+  - intent: inform_details  # predicted: inform_details: im [1m68](height) tall, weigh [45kg](weight) and im a [19](age) [year](age) old [girl]{"entity": "gender", "value": "female"}.
+  - action: diet_form
+  - active_loop: diet_form
+  - intent: inform_activity_level  # predicted: inform_activity_level: [2](activity_level)
+  - action: diet_form
+  - active_loop: diet_form
+  - intent: confirm  # predicted: affirm: yes
+  - action: diet_form
+  - active_loop: null
+  - action: action_utter_slot_values  # predicted: action_generate_diet
+  - action: action_generate_diet  # predicted: action_listen
+  - intent: thanks
+  - action: utter_more
+- story: Test to maintain weight, diet with allergic to peanut (.\tests\test_stories.yml)
+  steps:
+  - intent: ask_diet_plan
+  - action: diet_form
+  - active_loop: diet_form
+  - intent: gain_weight
+  - action: diet_form
+  - active_loop: diet_form
+  - intent: inform_no_diet
+  - action: diet_form
+  - active_loop: diet_form
+  - intent: deny
+  - action: diet_form
+  - active_loop: diet_form
+  - intent: inform_details  # predicted: inform_details: im [1m88](height)
+  - action: diet_form
+  - active_loop: diet_form
+  - intent: inform_details  # predicted: inform_details: im [82kg](weight)
+  - action: diet_form
+  - active_loop: diet_form
+  - intent: inform_details  # predicted: inform_details: 36yrs old [man]{"entity": "gender", "value": "male"}
+  - action: diet_form
+  - active_loop: diet_form
+  - intent: inform_details  # predicted: inform_details: im [83kg](weight)
+  - action: diet_form
+  - active_loop: diet_form
+  - intent: inform_activity_level  # predicted: inform_activity_level: [2](activity_level)
+  - action: diet_form
+  - active_loop: diet_form
+  - intent: affirm
+  - action: diet_form
+  - active_loop: null
+  - action: action_generate_diet

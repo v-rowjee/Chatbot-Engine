@@ -1,0 +1,50 @@
+[
+  {
+    "text": "what diets can i choose?",
+    "intent_response_key_target": "faq/diet_options",
+    "intent_response_key_prediction": {
+      "name": "faq/what_can_do",
+      "confidence": 0.9521679282188416
+    }
+  },
+  {
+    "text": "i dont want to eat sometimes, what should i do?",
+    "intent_response_key_target": "faq/eating_disorder",
+    "intent_response_key_prediction": {
+      "name": "faq/what_can_do",
+      "confidence": 0.9784241914749146
+    }
+  },
+  {
+    "text": "what is your purpose",
+    "intent_response_key_target": "faq/what_can_do",
+    "intent_response_key_prediction": {
+      "name": "faq/ask_is_bot",
+      "confidence": 0.9543597102165222
+    }
+  },
+  {
+    "text": "How can I reduce my carbohydrate intake?",
+    "intent_response_key_target": "faq/low_carb",
+    "intent_response_key_prediction": {
+      "name": "faq/low_fat",
+      "confidence": 0.9753222465515137
+    }
+  },
+  {
+    "text": "Are there any low-fat bread alternatives?",
+    "intent_response_key_target": "faq/low_fat",
+    "intent_response_key_prediction": {
+      "name": "faq/low_carb",
+      "confidence": 0.766567587852478
+    }
+  },
+  {
+    "text": "what is your name?",
+    "intent_response_key_target": "faq/ask_is_bot",
+    "intent_response_key_prediction": {
+      "name": "faq/what_can_do",
+      "confidence": 0.9813306927680969
+    }
+  }
+]

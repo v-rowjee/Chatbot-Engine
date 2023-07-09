@@ -11,7 +11,7 @@ pipeline:
   analyzer: word
 - name: CountVectorsFeaturizer
   analyzer: char_wb
-  min_ngram: 2
+  min_ngram: 1
   max_ngram: 4
 - name: DIETClassifier
   epochs: 114
@@ -19,22 +19,22 @@ pipeline:
   constrain_similarities: true
 - name: EntitySynonymMapper
 - name: ResponseSelector
-  epochs: 74
+  epochs: 50
   constrain_similarities: true
   retrieval_intent: faq
 - name: FallbackClassifier
-  threshold: 0.6405888913023852
-  ambiguity_threshold: 0.21525288495953082
+  threshold: 0.7569526543855203
+  ambiguity_threshold: 0.24489580046481124
 
 policies:
 - name: MemoizationPolicy
 - name: RulePolicy
 - name: UnexpecTEDIntentPolicy
-  max_history: 3
-  epochs: 82
-- name: TEDPolicy
   max_history: 8
-  epochs: 62
+  epochs: 65
+- name: TEDPolicy
+  max_history: 9
+  epochs: 70
   split_entities_by_comma:
     allergen: true
   constrain_similarities: true

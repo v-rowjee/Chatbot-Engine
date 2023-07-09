@@ -1,98 +1,26 @@
 {
-  "ask_diet_plan": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 2
-  },
-  "mood_unhappy": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 3
-  },
-  "None": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 12
-  },
-  "deny": {
-    "precision": 0.6,
-    "recall": 1.0,
-    "f1-score": 0.7499999999999999,
-    "support": 3
-  },
-  "utter_iamabot": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 1
-  },
-  "affirm": {
-    "precision": 0.3333333333333333,
-    "recall": 1.0,
-    "f1-score": 0.5,
-    "support": 2
-  },
   "utter_happy": {
     "precision": 0.0,
     "recall": 0.0,
     "f1-score": 0.0,
     "support": 3
   },
-  "utter_goodbye": {
+  "bot_challenge": {
     "precision": 0.0,
     "recall": 0.0,
     "f1-score": 0.0,
-    "support": 4
-  },
-  "goodbye": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 2
-  },
-  "utter_greet": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 6
-  },
-  "gain_weight": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 2
-  },
-  "utter_more": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
     "support": 1
+  },
+  "utter_did_that_help": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3
   },
   "inform_no_diet": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 1
-  },
-  "thanks": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 1
-  },
-  "greet": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 6
-  },
-  "bot_challenge": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
     "support": 1
   },
   "mood_great": {
@@ -101,53 +29,65 @@
     "f1-score": 0.0,
     "support": 2
   },
-  "action_utter_slot_values": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 2
-  },
-  "inform_activity_level": {
+  "gain_weight": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 2
   },
-  "utter_did_that_help": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 3
+  "diet_form": {
+    "precision": 0.9230769230769231,
+    "recall": 1.0,
+    "f1-score": 0.9600000000000001,
+    "support": 24
   },
   "action_listen": {
-    "precision": 0.7142857142857143,
+    "precision": 0.875,
     "recall": 1.0,
-    "f1-score": 0.8333333333333333,
-    "support": 35
+    "f1-score": 0.9333333333333333,
+    "support": 42
   },
-  "diet_form": {
-    "precision": 0.8947368421052632,
+  "affirm": {
+    "precision": 0.5714285714285714,
     "recall": 1.0,
-    "f1-score": 0.9444444444444444,
-    "support": 17
+    "f1-score": 0.7272727272727273,
+    "support": 4
   },
-  "utter_cheer_up": {
+  "greet": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 6
+  },
+  "lose_weight": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 1
+  },
+  "ask_diet_plan": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2
+  },
+  "utter_iamabot": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+  },
+  "action_utter_slot_values": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+  },
+  "mood_unhappy": {
     "precision": 0.0,
     "recall": 0.0,
     "f1-score": 0.0,
     "support": 3
-  },
-  "confirm": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 2
-  },
-  "action_generate_diet": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 2
   },
   "inform_diet": {
     "precision": 0.5,
@@ -155,35 +95,107 @@
     "f1-score": 0.6666666666666666,
     "support": 1
   },
+  "inform_activity_level": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 3
+  },
+  "utter_cheer_up": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3
+  },
+  "action_generate_diet": {
+    "precision": 0.6666666666666666,
+    "recall": 0.6666666666666666,
+    "f1-score": 0.6666666666666666,
+    "support": 3
+  },
+  "utter_more": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 1
+  },
+  "None": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 22
+  },
+  "utter_goodbye": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 4
+  },
+  "confirm": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+  },
+  "inform_allergens": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2
+  },
+  "deny": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4
+  },
+  "thanks": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 1
+  },
+  "utter_greet": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 6
+  },
+  "goodbye": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2
+  },
   "inform_details": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 5
+    "support": 6
   },
   "micro avg": {
-    "precision": 0.7706422018348624,
-    "recall": 0.6774193548387096,
-    "f1-score": 0.7210300429184548,
-    "support": 124
+    "precision": 0.8925619834710744,
+    "recall": 0.6967741935483871,
+    "f1-score": 0.7826086956521738,
+    "support": 155
   },
   "macro avg": {
-    "precision": 0.4460131811009004,
-    "recall": 0.5185185185185185,
-    "f1-score": 0.47016460905349794,
-    "support": 124
+    "precision": 0.535730074523178,
+    "recall": 0.5747126436781609,
+    "f1-score": 0.5501358411703239,
+    "support": 155
   },
   "weighted avg": {
-    "precision": 0.5578805885681947,
-    "recall": 0.6774193548387096,
-    "f1-score": 0.6059587813620071,
-    "support": 124
+    "precision": 0.6367068415455512,
+    "recall": 0.6967741935483871,
+    "f1-score": 0.663327468230694,
+    "support": 155
   },
-  "accuracy": 0.6774193548387096,
+  "accuracy": 0.6967741935483871,
   "conversation_accuracy": {
     "accuracy": 0.0,
     "correct": 0,
     "with_warnings": 0,
-    "total": 9
+    "total": 10
   }
 }

@@ -169,6 +169,9 @@ nlu:
     - [1m 78](height)
     - [1m 80](height) [69kg](weight) [45](age) [male](gender)
     - im [43](age) and [170cm](height) [52kg](weight)
+    - height : [1m 64cm](height)
+    - weight: [52kg](weight)
+    - age : [34](age)
 - intent: inform_activity_level
   examples: |
     - [1](activity_level)

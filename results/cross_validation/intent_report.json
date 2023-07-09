@@ -1,154 +1,161 @@
 {
-  "ask_diet_plan": {
-    "precision": 0.7894736842105263,
-    "recall": 0.8333333333333334,
-    "f1-score": 0.8108108108108109,
-    "support": 18,
-    "confused_with": {
-      "inform_no_diet": 1,
-      "greet": 1
-    }
+  "inform_no_allergens": {
+    "precision": 0.9333333333333333,
+    "recall": 1.0,
+    "f1-score": 0.9655172413793104,
+    "support": 14,
+    "confused_with": {}
   },
-  "gain_weight": {
-    "precision": 0.7619047619047619,
-    "recall": 0.6956521739130435,
-    "f1-score": 0.7272727272727272,
-    "support": 23,
+  "inform_allergens": {
+    "precision": 0.9166666666666666,
+    "recall": 0.8148148148148148,
+    "f1-score": 0.8627450980392156,
+    "support": 27,
     "confused_with": {
-      "lose_weight": 4,
-      "maintain_weight": 2
-    }
-  },
-  "inform_activity_level": {
-    "precision": 0.9285714285714286,
-    "recall": 0.7222222222222222,
-    "f1-score": 0.8125000000000001,
-    "support": 18,
-    "confused_with": {
-      "deny": 2,
+      "thanks": 2,
       "affirm": 2
     }
   },
-  "inform_no_allergens": {
-    "precision": 0.8125,
-    "recall": 1.0,
-    "f1-score": 0.896551724137931,
-    "support": 13,
-    "confused_with": {}
-  },
-  "inform_no_diet": {
-    "precision": 0.6363636363636364,
-    "recall": 0.5384615384615384,
-    "f1-score": 0.5833333333333334,
-    "support": 13,
+  "inform_diet": {
+    "precision": 0.8888888888888888,
+    "recall": 0.8205128205128205,
+    "f1-score": 0.8533333333333333,
+    "support": 39,
     "confused_with": {
-      "deny": 2,
+      "ask_diet_plan": 4,
+      "faq": 3
+    }
+  },
+  "maintain_weight": {
+    "precision": 0.7727272727272727,
+    "recall": 0.7727272727272727,
+    "f1-score": 0.7727272727272727,
+    "support": 22,
+    "confused_with": {
+      "gain_weight": 2,
+      "lose_weight": 1
+    }
+  },
+  "affirm": {
+    "precision": 0.5714285714285714,
+    "recall": 0.7272727272727273,
+    "f1-score": 0.64,
+    "support": 22,
+    "confused_with": {
+      "greet": 2,
       "maintain_weight": 1
     }
   },
-  "inform_details": {
-    "precision": 0.96875,
-    "recall": 1.0,
-    "f1-score": 0.9841269841269841,
-    "support": 31,
-    "confused_with": {}
-  },
-  "thanks": {
-    "precision": 0.65,
-    "recall": 0.8125,
-    "f1-score": 0.7222222222222223,
-    "support": 16,
-    "confused_with": {
-      "deny": 2,
-      "affirm": 1
-    }
-  },
   "deny": {
-    "precision": 0.5384615384615384,
-    "recall": 0.5,
-    "f1-score": 0.5185185185185186,
+    "precision": 0.8,
+    "recall": 0.5714285714285714,
+    "f1-score": 0.6666666666666666,
     "support": 14,
     "confused_with": {
-      "thanks": 3,
-      "affirm": 2
+      "thanks": 2,
+      "inform_no_diet": 2
     }
   },
-  "greet": {
-    "precision": 0.8888888888888888,
-    "recall": 0.6153846153846154,
-    "f1-score": 0.7272727272727274,
-    "support": 13,
+  "thanks": {
+    "precision": 0.7777777777777778,
+    "recall": 0.875,
+    "f1-score": 0.823529411764706,
+    "support": 16,
+    "confused_with": {
+      "gain_weight": 1,
+      "faq": 1
+    }
+  },
+  "inform_no_diet": {
+    "precision": 0.7857142857142857,
+    "recall": 0.6875,
+    "f1-score": 0.7333333333333334,
+    "support": 16,
+    "confused_with": {
+      "maintain_weight": 1,
+      "faq": 1
+    }
+  },
+  "inform_details": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 35,
+    "confused_with": {}
+  },
+  "inform_activity_level": {
+    "precision": 0.9375,
+    "recall": 0.75,
+    "f1-score": 0.8333333333333334,
+    "support": 20,
     "confused_with": {
       "affirm": 5
     }
   },
-  "inform_diet": {
-    "precision": 1.0,
-    "recall": 0.8666666666666667,
-    "f1-score": 0.9285714285714286,
-    "support": 30,
+  "gain_weight": {
+    "precision": 0.8571428571428571,
+    "recall": 0.8275862068965517,
+    "f1-score": 0.8421052631578947,
+    "support": 29,
     "confused_with": {
-      "maintain_weight": 1,
-      "inform_no_diet": 1
+      "maintain_weight": 2,
+      "lose_weight": 1
     }
   },
-  "maintain_weight": {
-    "precision": 0.7619047619047619,
-    "recall": 0.8888888888888888,
-    "f1-score": 0.8205128205128205,
-    "support": 18,
+  "greet": {
+    "precision": 0.8181818181818182,
+    "recall": 0.6923076923076923,
+    "f1-score": 0.7500000000000001,
+    "support": 13,
     "confused_with": {
-      "lose_weight": 1,
-      "inform_no_diet": 1
-    }
-  },
-  "affirm": {
-    "precision": 0.52,
-    "recall": 0.8666666666666667,
-    "f1-score": 0.65,
-    "support": 15,
-    "confused_with": {
-      "thanks": 1,
-      "maintain_weight": 1
+      "affirm": 3,
+      "inform_diet": 1
     }
   },
   "lose_weight": {
-    "precision": 0.782608695652174,
-    "recall": 0.782608695652174,
-    "f1-score": 0.782608695652174,
-    "support": 23,
+    "precision": 0.9117647058823529,
+    "recall": 0.8378378378378378,
+    "f1-score": 0.8732394366197184,
+    "support": 37,
     "confused_with": {
-      "gain_weight": 3,
-      "inform_details": 1
+      "maintain_weight": 1,
+      "inform_diet": 1
     }
   },
-  "inform_allergens": {
-    "precision": 1.0,
-    "recall": 0.8148148148148148,
-    "f1-score": 0.8979591836734693,
-    "support": 27,
+  "ask_diet_plan": {
+    "precision": 0.7586206896551724,
+    "recall": 0.7586206896551724,
+    "f1-score": 0.7586206896551724,
+    "support": 29,
     "confused_with": {
-      "thanks": 2,
-      "inform_no_allergens": 1
+      "faq": 6,
+      "inform_no_diet": 1
     }
   },
-  "accuracy": 0.8014705882352942,
+  "faq": {
+    "precision": 0.8818181818181818,
+    "recall": 1.0,
+    "f1-score": 0.9371980676328503,
+    "support": 97,
+    "confused_with": {}
+  },
+  "accuracy": 0.8534883720930233,
   "macro avg": {
-    "precision": 0.7885305282826939,
-    "recall": 0.7812285440002833,
-    "f1-score": 0.7758757982932248,
-    "support": 272
+    "precision": 0.8407710032811454,
+    "recall": 0.8090405755635641,
+    "f1-score": 0.8208232765095205,
+    "support": 430
   },
   "weighted avg": {
-    "precision": 0.8210419177754221,
-    "recall": 0.8014705882352942,
-    "f1-score": 0.8036174317347348,
-    "support": 272
+    "precision": 0.8576413934143071,
+    "recall": 0.8534883720930233,
+    "f1-score": 0.8522564820810062,
+    "support": 430
   },
   "micro avg": {
-    "precision": 0.8014705882352942,
-    "recall": 0.8014705882352942,
-    "f1-score": 0.8014705882352942,
-    "support": 272
+    "precision": 0.8534883720930233,
+    "recall": 0.8534883720930233,
+    "f1-score": 0.8534883720930233,
+    "support": 430
   }
 }

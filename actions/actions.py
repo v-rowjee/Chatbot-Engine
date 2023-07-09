@@ -112,7 +112,7 @@ class ValidateDietForm(FormValidationAction):
         if tracker.get_intent_of_latest_message() in ["inform_no_diet", "deny"]:
             return {"diet": ""}
         else:
-            diet_matches = difflib.get_close_matches(slot_value.lower(), self.diet_db())
+            diet_matches = difflib.get_close_matches(slot_value.lower(), self.diet_db(), cutoff=0.8)
             diet = diet_matches[0] if diet_matches else None
             if diet in self.diet_db():
                 return {"diet": diet}
