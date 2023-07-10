@@ -19,12 +19,12 @@ pipeline:
   constrain_similarities: true
 - name: EntitySynonymMapper
 - name: ResponseSelector
-  epochs: 74
+  epochs: 52
   constrain_similarities: true
   retrieval_intent: faq
 - name: FallbackClassifier
-  threshold: 0.6405888913023852
-  ambiguity_threshold: 0.21525288495953082
+  threshold: 0.7405888913023852
+  ambiguity_threshold: 0.11525288495953082
 
 policies:
 - name: MemoizationPolicy

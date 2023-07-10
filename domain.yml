@@ -7,6 +7,7 @@ intents:
   - affirm
   - deny
   - thanks
+  - get_started
   - ask_diet_plan
   - lose_weight
   - gain_weight
@@ -179,16 +180,25 @@ actions:
 responses:
   utter_default:
   - text: I'm sorry, I didn't quite understand that. Could you rephrase?🤔
+  utter_get_started:
+  - text: "Hello there, I'm Cibo! My goal is to help you create your personalized meal plan based on your goals and preferences.🍽️\n\nIn order to achieve this, I will need to ask you some questions about your weight goal, dietary preference, any allergies you may have and your physical attribute.📝\n\nLet's get started!🤗"
+    buttons:
+    - payload: /ask_diet_plan
+      title: Create a Meal Plan🍽️
   utter_greet:
   - text: Hi, how can i help you?👋
     buttons:
+    - payload: /get_started
+      title: Let's get started!🤩
     - payload: /ask_diet_plan
-      title: Create a Meal Plan
+      title: Create a Meal Plan🍽️
   utter_more:
   - text: Is there anything else I can help you with?🫡
     buttons:
     - payload: /ask_diet_plan
-      title: Create another Meal Plan
+      title: Create another Meal Plan🍽️
+    - payload: /restart
+      title: Start a New Meal Plan🔄
   utter_ask_goal:
   - text: In terms of weight goals, are you primarily interested in weight loss, weight gain or maintaining your current weight?
     buttons:
@@ -233,11 +243,6 @@ responses:
   utter_faq/ask_is_bot:
   - text: Hello there, I am an AI-powered chatbot designed to assist you with your diet planning.🤖
   - text: Hi, I'm your diet recommendation chatbot. You may ask me any query you have regarding your diet.🤖
-  utter_faq/what_can_do:
-  - text: As you diet assistant I can help you build a custom meal plan. Lets get started by creating a meal plan.🤖
-    buttons:
-      - payload: /ask_diet_plan
-        title: Create a Meal Plan
   utter_faq/diet_options:
   - text: "There are several popular diet options that people follow but here are the ones I know: Keto, Vegetarian, Lacto-Vegetarian, Ovo-Vegetarian, Vegan, Gluten-free, Paleo, Primal, Pescetarian, Low FODMAP and Whole30."
   utter_faq/high_protein:
