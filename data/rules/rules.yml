@@ -1,15 +1,21 @@
 version: "3.1"
 
 rules:
-- rule: greetings
+- rule: Greetings
   steps:
     - intent: greet
     - action: utter_greet
 
-- rule: ending conversation
+- rule: Ending conversation
   steps:
     - intent: thanks
     - action: utter_more
+
+- rule: Tell user how the chatbot works
+  conversation_start: true  # this rule only applies at the beginning of a conversation
+  steps:
+    - intent: get_started
+    - action: utter_get_started
 
 - rule: Ask the user to rephrase whenever they send a message with low NLU confidence
   steps:

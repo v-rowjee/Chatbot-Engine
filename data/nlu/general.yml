@@ -76,3 +76,21 @@ nlu:
     - thanks for the help
     - thatwas very helpful thank you
     - thank again
+
+- intent: get_started
+  examples: |
+    - lets get started
+    - how do i start?
+    - hwo do i create a new diet plan
+    - what can you do?
+    - what can i do?
+    - what is your purpose
+    - what are the task you can do?
+    - what must i do?
+    - how do i start
+    - how do i get started
+    - can you help me use the chatbot
+    - how do i proceed
+    - what must i say?
+    - what can i say
+    - Let's get started!🤩

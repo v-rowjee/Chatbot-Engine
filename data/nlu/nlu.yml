@@ -29,6 +29,8 @@ nlu:
     - Are there any meal planning apps you recommend?
     - Can you suggest meal planning resources?
     - What are some quick and easy meal ideas?
+    - Create a Meal Plan🍽️
+    - Create another Meal Plan🍽️
 - intent: inform_diet
   examples: |
     - [gluten free](diet)

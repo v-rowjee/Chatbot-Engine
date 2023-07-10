@@ -14,18 +14,6 @@ nlu:
     - are you a real person or a computer?
     - is you a real person?
 
-- intent: faq/what_can_do
-  examples: |
-    - what can you do?
-    - what can i do?
-    - what is your purpose
-    - what are the task you can do?
-    - what must i do?
-    - how do i start
-    - how do i get started
-    - can you help me use the chatbot
-    - how do i proceed
-
 - intent: faq/diet_options
   examples: |
     - what are the diet options?
