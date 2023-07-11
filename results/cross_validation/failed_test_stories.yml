@@ -46,7 +46,7 @@ stories:
   - action: utter_cheer_up  # predicted: action_default_fallback
   - action: utter_did_that_help  # predicted: action_listen
   - intent: affirm
-  - action: utter_happy  # predicted: action_default_fallback
+  - action: utter_happy  # predicted: diet_form
 - story: sad path 2 (.\hpvenv\Lib\site-packages\rasa\cli\initial_project\tests\test_stories.yml)
   steps:
   - intent: greet
@@ -60,7 +60,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_unhappy  # predicted: inform_diet: very [terrible](diet)
+  - intent: mood_unhappy  # predicted: inform_diet: very terrible
   - action: utter_cheer_up  # predicted: action_default_fallback
   - action: utter_did_that_help  # predicted: action_listen
   - intent: deny
@@ -68,11 +68,11 @@ stories:
 - story: say goodbye (.\hpvenv\Lib\site-packages\rasa\cli\initial_project\tests\test_stories.yml)
   steps:
   - intent: goodbye  # predicted: affirm: bye-bye!
-  - action: utter_goodbye  # predicted: action_listen
+  - action: utter_goodbye  # predicted: utter_faq
 - story: bot challenge (.\hpvenv\Lib\site-packages\rasa\cli\initial_project\tests\test_stories.yml)
   steps:
   - intent: bot_challenge  # predicted: faq/ask_is_bot: are you a bot?
-  - action: utter_iamabot  # predicted: action_listen
+  - action: utter_iamabot  # predicted: utter_faq
 - story: Test for weight gain keto diet with no allergens (.\tests\test_stories.yml)
   steps:
   - intent: greet
@@ -89,7 +89,7 @@ stories:
   - intent: deny
   - action: diet_form
   - active_loop: diet_form
-  - intent: inform_details  # predicted: inform_details: im [1m68](height) tall, weigh [45kg](weight) and im a [19](age) year old [girl]{"entity": "gender", "value": "female"}.
+  - intent: inform_details  # predicted: inform_details: im [1m68](height) tall, weigh [45kg](weight) and im a [19](age) [year](age) old [girl]{"entity": "gender", "value": "female"}.
   - action: diet_form
   - active_loop: diet_form
   - intent: inform_activity_level  # predicted: inform_activity_level: [2](activity_level)
@@ -122,7 +122,7 @@ stories:
   - intent: inform_details  # predicted: inform_details: im [82kg](weight)
   - action: diet_form
   - active_loop: diet_form
-  - intent: inform_details  # predicted: inform_details: [36yrs](height) old [man]{"entity": "gender", "value": "male"}
+  - intent: inform_details  # predicted: inform_details: 36yrs old [man]{"entity": "gender", "value": "male"}
   - action: diet_form
   - active_loop: diet_form
   - intent: inform_details  # predicted: inform_details: im [83kg](weight)

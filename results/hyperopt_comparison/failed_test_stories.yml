@@ -17,7 +17,7 @@ stories:
   - intent: inform_activity_level  # predicted: inform_activity_level: [2](activity_level)
   - action: diet_form
   - active_loop: diet_form
-  - intent: inform_allergens  # predicted: inform_allergens: im allergic to [egg](allergen) [only](allergen)
+  - intent: inform_allergens  # predicted: inform_allergens: im allergic to [egg](allergen) only
   - action: diet_form
   - active_loop: diet_form
   - intent: affirm
@@ -29,50 +29,50 @@ stories:
   - intent: greet
   - action: utter_greet
   - intent: mood_great  # predicted: nlu_fallback: amazing
-  - action: utter_happy  # predicted: utter_faq
+  - action: utter_happy  # predicted: action_default_fallback
 - story: happy path 2 (.\hpvenv\Lib\site-packages\rasa\cli\initial_project\tests\test_stories.yml)
   steps:
   - intent: greet
   - action: utter_greet
   - intent: mood_great  # predicted: nlu_fallback: amazing
-  - action: utter_happy  # predicted: utter_faq
+  - action: utter_happy  # predicted: action_default_fallback
   - intent: goodbye  # predicted: affirm: bye-bye!
   - action: utter_goodbye  # predicted: action_default_fallback
 - story: sad path 1 (.\hpvenv\Lib\site-packages\rasa\cli\initial_project\tests\test_stories.yml)
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_unhappy  # predicted: deny: not good
-  - action: utter_cheer_up  # predicted: utter_faq
+  - intent: mood_unhappy  # predicted: nlu_fallback: not good
+  - action: utter_cheer_up  # predicted: action_default_fallback
   - action: utter_did_that_help  # predicted: action_listen
   - intent: affirm
-  - action: utter_happy  # predicted: action_listen
+  - action: utter_happy  # predicted: diet_form
 - story: sad path 2 (.\hpvenv\Lib\site-packages\rasa\cli\initial_project\tests\test_stories.yml)
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_unhappy  # predicted: deny: not good
-  - action: utter_cheer_up  # predicted: utter_faq
+  - intent: mood_unhappy  # predicted: nlu_fallback: not good
+  - action: utter_cheer_up  # predicted: action_default_fallback
   - action: utter_did_that_help  # predicted: action_listen
   - intent: deny
-  - action: utter_goodbye  # predicted: utter_faq/ask_is_bot
+  - action: utter_goodbye  # predicted: diet_form
 - story: sad path 3 (.\hpvenv\Lib\site-packages\rasa\cli\initial_project\tests\test_stories.yml)
   steps:
   - intent: greet
   - action: utter_greet
   - intent: mood_unhappy  # predicted: inform_diet: very terrible
-  - action: utter_cheer_up  # predicted: utter_faq
+  - action: utter_cheer_up  # predicted: action_default_fallback
   - action: utter_did_that_help  # predicted: action_listen
   - intent: deny
-  - action: utter_goodbye  # predicted: utter_faq/what_can_do
+  - action: utter_goodbye  # predicted: diet_form
 - story: say goodbye (.\hpvenv\Lib\site-packages\rasa\cli\initial_project\tests\test_stories.yml)
   steps:
   - intent: goodbye  # predicted: affirm: bye-bye!
-  - action: utter_goodbye  # predicted: action_default_fallback
+  - action: utter_goodbye  # predicted: utter_faq
 - story: bot challenge (.\hpvenv\Lib\site-packages\rasa\cli\initial_project\tests\test_stories.yml)
   steps:
   - intent: bot_challenge  # predicted: faq/ask_is_bot: are you a bot?
-  - action: utter_iamabot  # predicted: action_default_fallback
+  - action: utter_iamabot  # predicted: utter_faq
 - story: Test for weight gain keto diet with no allergens (.\tests\test_stories.yml)
   steps:
   - intent: greet

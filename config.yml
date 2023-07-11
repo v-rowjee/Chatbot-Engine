@@ -11,30 +11,30 @@ pipeline:
   analyzer: word
 - name: CountVectorsFeaturizer
   analyzer: char_wb
-  min_ngram: 2
+  min_ngram: 1
   max_ngram: 4
 - name: DIETClassifier
-  epochs: 114
+  epochs: 149
   use_masked_language_model: true
   constrain_similarities: true
 - name: EntitySynonymMapper
 - name: ResponseSelector
-  epochs: 52
+  epochs: 86
   constrain_similarities: true
   retrieval_intent: faq
 - name: FallbackClassifier
-  threshold: 0.7405888913023852
-  ambiguity_threshold: 0.11525288495953082
+  threshold: 0.7973361237181544
+  ambiguity_threshold: 0.17741814379002124
 
 policies:
 - name: MemoizationPolicy
 - name: RulePolicy
 - name: UnexpecTEDIntentPolicy
   max_history: 3
-  epochs: 82
+  epochs: 91
 - name: TEDPolicy
-  max_history: 8
-  epochs: 62
+  max_history: 9
+  epochs: 57
   split_entities_by_comma:
     allergen: true
   constrain_similarities: true

@@ -2,390 +2,398 @@ version: "3.1"
 nlu:
 - intent: faq/low_carb
   examples: |
-    - Can you recommend low-carb snacks?
     - What are some low-carb meal options?
     - Are there any low-carb bread alternatives?
+    - Can you recommend low-carb snacks?
     - How can I reduce my carbohydrate intake?
-    - How can I manage cravings on a low-carb diet?
-- intent: faq/what_can_do
-  examples: |
-    - what must i do?
-    - can you help me use the chatbot
-    - what can i do?
-    - how do i start
-    - how do i proceed
-    - what is your purpose
-    - what are the task you can do?
+    - What are the benefits of a low-carb diet?
 - intent: faq/eating_disorder
   examples: |
-    - How can I stop purging?
-    - How can i overcome emotional eating habits?
-    - What are the signs and symptoms of an eating disorder?
-    - how does eatign disorder affect me?
-    - How can i develop a healthier relationship with food?
-    - i dont want to eat sometimes, what should i do?
-    - what to eat as a person with eating disorder?
     - How can i stop restricting my food intake?
+    - How can I stop purging?
+    - How can i develop a healthier relationship with food?
+    - How can i overcome emotional eating habits?
+    - how does eatign disorder affect me?
+    - what to eat as a person with eating disorder?
+    - What are the signs and symptoms of an eating disorder?
 - intent: faq/cholesterol
   examples: |
-    - How can I lower my LDL (bad) cholesterol levels?
+    - what can i eat if i have cholesterol?
+    - What is cholesterol, and how does it impact my health?
+    - Are there any specific foods that can help improve cholesterol levels?
+    - How does dietary cholesterol impact my blood cholesterol levels?
+    - Can you provide guidance on cholesterol-lowering medications?
+    - having cholesterol, what should i eat?
     - What are the differences between LDL and HDL cholesterol?
     - what do you recommend for a person with high cholesterol?
-    - How does dietary cholesterol impact my blood cholesterol levels?
-    - Are there any specific foods that can help improve cholesterol levels?
-    - having cholesterol, what should i eat?
-    - what can i eat if i have cholesterol?
-    - what can i eat if i have high cholesterol?
 - intent: faq/ask_is_bot
   examples: |
     - am i talking to a bot?
-    - r you a human or a bot?
-    - am i taking to a chatbot or a real person
-    - are you a real person or a computer?
-    - are you a bot
-    - are you an actual person?
     - am i talking to a human?
-    - what is your name?
+    - are you a real person or a computer?
+    - am i taking to a chatbot or a real person
+    - are you a bot
+    - you are human
+    - is you a real person?
+    - are you an ai
+    - are you an actual person?
 - intent: faq/diet_options
   examples: |
-    - what are the diet options?
-    - What are some popular diet options?
     - Can you tell me about different types of diets?
-    - what diets can i choose?
-    - diet options please
-    - what r the diet plans?
-    - wat are the meal plans you have
+    - what r the diet plans you offer
+    - What are some popular diet options?
     - what are the meal plans you provide?
+    - wat are the meal plans you have
     - what are the diet plans available?
+    - what r the diet plans?
+    - what are the diet options?
+    - can you give me a list of all diets that you have?
 - intent: faq/water
   examples: |
     - how much water should i drink daily
-    - what is the healthy amount of water to drink?
     - how much liters should a girl drink?
-    - how much water shoudl i drink?
-    - for a man how much glasses of water do i need?
-    - how much liquid do i need to drink to be healthy
+    - how much water should a man drink daily?
     - water consumption
+    - what is the healthy amount of water to drink?
     - how much water should i drink?
-    - do i need to drink 4L of water daily?
+    - how much water shoudl i drink?
+    - water intake recommendation
+    - how much liquid do i need to drink to be healthy
 - intent: faq/low_fat
   examples: |
-    - Can you recommend low-fat snacks?
-    - How can I reduce the fat content in my meals?
-    - What are some low-fat meal options?
+    - What are the benefits of a low-fat diet?
     - How can I reduce my fat intake?
-    - Can you suggest low-fat dairy alternatives?
+    - What are some low-fat meal options?
     - What are some low-fat food options?
     - Are there any low-fat bread alternatives?
-    - what are some low fat food
-    - How can I manage cravings on a low-fat diet?
+    - Can you suggest low-fat dairy alternatives?
+    - How can I reduce the fat content in my meals?
     - Are there any low-fat cooking techniques I should use?
+    - what are some low fat food
 - intent: faq/high_protein
   examples: |
-    - What are the best sources of protein?
-    - can you give me example of food with high protein?
     - i need food with a lot of protein
+    - What are some high protein food recommendations?
+    - what meals are high in protein?
+    - top 5 food with high protein
+    - Can you give me examples of food with high protein?
+    - can you give me example of food with high protein?
+    - Can you suggest some high protein recipe
+    - Are there any protein-rich snacks I can have?
+    - How can I increase my protein intake?
     - high protein food
     - What meals are high in protein?
-    - What are good sources of protein?
-    - Can you give me examples of food with high protein?
-    - Are there any protein-rich snacks I can have?
-    - Can you suggest some high protein recipe
-    - What are some high protein food recommendations?
-    - what are some high protein food recommendation
     - food high in protein
 - intent: greet
   examples: |
-    - good afternoon
-    - hey there
-    - hello there
+    - hey dude
     - hello
+    - moin
+    - good morning
     - goodevening
+    - hey
+    - hey there
+    - good evening
     - let's go
     - goodmorning
-    - good evening
-    - hey
     - hi
 - intent: deny
   examples: |
-    - no thank you
-    - no
     - never
-    - not really
-    - nope
-    - no thanks
-    - no way
-    - no im not
-    - nah
-    - i dont think so
     - none
+    - no way
+    - i dont think so
+    - no thanks
+    - not at all
+    - nah
+    - non
+    - nope
+    - no
+    - not really
 - intent: inform_no_allergens
   examples: |
-    - correction: no allergies
+    - no allergies
     - btw i dont have any allegies anymore
+    - allergies: none
+    - no dietary restrictions
+    - correction: no allergies
     - no allergy
     - i dont have any food allergies
-    - i dont have any allergies
-    - no allergen
-    - can you correct the fact that i do not have any allergies
-    - no allergens for now
-    - no food allergies
     - i dont have allergies!
-    - no dietary restrictions
+    - i dont have any allergies
+    - can you correct the fact that i do not have any allergies
+    - no allergen
+- intent: get_started
+  examples: |
+    - lets get started
+    - can you help me use the chatbot
+    - Let's get started!🤩
+    - how do i start?
+    - what can i do?
+    - how do i proceed
+    - what can you do?
+    - how do i get started
+    - what is your purpose
+    - what must i do?
+    - what must i say?
+    - what can i say
 - intent: thanks
   examples: |
-    - tysm
-    - tenks
     - tanku
-    - tanks
+    - thanx
     - thank you so much
+    - thanks for the help
+    - thank you
+    - thks
+    - tanks
+    - sanks
+    - thanks!
+    - tenks
     - fanks
     - thank again
-    - thanx
-    - thanks!
-    - thank you
-    - sanks
-    - thatwas very helpful thank you
-    - thank1
+    - ty
 - intent: inform_no_diet
   examples: |
-    - i dont know tbh
-    - i do not have a specific diet yet
+    - i dont have a diet
+    - balanced
     - i dont have a specific diet
-    - i dont know
     - idk
-    - i dont have a preference
-    - i havent yet decided
-    - nothing specific
     - I prefer a balanced diet that includes a variety of food groups.
+    - i dont know
+    - nothing specific
+    - i dont know tbh
+    - no preference
     - im not following any specific diet, but i want a healthy and sustainable meal plan.
     - whatever
-    - no pref
-    - i dont have a diet
+    - i do not have a specific diet yet
+    - i dont have a preference
 - intent: inform_activity_level
   examples: |
-    - [0](activity_level)
-    - [3](activity_level) /5
-    - [one]{"entity": "activity_level", "value": "1"}
     - [2](activity_level)
     - activity level: [2](activity_level)
-    - i would say maybe [4](activity_level)
-    - [1](activity_level) or [2](activity_level)
-    - [5](activity_level)
+    - activity: [1](activity_level)
+    - [one]{"entity": "activity_level", "value": "1"}
+    - [two]{"entity": "activity_level", "value": "2"}
+    - [3](activity_level)
     - [three]{"entity": "activity_level", "value": "3"}
     - [five]{"entity": "activity_level", "value": "5"}
-    - [two]{"entity": "activity_level", "value": "2"}
-    - [2](activity_level) /5
-    - say [1](activity_level)
-    - [3](activity_level) maybe
+    - [4](activity_level)
+    - [0](activity_level)
+    - [3](activity_level) /5
+    - [1](activity_level) or [2](activity_level)
     - [7](activity_level) /10
-    - activity: [1](activity_level)
+    - [1](activity_level)
+    - [3](activity_level) maybe
+    - [5](activity_level)
 - intent: affirm
   examples: |
-    - yea
-    - ok
-    - yes
-    - please continue
-    - all good
-    - tes
-    - affirm
-    - continue
-    - ofc
-    - sure
-    - of course
     - yess
-    - okay
-    - good
-    - continu
-    - yeaah
     - cont
+    - ye
+    - ofc
+    - okay
+    - tes
+    - continu
+    - yes
+    - of course
+    - good
+    - ok
+    - affirm
+    - yeah
     - yep
+    - all good
+    - yea
+    - fine
 - intent: maintain_weight
   examples: |
-    - im good with my weight
-    - my weight is good
-    - i want to keep my weight
-    - i need to balance my weight
-    - Could you provide some examples of a typical day's meal plan for weight maintenance, including breakfast, lunch and dinner?
     - i dont want to change my weight
+    - im good with my weight
+    - Could you provide some examples of a typical day's meal plan for weight maintenance, including breakfast, lunch and dinner?
     - Are there specific portion sizes or calorie ranges I should aim for to sustain my current weight?
-    - my weight is fine
-    - i want to maintain my weight with a [vegetarian](diet) diet
-    - I want to maintain my current weight, but I'd like a diet plan that supports overall health. Can you help me with that?
     - i want a [keto](diet) diet to maintain my weight
-    - i want a healthy diet to stay at my current weight
-    - I'm happy with my weight, but I'd like to eat healthier. Can you help me with that?
+    - i want to keep my weight
     - nothing
-    - Could you provide me with a balanced diet plan that ensures I maintain my weight without any significant fluctuations?
-    - goal: maintain weight
+    - i want to maintain my weight with a [vegetarian](diet) diet
+    - my weight is good
+    - my weight is fine
     - weight is good
-- intent: ask_diet_plan
-  examples: |
-    - Are there any meal planning apps you recommend?
-    - What should a balanced meal consist of?
-    - What are some quick and easy meal ideas?
-    - can i get a diet plan
-    - can i have a customized diet meal plan
-    - How can I meal prep for the week?
-    - What are the food I should consider when developing a diet plan for myself?
-    - I need help with meal planning. Can you assist me in creating a well-balanced diet plan?
-    - recommend me a mean plan
-    - help me to creat a diet
-    - hello i want a diet plan plz
-    - i need a meal plan
-    - i want a diet plan
-    - i need advice on what to eat
-    - give me a planned meal
-    - i want another diet
-    - Can you suggest some healthy recipes or resources I can use to supplement a diet plan?
-    - Can you suggest meal planning resources?
-    - can you recomand me a diet
-    - Could you provide me with a comprehensive diet plan that includes breakfast, lunch, dinner, and snacks?
-    - can i get another diet plan please
-    - Can you provide me with a sample meal plan?
+    - I'm happy with my weight, but I'd like to eat healthier. Can you help me with that?
+    - i want a healthy diet to stay at my current weight
+    - I'm happy with my current weight and just want to maintain it.
+    - Could you provide me with a balanced diet plan that ensures I maintain my weight without any significant fluctuations?
+    - my goal is to maintain my weight
+    - i need to balance my weight
+    - goal: maintain weight
 - intent: inform_allergens
   examples: |
-    - i cant eat [nuts](allergen)
-    - im allergic to [peanut](allergen)
-    - im allergic to [sulfite](allergen)
-    - [nuts](allergen) and [egg](allergen)
-    - [meat](allergen), [sea food](allergen) and [egg](allergen)
-    - [soy](allergen)
     - [dairy](allergen) products
-    - [grain](allergen)
-    - [sulfite](allergen)
-    - [eggs]{"entity": "allergen", "value": "egg"} and [peanut](allergen)
-    - [tree nut](allergen)
     - [sesame](allergen) and [egg](allergen)
-    - [egg](allergen)
-    - [lupin](allergen) and [wheat](allergen)
-    - no [fish](allergen) and [egg](allergen)
-    - [egg](allergen) and [sesame](allergen)
-    - [peanuts](allergen) allergies
-    - [mollusks](allergen)
     - [sesame](allergen) and [tree nut](allergen)
-    - [celery](allergen)
+    - [eggs]{"entity": "allergen", "value": "egg"} and [peanut](allergen)
+    - im allergic to [peanut](allergen)
+    - [egg](allergen) and [sesame](allergen)
+    - no [fish](allergen) and [egg](allergen)
     - [wheat](allergen)
+    - [sulfite](allergen)
+    - [grain](allergen)
+    - [sesame](allergen) [wheat](allergen) and [peanut](allergen)
+    - [nuts](allergen) and [egg](allergen)
+    - im allergic to [eggs](allergen)
+    - [egg](allergen)
+    - im allergic to [sulfite](allergen)
+    - [seafood](allergen)
+    - [sesame](allergen) and [soy](allergen)
+    - [brocoli](allergen)
+    - [mollusks](allergen)
+    - [peanuts](allergen) allergies
+    - [tree nut](allergen)
+    - i cant eat [nuts](allergen)
+- intent: ask_diet_plan
+  examples: |
+    - can i get another diet plan please
+    - I'm looking for a personalized diet plan. Can you create a meal plan tailored to my specific needs and goals?
+    - can i get a diet plan
+    - give me a planned meal
+    - I need help with meal planning. Can you assist me in creating a well-balanced diet plan?
+    - hello there how do i get my meal plan?
+    - can i have a customized diet meal plan
+    - i want a diet plan
+    - Can you suggest some healthy recipes or resources I can use to supplement a diet plan?
+    - Can you suggest a sample diet plan that aligns with my dietary preferences and health goals?
+    - hello i want a diet plan plz
+    - What are the food I should consider when developing a diet plan for myself?
+    - Could you provide me with a comprehensive diet plan that includes breakfast, lunch, dinner, and snacks?
+    - How can I create a healthy meal plan?
+    - Create a Meal Plan🍽️
+    - i need a meal plan
+    - Create another Meal Plan🍽️
+    - What should a balanced meal consist of?
+    - How can I meal prep for the week?
+    - help me to creat a diet
+    - i want another diet
+    - i need a diet
+    - can you recomand me a diet
 - intent: gain_weight
   examples: |
-    - i need to gain weight fast
-    - my goal is to gain weight
-    - i want to gain weight
-    - can i get more mass
-    - gain weight
-    - i want a [vegetarian](diet) diet plan to gain muscles mass
-    - i want to gain weight fast
-    - i want som more weight
-    - Could you suggest some high-calorie foods or snacks that I can incorporate into my diet?
-    - i want to gain muscle mass
-    - i want to be bigger
-    - i want a [paleo](diet) meal plan to gain weight
-    - how do i gain weight
+    - to be bigger
     - im currently underweight
-    - How can I maintain a balanced diet while still focusing on gaining weight?
+    - i want to gain weight fast
+    - i want a [vegetarian](diet) diet plan to gain muscles mass
     - im trying to gain weight. What are some healthy ways to do so?
-    - i want a [high protein](diet) diet to gain mass
-    - im hoping to gain 5 pounds of muscle
     - i want to gain muscles
-    - im lightweight, how to get more weight
+    - gain weight
+    - I'm trying to gain weight.
+    - i need to gain weight fast
     - i want to be heavier
-    - i need a meal plan to lose weight quickly
+    - i want som more weight
     - i am too skinny
-    - What r some healthy ways to gain weight?
-- intent: inform_details
-  examples: |
-    - [65kg](weight)
-    - im a [21yo]{"entity": "age", "value": "21"} [male](gender)
-    - [1m 80](height) [69kg](weight) [45](age) [male](gender)
-    - im [1m80](height), [70kg](weight) [21year](age) old and im a [man]{"entity": "gender", "value": "male"}
-    - [168cm](height) , [65kg](weight) , [40](age) , [female](gender)
-    - im [1m69](height) i weigh [45kg](weight) i have [21yo](age) and im a [girl]{"entity": "gender", "value": "female"}
-    - im [1m82](height)
-    - im arounnd [5 feet 10 inches](height), weigh [200 pounds](weight), [non-binary](gender), and [22 years](age) old
-    - [80kg](weight)
-    - [182cm](height)
-    - im [168cm](height) tall and weighs [61.5kg](weight)
-    - gender [male](gender)
-    - [1m75](height) [69kg](weight) [22](age) [male](gender)
-    - heihgt of [1m69](height)
-    - im [1m60](height), i weigh [60kg](weight) i have [23](age) and im a [girl]{"entity": "gender", "value": "female"}
-    - im [43](age) and [170cm](height) [52kg](weight)
-    - im a [43yr](age) old [man]{"entity": "gender", "value": "male"} and im [1m70](height) and [70.4kg](weight)
-    - im [168cm](height) and i weigh [60.5kg](weight)
-    - [1m 64](height)
-    - I'm [6 feet](height) tall, weigh [180 pounds](weight), identify as [male](gender), and I'm [28 years](age) old.
-    - age: [51](age)
-    - [155cm](height) and [55kg](weight) and [25yo]{"entity": "age", "value": "25"}
-    - [1m 78](height)
-    - [1m75](height) [66kg](weight) [25yo]{"entity": "age", "value": "25"} [male](gender)
-    - yes and im a [19](age) years old [girl]{"entity": "gender", "value": "female"}
-    - weight : [75kg](weight)
-    - age [34](age)
-    - [1m70](height) and [70kg](weight) and [20](age) years old
+    - bigger muscles
+    - i want to gain weight
+    - i want to gain muscle mass
+    - im hoping to gain 5 pounds of muscle
+    - how do i gain weight
+    - How can I maintain a balanced diet while still focusing on gaining weight?
+    - my goal is to gain weight
+    - i want a [paleo](diet) meal plan to gain weight
+    - Could you suggest some high-calorie foods or snacks that I can incorporate into my diet?
+    - can i get more mass
+    - i want a [high protein](diet) diet to gain mass
 - intent: lose_weight
   examples: |
-    - i want to lse weight
-    - lose weight
-    - i want a [low carb](diet) diet for weight loss
-    - I'm looking to lose weight.
+    - give me a [keto]{"entity": "diet", "value": "ketogenic"} diet to lose weight
     - im overweight
-    - im obese
-    - how can i reduce my weight?
-    - i want a [paleolithic]{"entity": "diet", "value": "paleo"} diet to loss weight
-    - Could you provide me with a weight loss meal plan or some guidance on creating one?
-    - how to burn fat
-    - how to loose fat
-    - I'm tired of being overweight and I'm ready to make a change
-    - i want to lose 5 kg
-    - goal: loose weight
     - can you give me a diet plan to lose weight fast
-    - im too fat
-    - I want to lose 10kg by next month
-    - i really want to lose weight
-    - loss fat quickly
+    - Can you recommend some effective strategies for weight loss?
+    - i want a [low carb](diet) diet for weight loss
+    - im obese
     - I'm trying to lose weight.
-    - I'm trying to lose weight. What are some healthy ways to do so?
-    - how to lose weight?
-    - i want to diet to help me lose weight
-    - i want a [keto](diet) to lose weigh
-    - i dont want to be fat
+    - how to burn fat
+    - lose weight
     - help me loss weight
-    - i want to lose weight
+    - I'm looking for a diet that can help me lose weight.
+    - how to lose weight?
+    - how can i reduce my weight?
+    - I'm tired of being overweight and I'm ready to make a change
     - i need a [keto](diet) meal plan to lose weight
     - my goal is to loose weight
+    - loss fat quickly
+    - i want a [keto](diet) to lose weigh
+    - i want to diet to help me lose weight
+    - i want to lse weight
+    - i want a [vegetarian](diet) diet to lose weight
+    - Could you provide me with a weight loss meal plan or some guidance on creating one?
+    - i want to burn all my fat
+    - I'm trying to lose weight. What are some healthy ways to do so?
+    - im too fat
+    - I'm looking to lose weight.
+    - i want a [paleolithic]{"entity": "diet", "value": "paleo"} diet to loss weight
+    - i want to lose 5 kg
+    - i need a [vegan](diet) diet to lsoe weight
+    - i dont want to be fat
 - intent: inform_diet
   examples: |
-    - [vegetarian](diet)
-    - [primal](diet) diet
-    - i [dont eat gluten]{"entity": "diet", "value": "gluten free"}
-    - [greek](diet) diet
-    - i want a [veg]{"entity": "diet", "value": "vegetarian"} diet
-    - [paleo](diet) diet
-    - [gluten free](diet)
+    - [dash](diet) diet
+    - I'm looking for a [vegan](diet) diet.
     - [pescatarian](diet)
     - i will need a [whole30](diet) diet
-    - i'm interested in the [plant-based](diet) diet because I think it's healthier for me.
-    - im [veg]{"entity": "diet", "value": "vegetarian"}
-    - [veggie]{"entity": "diet", "value": "vegetarian"}
-    - [Dietary Approaches to Stop Hypertension]{"entity": "diet", "value": "dash"}
+    - [keto]{"entity": "diet", "value": "ketogenic"} diet
+    - [intermittent fasting](diet)
+    - i want a [keto]{"entity": "diet", "value": "ketogenic"} diet
+    - [veg]{"entity": "diet", "value": "vegetarian"}
+    - [whole30](diet) diet
     - I'm looking for a [vegan](diet) diet plan.
+    - [keto]{"entity": "diet", "value": "ketogenic"}
+    - i want a [veg]{"entity": "diet", "value": "vegetarian"} diet
     - im looking for a [paleo](diet) diet
     - [Mediterranean](diet) Diet
-    - [flexitarian](diet) diet
-    - [keto]{"entity": "diet", "value": "ketogenic"} diet
-    - [whole30](diet) diet
-    - [veg]{"entity": "diet", "value": "vegetarian"}
-    - [non-vegetarian](diet)
-    - [ketogenic](diet) meal plan
-    - im looking for a [mediteranean]{"entity": "diet", "value": "mediterranean"} diet
-    - [keto]{"entity": "diet", "value": "ketogenic"}
-    - looking for a diet that's good for my blood pressure. I've heard the [DASH](diet) diet is a good option
-    - a [keto-friendly]{"entity": "diet", "value": "ketogenic"} meal plan would be great.
-    - I'm looking for a diet that's based on whole foods and i think the [paleo](diet) diet might be a good fit.
+    - i [dont eat gluten]{"entity": "diet", "value": "gluten free"}
+    - [Dietary Approaches to Stop Hypertension]{"entity": "diet", "value": "dash"}
+    - [paleo](diet) diet
+    - [non-veg](diet)
+    - i am [vegan](diet)
+    - [veggie]{"entity": "diet", "value": "vegetarian"}
+    - [greek](diet) diet
     - i want a [primal](diet) diet type
-    - i want a [keto]{"entity": "diet", "value": "ketogenic"} diet
-    - [no gluten]{"entity": "diet", "value": "gluten free"}
     - I'm looking for a diet that's based on the [Mediterranean](diet) diet. I've heard it's good for my heart health
+    - I'm looking for a diet that's based on whole foods and i think the [paleo](diet) diet might be a good fit.
+    - i'm interested in the [plant-based](diet) diet because I think it's healthier for me.
+    - I've been reading about [intermittent](diet) fasting and I'm wondering if it would be a good option for me
+    - im looking for a [mediteranean]{"entity": "diet", "value": "mediterranean"} diet
+    - [no gluten]{"entity": "diet", "value": "gluten free"}
+    - [primal](diet) diet
+    - maybe a diet called [primal](diet) diet
+- intent: inform_details
+  examples: |
+    - heihgt of [1m69](height)
+    - age = [20](age)
+    - age : [34](age)
+    - [65kg](weight)
+    - [1m 80](height) [69kg](weight) [45](age) [male](gender)
+    - im arounnd [5 feet 10 inches](height), weigh [200 pounds](weight), [non-binary](gender), and [22 years](age) old
+    - height : [1m 64cm](height)
+    - [1m 64](height)
+    - [182cm](height)
+    - [179cm](height) [70kg](weight) [39](age) [female](gender)
+    - yes and im a [19](age) years old [girl]{"entity": "gender", "value": "female"}
+    - [1m75](height) [69kg](weight) [22](age) [male](gender)
+    - [168cm](height) , [65kg](weight) , [40](age) , [female](gender)
+    - [175cm](height) and [75kg](weight)
+    - im [168cm](height) and i weigh [60.5kg](weight)
+    - im [168cm](height) tall and weighs [61.5kg](weight)
+    - im [1m60](height), i weigh [60kg](weight) i have [23](age) and im a [girl]{"entity": "gender", "value": "female"}
+    - [155cm](height) and [55kg](weight) and [25yo]{"entity": "age", "value": "25"}
+    - [80kg](weight)
+    - age [34](age)
+    - im a [21yo]{"entity": "age", "value": "21"} [male](gender)
+    - [1m70](height) and [70kg](weight) and [20](age) years old
+    - im [1m82](height)
+    - weight : [75kg](weight)
+    - im a [43yr](age) old [man]{"entity": "gender", "value": "male"} and im [1m70](height) and [70.4kg](weight)
+    - my age is [25](age) years old
+    - [1m75](height) [66kg](weight) [25yo]{"entity": "age", "value": "25"} [male](gender)
+    - im [43](age) and [170cm](height) [52kg](weight)
+    - im [1m69](height) i weigh [45kg](weight) i have [21yo](age) and im a [girl]{"entity": "gender", "value": "female"}
+    - gender [male](gender)
 - synonym: gluten free
   examples: |
     - dont eat gluten
