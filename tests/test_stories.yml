@@ -40,7 +40,6 @@ stories:
     intent: confirm
   - action: diet_form
   - active_loop: null
-  - action: action_utter_slot_values
   - action: action_generate_diet
   - user: |
       thank you very mush
@@ -133,3 +132,107 @@ stories:
   - action: diet_form
   - active_loop: null
   - action: action_generate_diet
+
+- story: Testing get started
+  steps:
+  - user: /get_started
+    intent: get_started
+  - action: utter_get_started
+  - user: /ask_diet_plan
+    intent: ask_diet_plan
+  - action: diet_form
+  - active_loop: diet_form
+  - user: |
+      i wanna gain weight
+    intent: gain_weight
+  - action: diet_form
+  - active_loop: diet_form
+  - user: |
+      mediteranean diet
+    intent: inform_diet
+  - action: diet_form
+  - active_loop: diet_form
+  - user: |
+      paleo diet
+    intent: inform_diet
+  - action: diet_form
+  - active_loop: diet_form
+  - user: |
+      yes
+      intent: affirm
+  - action: diet_form
+  - active_loop: diet_form
+  - user: |
+      seafood
+    intent: inform_allergens
+  - action: diet_form
+  - active_loop: diet_form
+  - user: |
+      165cm 53kg 32 female
+    intent: inform_details
+  - action: diet_form
+  - active_loop: diet_form
+  - user: |
+      2
+    intent: inform_activity_level
+  - action: diet_form
+  - active_loop: diet_form
+  - user: |
+      Im allergic to shellfish actually
+    intent: inform_allergens
+  - action: diet_form
+  - active_loop: diet_form
+  - user: |
+      yes
+    intent: affirm
+  - action: diet_form
+  - active_loop: null
+  - action: action_generate_diet
+  - user: |
+      thank you
+    intent: thanks
+  - action: utter_more
+  - user: /ask_diet_plan
+    intent: ask_diet_plan
+  - action: diet_form
+  - active_loop: diet_form
+  - user: /affirm
+    intent: affirm
+  - action: diet_form
+  - active_loop: null
+  - action: action_generate_diet
+
+- story: Testing faq
+  steps:
+  - user: |
+      srxdtcfyvgbhj
+    intent: nlu_fallback
+  - action: action_default_fallback
+  - user: |
+      hi
+    intent: greet
+  - action: utter_greet
+  - user: /get_started
+    intent: get_started
+  - action: utter_get_started
+  - user: |
+      i want to weigh less than i am currently.
+    intent: lose_weight
+
+- story:  Testing interruption
+  steps:
+  - user: |
+      hi
+    intent: greet
+  - action: utter_greet
+  - user: |
+      i want a high protein diet plan
+    intent: inform_diet
+  - action: diet_form
+  - active_loop: diet_form
+  - user: |
+      then give me examples of food that are high in protein
+    intent: faq
+  - action: utter_faq
+  - action: diet_form
+  - active_loop: diet_form
