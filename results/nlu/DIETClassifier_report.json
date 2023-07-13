@@ -1,0 +1,79 @@
+{
+  "diet": {
+    "precision": 0.8679245283018868,
+    "recall": 0.7540983606557377,
+    "f1-score": 0.8070175438596491,
+    "support": 61,
+    "confused_with": {}
+  },
+  "allergen": {
+    "precision": 0.9333333333333333,
+    "recall": 0.6666666666666666,
+    "f1-score": 0.7777777777777778,
+    "support": 42,
+    "confused_with": {}
+  },
+  "gender": {
+    "precision": 0.9230769230769231,
+    "recall": 0.8,
+    "f1-score": 0.8571428571428571,
+    "support": 15,
+    "confused_with": {}
+  },
+  "height": {
+    "precision": 0.9354838709677419,
+    "recall": 0.8787878787878788,
+    "f1-score": 0.90625,
+    "support": 33,
+    "confused_with": {
+      "activity_level": 3
+    }
+  },
+  "activity_level": {
+    "precision": 0.7272727272727273,
+    "recall": 0.7619047619047619,
+    "f1-score": 0.7441860465116279,
+    "support": 21,
+    "confused_with": {
+      "allergen": 1
+    }
+  },
+  "age": {
+    "precision": 0.8846153846153846,
+    "recall": 0.8846153846153846,
+    "f1-score": 0.8846153846153846,
+    "support": 26,
+    "confused_with": {
+      "weight": 2,
+      "height": 1
+    }
+  },
+  "weight": {
+    "precision": 0.7857142857142857,
+    "recall": 0.9166666666666666,
+    "f1-score": 0.8461538461538461,
+    "support": 24,
+    "confused_with": {
+      "age": 2
+    }
+  },
+  "micro avg": {
+    "precision": 0.8669950738916257,
+    "recall": 0.7927927927927928,
+    "f1-score": 0.8282352941176471,
+    "support": 222
+  },
+  "macro avg": {
+    "precision": 0.8653458647546117,
+    "recall": 0.8089628170424422,
+    "f1-score": 0.8318776365801631,
+    "support": 222
+  },
+  "weighted avg": {
+    "precision": 0.8738305763260116,
+    "recall": 0.7927927927927928,
+    "f1-score": 0.8269987792057866,
+    "support": 222
+  },
+  "accuracy": 0.9727427597955707
+}

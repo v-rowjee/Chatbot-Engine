@@ -1,0 +1,594 @@
+[
+  {
+    "text": "How can I reduce the fat content in my meals?",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "lose_weight",
+      "confidence": 0.9587532877922058
+    }
+  },
+  {
+    "text": "fine",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "inform_activity_level",
+      "confidence": 0.9291935563087463
+    }
+  },
+  {
+    "text": "affirm",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "inform_allergens",
+      "confidence": 0.6192176938056946
+    }
+  },
+  {
+    "text": "can you help me use the chatbot",
+    "intent": "get_started",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.9999873638153076
+    }
+  },
+  {
+    "text": "How can I meal prep for the week?",
+    "intent": "ask_diet_plan",
+    "intent_prediction": {
+      "name": "inform_diet",
+      "confidence": 0.7890399694442749
+    }
+  },
+  {
+    "text": "no pref",
+    "intent": "inform_no_diet",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.5979002714157104
+    }
+  },
+  {
+    "text": "peanuts allergies",
+    "intent": "inform_allergens",
+    "intent_prediction": {
+      "name": "inform_no_allergens",
+      "confidence": 0.7280766367912292
+    }
+  },
+  {
+    "text": "sulfite",
+    "intent": "inform_allergens",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.9357039928436279
+    }
+  },
+  {
+    "text": "two",
+    "intent": "inform_activity_level",
+    "intent_prediction": {
+      "name": "get_started",
+      "confidence": 0.2510072886943817
+    }
+  },
+  {
+    "text": "Could you provide me with a weight loss meal plan or some guidance on creating one?",
+    "intent": "lose_weight",
+    "intent_prediction": {
+      "name": "ask_diet_plan",
+      "confidence": 0.9790453910827637
+    }
+  },
+  {
+    "text": "im lightweight, how to get more weight",
+    "intent": "gain_weight",
+    "intent_prediction": {
+      "name": "lose_weight",
+      "confidence": 0.5108594298362732
+    }
+  },
+  {
+    "text": "How can I maintain a balanced diet while still focusing on gaining weight?",
+    "intent": "gain_weight",
+    "intent_prediction": {
+      "name": "maintain_weight",
+      "confidence": 0.8827827572822571
+    }
+  },
+  {
+    "text": "i need a meal plan to lose weight quickly",
+    "intent": "gain_weight",
+    "intent_prediction": {
+      "name": "lose_weight",
+      "confidence": 0.9884767532348633
+    }
+  },
+  {
+    "text": "can you give me a list of all diets that you have?",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "inform_no_allergens",
+      "confidence": 0.29976269602775574
+    }
+  },
+  {
+    "text": "let's go",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "inform_diet",
+      "confidence": 0.6587130427360535
+    }
+  },
+  {
+    "text": "no thanks",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "thanks",
+      "confidence": 0.9597590565681458
+    }
+  },
+  {
+    "text": "nah",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.5202571153640747
+    }
+  },
+  {
+    "text": "what is your purpose",
+    "intent": "get_started",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.994860053062439
+    }
+  },
+  {
+    "text": "i need a diet",
+    "intent": "ask_diet_plan",
+    "intent_prediction": {
+      "name": "inform_diet",
+      "confidence": 0.9410896897315979
+    }
+  },
+  {
+    "text": "What should a balanced meal consist of?",
+    "intent": "ask_diet_plan",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.9914922118186951
+    }
+  },
+  {
+    "text": "What are some quick and easy meal ideas?",
+    "intent": "ask_diet_plan",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.9910122156143188
+    }
+  },
+  {
+    "text": "Dietary Approaches to Stop Hypertension",
+    "intent": "inform_diet",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.9998445510864258
+    }
+  },
+  {
+    "text": "idk",
+    "intent": "inform_no_diet",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.4909207224845886
+    }
+  },
+  {
+    "text": "whatever",
+    "intent": "inform_no_diet",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.6588999629020691
+    }
+  },
+  {
+    "text": "wheat",
+    "intent": "inform_allergens",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.34339624643325806
+    }
+  },
+  {
+    "text": "four",
+    "intent": "inform_activity_level",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.9435797333717346
+    }
+  },
+  {
+    "text": "five",
+    "intent": "inform_activity_level",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.655349850654602
+    }
+  },
+  {
+    "text": "loss fat quickly",
+    "intent": "lose_weight",
+    "intent_prediction": {
+      "name": "gain_weight",
+      "confidence": 0.9994694590568542
+    }
+  },
+  {
+    "text": "Could you suggest some high-calorie foods or snacks that I can incorporate into my diet?",
+    "intent": "gain_weight",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.9858757853507996
+    }
+  },
+  {
+    "text": "i want to stay the same",
+    "intent": "maintain_weight",
+    "intent_prediction": {
+      "name": "get_started",
+      "confidence": 0.42787593603134155
+    }
+  },
+  {
+    "text": "i dont want to eat sometimes, what should i do?",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "ask_diet_plan",
+      "confidence": 0.3691595494747162
+    }
+  },
+  {
+    "text": "hi",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.6671207547187805
+    }
+  },
+  {
+    "text": "negative",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "inform_activity_level",
+      "confidence": 0.9642217755317688
+    }
+  },
+  {
+    "text": "hwo do i create a new diet plan",
+    "intent": "get_started",
+    "intent_prediction": {
+      "name": "ask_diet_plan",
+      "confidence": 0.9997238516807556
+    }
+  },
+  {
+    "text": "what are the task you can do?",
+    "intent": "get_started",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.9976997971534729
+    }
+  },
+  {
+    "text": "ketogenic meal plan",
+    "intent": "inform_diet",
+    "intent_prediction": {
+      "name": "ask_diet_plan",
+      "confidence": 0.49881523847579956
+    }
+  },
+  {
+    "text": "mollusks",
+    "intent": "inform_allergens",
+    "intent_prediction": {
+      "name": "thanks",
+      "confidence": 0.8724583983421326
+    }
+  },
+  {
+    "text": "three",
+    "intent": "inform_activity_level",
+    "intent_prediction": {
+      "name": "thanks",
+      "confidence": 0.288194864988327
+    }
+  },
+  {
+    "text": "I'm tired of being overweight and I'm ready to make a change",
+    "intent": "lose_weight",
+    "intent_prediction": {
+      "name": "maintain_weight",
+      "confidence": 0.8133229613304138
+    }
+  },
+  {
+    "text": "im overweight",
+    "intent": "lose_weight",
+    "intent_prediction": {
+      "name": "gain_weight",
+      "confidence": 0.9694736003875732
+    }
+  },
+  {
+    "text": "i want a high protein diet to gain mass",
+    "intent": "gain_weight",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.9960426092147827
+    }
+  },
+  {
+    "text": "nothing",
+    "intent": "maintain_weight",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.7776762843132019
+    }
+  },
+  {
+    "text": "Could you provide some examples of a typical day's meal plan for weight maintenance, including breakfast, lunch and dinner?",
+    "intent": "maintain_weight",
+    "intent_prediction": {
+      "name": "ask_diet_plan",
+      "confidence": 0.9840356707572937
+    }
+  },
+  {
+    "text": "How can I stop purging?",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "get_started",
+      "confidence": 0.9341670274734497
+    }
+  },
+  {
+    "text": "good evening",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.7102635502815247
+    }
+  },
+  {
+    "text": "good afternoon",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.9902878999710083
+    }
+  },
+  {
+    "text": "of course",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.7437630891799927
+    }
+  },
+  {
+    "text": "sure",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "inform_allergens",
+      "confidence": 0.2320595681667328
+    }
+  },
+  {
+    "text": "no thank you",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "thanks",
+      "confidence": 0.7035995721817017
+    }
+  },
+  {
+    "text": "thank you so much",
+    "intent": "thanks",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.6083084940910339
+    }
+  },
+  {
+    "text": "Could you provide me with a comprehensive diet plan that includes breakfast, lunch, dinner, and snacks?",
+    "intent": "ask_diet_plan",
+    "intent_prediction": {
+      "name": "maintain_weight",
+      "confidence": 0.9630100131034851
+    }
+  },
+  {
+    "text": "pescatarian",
+    "intent": "inform_diet",
+    "intent_prediction": {
+      "name": "inform_allergens",
+      "confidence": 0.2609727680683136
+    }
+  },
+  {
+    "text": "greek diet",
+    "intent": "inform_diet",
+    "intent_prediction": {
+      "name": "ask_diet_plan",
+      "confidence": 0.9164423942565918
+    }
+  },
+  {
+    "text": "celery",
+    "intent": "inform_allergens",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.33187004923820496
+    }
+  },
+  {
+    "text": "brocoli",
+    "intent": "inform_allergens",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.457870751619339
+    }
+  },
+  {
+    "text": "one",
+    "intent": "inform_activity_level",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.42998206615448
+    }
+  },
+  {
+    "text": "im obese",
+    "intent": "lose_weight",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.7088568806648254
+    }
+  },
+  {
+    "text": "i want to be heavier",
+    "intent": "gain_weight",
+    "intent_prediction": {
+      "name": "lose_weight",
+      "confidence": 0.4158661365509033
+    }
+  },
+  {
+    "text": "Are there specific portion sizes or calorie ranges I should aim for to sustain my current weight?",
+    "intent": "maintain_weight",
+    "intent_prediction": {
+      "name": "inform_no_diet",
+      "confidence": 0.3870394229888916
+    }
+  },
+  {
+    "text": "diet options please",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "ask_diet_plan",
+      "confidence": 0.8994813561439514
+    }
+  },
+  {
+    "text": "tes",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "thanks",
+      "confidence": 0.24316063523292542
+    }
+  },
+  {
+    "text": "i dont think so",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "inform_no_diet",
+      "confidence": 0.808347761631012
+    }
+  },
+  {
+    "text": "never",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "inform_no_diet",
+      "confidence": 0.543583333492279
+    }
+  },
+  {
+    "text": "thank again",
+    "intent": "thanks",
+    "intent_prediction": {
+      "name": "gain_weight",
+      "confidence": 0.8348926305770874
+    }
+  },
+  {
+    "text": "i need advice on what to eat",
+    "intent": "ask_diet_plan",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.9109864234924316
+    }
+  },
+  {
+    "text": "What are the food I should consider when developing a diet plan for myself?",
+    "intent": "ask_diet_plan",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.9999531507492065
+    }
+  },
+  {
+    "text": "im not following any specific diet, but i want a healthy and sustainable meal plan.",
+    "intent": "inform_no_diet",
+    "intent_prediction": {
+      "name": "ask_diet_plan",
+      "confidence": 0.8596891164779663
+    }
+  },
+  {
+    "text": "dairy products",
+    "intent": "inform_allergens",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.9997720122337341
+    }
+  },
+  {
+    "text": "grain",
+    "intent": "inform_allergens",
+    "intent_prediction": {
+      "name": "gain_weight",
+      "confidence": 0.9481937885284424
+    }
+  },
+  {
+    "text": "how can i reduce my weight?",
+    "intent": "lose_weight",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.9998527765274048
+    }
+  },
+  {
+    "text": "i need a vegan diet to lsoe weight",
+    "intent": "lose_weight",
+    "intent_prediction": {
+      "name": "inform_diet",
+      "confidence": 0.543463408946991
+    }
+  },
+  {
+    "text": "i am too skinny",
+    "intent": "gain_weight",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.29817014932632446
+    }
+  },
+  {
+    "text": "im currently underweight",
+    "intent": "gain_weight",
+    "intent_prediction": {
+      "name": "lose_weight",
+      "confidence": 0.6156784892082214
+    }
+  },
+  {
+    "text": "i dont want to change my weight",
+    "intent": "maintain_weight",
+    "intent_prediction": {
+      "name": "lose_weight",
+      "confidence": 0.7724871635437012
+    }
+  }
+]

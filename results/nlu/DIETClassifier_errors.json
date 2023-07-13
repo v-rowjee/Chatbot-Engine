@@ -1,0 +1,1122 @@
+[
+  {
+    "text": "fine",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "activity_level",
+        "start": 0,
+        "end": 4,
+        "confidence_entity": 0.9458023905754089,
+        "value": "fine",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I'm looking for a diet that's based on whole foods and i think the paleo diet might be a good fit.",
+    "entities": [
+      {
+        "start": 67,
+        "end": 72,
+        "value": "paleo",
+        "entity": "diet"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "diet",
+        "start": 39,
+        "end": 44,
+        "confidence_entity": 0.8860856890678406,
+        "value": "whole",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "diet",
+        "start": 67,
+        "end": 72,
+        "confidence_entity": 0.9993009567260742,
+        "value": "paleo",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "im allergic to sulfite",
+    "entities": [
+      {
+        "start": 15,
+        "end": 22,
+        "value": "sulfite",
+        "entity": "allergen"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "sulfite",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "sulfite",
+        "entity": "allergen"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "im arounnd 5 feet 10 inches, weigh 200 pounds, non-binary, and 22 years old",
+    "entities": [
+      {
+        "start": 11,
+        "end": 27,
+        "value": "5 feet 10 inches",
+        "entity": "height"
+      },
+      {
+        "start": 35,
+        "end": 45,
+        "value": "200 pounds",
+        "entity": "weight"
+      },
+      {
+        "start": 47,
+        "end": 57,
+        "value": "non-binary",
+        "entity": "gender"
+      },
+      {
+        "start": 63,
+        "end": 71,
+        "value": "22 years",
+        "entity": "age"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "activity_level",
+        "start": 11,
+        "end": 17,
+        "confidence_entity": 0.43938255310058594,
+        "value": "5 feet",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "activity_level",
+        "start": 18,
+        "end": 20,
+        "confidence_entity": 0.6103456020355225,
+        "value": "10",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "weight",
+        "start": 35,
+        "end": 45,
+        "confidence_entity": 0.65,
+        "value": "200 pounds",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "age",
+        "start": 63,
+        "end": 71,
+        "confidence_entity": 0.41213345527648926,
+        "value": "22 years",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "two",
+    "entities": [
+      {
+        "start": 0,
+        "end": 3,
+        "value": "2",
+        "entity": "activity_level"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "i want a keto diet",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "diet",
+        "start": 9,
+        "end": 13,
+        "confidence_entity": 0.9987623691558838,
+        "value": "ketogenic",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "top 5 food with high protein",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "activity_level",
+        "start": 4,
+        "end": 5,
+        "confidence_entity": 0.40780913829803467,
+        "value": "5",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "intermittent fasting",
+    "entities": [
+      {
+        "start": 0,
+        "end": 20,
+        "value": "intermittent fasting",
+        "entity": "diet"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "diet",
+        "start": 0,
+        "end": 12,
+        "confidence_entity": 0.9967678785324097,
+        "value": "intermittent",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Dietary Approaches to Stop Hypertension",
+    "entities": [
+      {
+        "start": 0,
+        "end": 39,
+        "value": "dash",
+        "entity": "diet"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "wheat",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "wheat",
+        "entity": "allergen"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "sesame wheat and peanut",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "sesame",
+        "entity": "allergen"
+      },
+      {
+        "start": 7,
+        "end": 12,
+        "value": "wheat",
+        "entity": "allergen"
+      },
+      {
+        "start": 17,
+        "end": 23,
+        "value": "peanut",
+        "entity": "allergen"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "allergen",
+        "start": 0,
+        "end": 6,
+        "confidence_entity": 0.999334990978241,
+        "value": "sesame",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "allergen",
+        "start": 17,
+        "end": 23,
+        "confidence_entity": 0.9947779178619385,
+        "value": "peanut",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "lupin and wheat",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "lupin",
+        "entity": "allergen"
+      },
+      {
+        "start": 10,
+        "end": 15,
+        "value": "wheat",
+        "entity": "allergen"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "1m 80 69kg 45 male",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "1m 80",
+        "entity": "height"
+      },
+      {
+        "start": 6,
+        "end": 10,
+        "value": "69kg",
+        "entity": "weight"
+      },
+      {
+        "start": 11,
+        "end": 13,
+        "value": "45",
+        "entity": "age"
+      },
+      {
+        "start": 14,
+        "end": 18,
+        "value": "male",
+        "entity": "gender"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "height",
+        "start": 0,
+        "end": 5,
+        "confidence_entity": 0.4736972451210022,
+        "value": "1m 80",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "weight",
+        "start": 6,
+        "end": 13,
+        "confidence_entity": 0.3562793731689453,
+        "value": "69kg 45",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "gender",
+        "start": 14,
+        "end": 18,
+        "confidence_entity": 0.9927424192428589,
+        "value": "male",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "four",
+    "entities": [
+      {
+        "start": 0,
+        "end": 4,
+        "value": "4",
+        "entity": "activity_level"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "five",
+    "entities": [
+      {
+        "start": 0,
+        "end": 4,
+        "value": "5",
+        "entity": "activity_level"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "i want a low carb diet for weight loss",
+    "entities": [
+      {
+        "start": 9,
+        "end": 17,
+        "value": "low carb",
+        "entity": "diet"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "how much liters should a girl drink?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "gender",
+        "start": 25,
+        "end": 29,
+        "confidence_entity": 0.7054920792579651,
+        "value": "female",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "negative",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "activity_level",
+        "start": 0,
+        "end": 8,
+        "confidence_entity": 0.8263004422187805,
+        "value": "negative",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "i dont eat gluten",
+    "entities": [
+      {
+        "start": 2,
+        "end": 17,
+        "value": "gluten free",
+        "entity": "diet"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "diet",
+        "start": 11,
+        "end": 17,
+        "confidence_entity": 0.9950076341629028,
+        "value": "gluten",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "mollusks",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "mollusks",
+        "entity": "allergen"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "1m80, 80kg, 18years male",
+    "entities": [
+      {
+        "start": 0,
+        "end": 4,
+        "value": "1m80",
+        "entity": "height"
+      },
+      {
+        "start": 6,
+        "end": 10,
+        "value": "80kg",
+        "entity": "weight"
+      },
+      {
+        "start": 12,
+        "end": 19,
+        "value": "18",
+        "entity": "age"
+      },
+      {
+        "start": 20,
+        "end": 24,
+        "value": "male",
+        "entity": "gender"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "height",
+        "start": 0,
+        "end": 4,
+        "confidence_entity": 0.998339056968689,
+        "value": "1m80",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "weight",
+        "start": 6,
+        "end": 10,
+        "confidence_entity": 0.9889740943908691,
+        "value": "80kg",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "height",
+        "start": 12,
+        "end": 19,
+        "confidence_entity": 0.5430339574813843,
+        "value": "18",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "gender",
+        "start": 20,
+        "end": 24,
+        "confidence_entity": 0.9976571798324585,
+        "value": "male",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "three",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "3",
+        "entity": "activity_level"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "allergen",
+        "start": 0,
+        "end": 5,
+        "confidence_entity": 0.36299005150794983,
+        "value": "3",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "i want a high protein diet to gain mass",
+    "entities": [
+      {
+        "start": 9,
+        "end": 21,
+        "value": "high protein",
+        "entity": "diet"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "what are some low carb food",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "diet",
+        "start": 14,
+        "end": 22,
+        "confidence_entity": 0.602046012878418,
+        "value": "low carb",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can you suggest low-fat dairy alternatives?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "allergen",
+        "start": 24,
+        "end": 29,
+        "confidence_entity": 0.8484708070755005,
+        "value": "dairy",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "no gluten",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "gluten free",
+        "entity": "diet"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "diet",
+        "start": 3,
+        "end": 9,
+        "confidence_entity": 0.7244842052459717,
+        "value": "gluten",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "greek diet",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "greek",
+        "entity": "diet"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I've been reading about intermittent fasting and I'm wondering if it would be a good option for me",
+    "entities": [
+      {
+        "start": 24,
+        "end": 36,
+        "value": "intermittent",
+        "entity": "diet"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "diet",
+        "start": 5,
+        "end": 17,
+        "confidence_entity": 0.43471625447273254,
+        "value": "been reading",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "diet",
+        "start": 24,
+        "end": 44,
+        "confidence_entity": 0.9861136078834534,
+        "value": "intermittent fasting",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "celery",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "celery",
+        "entity": "allergen"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "brocoli",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "brocoli",
+        "entity": "allergen"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "one",
+    "entities": [
+      {
+        "start": 0,
+        "end": 3,
+        "value": "1",
+        "entity": "activity_level"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "i want to lose the maximum weight in 1 month",
+    "entities": [
+      {
+        "start": 37,
+        "end": 38,
+        "value": "1",
+        "entity": "age"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "weight",
+        "start": 37,
+        "end": 38,
+        "confidence_entity": 0.5337061285972595,
+        "value": "1",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I want to lose 10kg by next month",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "weight",
+        "start": 15,
+        "end": 19,
+        "confidence_entity": 0.9916952252388,
+        "value": "10kg",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "i want to lose 5 kg",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "height",
+        "start": 15,
+        "end": 16,
+        "confidence_entity": 0.24816152453422546,
+        "value": "5",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "weight",
+        "start": 17,
+        "end": 19,
+        "confidence_entity": 0.7843496799468994,
+        "value": "kg",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "i'm interested in the plant-based diet because I think it's healthier for me.",
+    "entities": [
+      {
+        "start": 22,
+        "end": 33,
+        "value": "plant-based",
+        "entity": "diet"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "dairy products",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "dairy",
+        "entity": "allergen"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "no fish and egg",
+    "entities": [
+      {
+        "start": 3,
+        "end": 7,
+        "value": "fish",
+        "entity": "allergen"
+      },
+      {
+        "start": 12,
+        "end": 15,
+        "value": "egg",
+        "entity": "allergen"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "allergen",
+        "start": 12,
+        "end": 15,
+        "confidence_entity": 0.9973694086074829,
+        "value": "egg",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "meat, sea food and egg",
+    "entities": [
+      {
+        "start": 0,
+        "end": 4,
+        "value": "meat",
+        "entity": "allergen"
+      },
+      {
+        "start": 6,
+        "end": 14,
+        "value": "sea food",
+        "entity": "allergen"
+      },
+      {
+        "start": 19,
+        "end": 22,
+        "value": "egg",
+        "entity": "allergen"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "allergen",
+        "start": 6,
+        "end": 9,
+        "confidence_entity": 0.7961044907569885,
+        "value": "sea",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "allergen",
+        "start": 19,
+        "end": 22,
+        "confidence_entity": 0.9970231652259827,
+        "value": "egg",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "grain",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "grain",
+        "entity": "allergen"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "im a 43yr old man and im 1m70 and 70.4kg",
+    "entities": [
+      {
+        "start": 5,
+        "end": 9,
+        "value": "43yr",
+        "entity": "age"
+      },
+      {
+        "start": 14,
+        "end": 17,
+        "value": "male",
+        "entity": "gender"
+      },
+      {
+        "start": 25,
+        "end": 29,
+        "value": "1m70",
+        "entity": "height"
+      },
+      {
+        "start": 34,
+        "end": 40,
+        "value": "70.4kg",
+        "entity": "weight"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "age",
+        "start": 5,
+        "end": 9,
+        "confidence_entity": 0.9292340278625488,
+        "value": "43yr",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "height",
+        "start": 25,
+        "end": 29,
+        "confidence_entity": 0.9774288535118103,
+        "value": "1m70",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "weight",
+        "start": 34,
+        "end": 40,
+        "confidence_entity": 0.764199435710907,
+        "value": "70.4kg",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "1m70 and 70kg and 20 years old",
+    "entities": [
+      {
+        "start": 0,
+        "end": 4,
+        "value": "1m70",
+        "entity": "height"
+      },
+      {
+        "start": 9,
+        "end": 13,
+        "value": "70kg",
+        "entity": "weight"
+      },
+      {
+        "start": 18,
+        "end": 20,
+        "value": "20",
+        "entity": "age"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "height",
+        "start": 0,
+        "end": 4,
+        "confidence_entity": 0.986377477645874,
+        "value": "1m70",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "weight",
+        "start": 9,
+        "end": 13,
+        "confidence_entity": 0.9970685839653015,
+        "value": "70kg",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "age",
+        "start": 18,
+        "end": 26,
+        "confidence_entity": 0.3692605197429657,
+        "value": "20 years",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "im 1m80, 70kg 21year old and im a man",
+    "entities": [
+      {
+        "start": 3,
+        "end": 7,
+        "value": "1m80",
+        "entity": "height"
+      },
+      {
+        "start": 9,
+        "end": 13,
+        "value": "70kg",
+        "entity": "weight"
+      },
+      {
+        "start": 14,
+        "end": 20,
+        "value": "21year",
+        "entity": "age"
+      },
+      {
+        "start": 34,
+        "end": 37,
+        "value": "male",
+        "entity": "gender"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "height",
+        "start": 3,
+        "end": 7,
+        "confidence_entity": 0.9972924590110779,
+        "value": "1m80",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "weight",
+        "start": 9,
+        "end": 13,
+        "confidence_entity": 0.997805655002594,
+        "value": "70kg",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "age",
+        "start": 14,
+        "end": 20,
+        "confidence_entity": 0.993590235710144,
+        "value": "21year",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I'm 6 feet tall, weigh 180 pounds, identify as male, and I'm 28 years old.",
+    "entities": [
+      {
+        "start": 4,
+        "end": 10,
+        "value": "6 feet",
+        "entity": "height"
+      },
+      {
+        "start": 23,
+        "end": 33,
+        "value": "180 pounds",
+        "entity": "weight"
+      },
+      {
+        "start": 47,
+        "end": 51,
+        "value": "male",
+        "entity": "gender"
+      },
+      {
+        "start": 61,
+        "end": 69,
+        "value": "28 years",
+        "entity": "age"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "height",
+        "start": 4,
+        "end": 10,
+        "confidence_entity": 0.4867549240589142,
+        "value": "6 feet",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "age",
+        "start": 23,
+        "end": 33,
+        "confidence_entity": 0.4251296818256378,
+        "value": "180 pounds",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "gender",
+        "start": 47,
+        "end": 51,
+        "confidence_entity": 0.9955783486366272,
+        "value": "male",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "age",
+        "start": 61,
+        "end": 69,
+        "confidence_entity": 0.34119799733161926,
+        "value": "28 years",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "im hoping to gain 5 pounds of muscle",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "weight",
+        "start": 18,
+        "end": 26,
+        "confidence_entity": 0.66,
+        "value": "5 pounds",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

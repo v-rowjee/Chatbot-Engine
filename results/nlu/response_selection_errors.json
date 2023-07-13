@@ -3,16 +3,16 @@
     "text": "i dont want to eat sometimes, what should i do?",
     "intent_response_key_target": "faq/eating_disorder",
     "intent_response_key_prediction": {
-      "name": "faq/low_fat",
-      "confidence": 0.7667837142944336
+      "name": "faq/water",
+      "confidence": 0.3171364665031433
     }
   },
   {
-    "text": "can you give me a list of all diets that you have?",
-    "intent_response_key_target": "faq/diet_options",
+    "text": "How can I increase my protein intake?",
+    "intent_response_key_target": "faq/high_protein",
     "intent_response_key_prediction": {
-      "name": "faq/ask_is_bot",
-      "confidence": 0.880257248878479
+      "name": "faq/eating_disorder",
+      "confidence": 0.46676015853881836
     }
   },
   {
@@ -20,7 +20,7 @@
     "intent_response_key_target": "faq/low_carb",
     "intent_response_key_prediction": {
       "name": "faq/low_fat",
-      "confidence": 0.8304244875907898
+      "confidence": 0.7312963008880615
     }
   }
 ]

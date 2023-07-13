@@ -1,0 +1,175 @@
+{
+  "inform_diet": {
+    "precision": 0.8974358974358975,
+    "recall": 0.8974358974358975,
+    "f1-score": 0.8974358974358975,
+    "support": 39,
+    "confused_with": {
+      "ask_diet_plan": 2,
+      "inform_allergens": 1
+    }
+  },
+  "deny": {
+    "precision": 0.7272727272727273,
+    "recall": 0.5714285714285714,
+    "f1-score": 0.64,
+    "support": 14,
+    "confused_with": {
+      "thanks": 2,
+      "inform_no_diet": 2
+    }
+  },
+  "maintain_weight": {
+    "precision": 0.85,
+    "recall": 0.7727272727272727,
+    "f1-score": 0.8095238095238095,
+    "support": 22,
+    "confused_with": {
+      "lose_weight": 1,
+      "inform_no_diet": 1
+    }
+  },
+  "inform_activity_level": {
+    "precision": 0.8823529411764706,
+    "recall": 0.75,
+    "f1-score": 0.8108108108108107,
+    "support": 20,
+    "confused_with": {
+      "affirm": 3,
+      "thanks": 1
+    }
+  },
+  "inform_no_diet": {
+    "precision": 0.8,
+    "recall": 0.75,
+    "f1-score": 0.7741935483870969,
+    "support": 16,
+    "confused_with": {
+      "faq": 1,
+      "deny": 1
+    }
+  },
+  "affirm": {
+    "precision": 0.5862068965517241,
+    "recall": 0.7727272727272727,
+    "f1-score": 0.6666666666666667,
+    "support": 22,
+    "confused_with": {
+      "inform_allergens": 2,
+      "thanks": 1
+    }
+  },
+  "faq": {
+    "precision": 0.8469387755102041,
+    "recall": 0.9431818181818182,
+    "f1-score": 0.8924731182795699,
+    "support": 88,
+    "confused_with": {
+      "ask_diet_plan": 2,
+      "lose_weight": 1
+    }
+  },
+  "ask_diet_plan": {
+    "precision": 0.75,
+    "recall": 0.7741935483870968,
+    "f1-score": 0.7619047619047619,
+    "support": 31,
+    "confused_with": {
+      "faq": 4,
+      "inform_diet": 2
+    }
+  },
+  "inform_details": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 38,
+    "confused_with": {}
+  },
+  "greet": {
+    "precision": 0.9,
+    "recall": 0.6923076923076923,
+    "f1-score": 0.7826086956521738,
+    "support": 13,
+    "confused_with": {
+      "affirm": 3,
+      "inform_diet": 1
+    }
+  },
+  "lose_weight": {
+    "precision": 0.8333333333333334,
+    "recall": 0.8108108108108109,
+    "f1-score": 0.8219178082191781,
+    "support": 37,
+    "confused_with": {
+      "gain_weight": 2,
+      "maintain_weight": 1
+    }
+  },
+  "thanks": {
+    "precision": 0.7368421052631579,
+    "recall": 0.875,
+    "f1-score": 0.7999999999999999,
+    "support": 16,
+    "confused_with": {
+      "gain_weight": 1,
+      "faq": 1
+    }
+  },
+  "inform_allergens": {
+    "precision": 0.8636363636363636,
+    "recall": 0.7037037037037037,
+    "f1-score": 0.7755102040816326,
+    "support": 27,
+    "confused_with": {
+      "affirm": 3,
+      "thanks": 1
+    }
+  },
+  "gain_weight": {
+    "precision": 0.84,
+    "recall": 0.7241379310344828,
+    "f1-score": 0.7777777777777777,
+    "support": 29,
+    "confused_with": {
+      "lose_weight": 4,
+      "faq": 2
+    }
+  },
+  "inform_no_allergens": {
+    "precision": 0.875,
+    "recall": 1.0,
+    "f1-score": 0.9333333333333333,
+    "support": 14,
+    "confused_with": {}
+  },
+  "get_started": {
+    "precision": 0.7857142857142857,
+    "recall": 0.7333333333333333,
+    "f1-score": 0.7586206896551724,
+    "support": 15,
+    "confused_with": {
+      "faq": 3,
+      "ask_diet_plan": 1
+    }
+  },
+  "accuracy": 0.8321995464852607,
+  "macro avg": {
+    "precision": 0.8234208328683853,
+    "recall": 0.798186740754872,
+    "f1-score": 0.8064235701079925,
+    "support": 441
+  },
+  "weighted avg": {
+    "precision": 0.8368316192649057,
+    "recall": 0.8321995464852607,
+    "f1-score": 0.8311142075262852,
+    "support": 441
+  },
+  "micro avg": {
+    "precision": 0.8321995464852607,
+    "recall": 0.8321995464852607,
+    "f1-score": 0.8321995464852607,
+    "support": 441
+  }
+}
