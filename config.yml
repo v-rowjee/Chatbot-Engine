@@ -23,7 +23,7 @@ pipeline:
   constrain_similarities: true
   retrieval_intent: faq
 - name: FallbackClassifier
-  threshold: 0.7973361237181544
+  threshold: 0.6973361237181544
   ambiguity_threshold: 0.17741814379002124
 
 policies:

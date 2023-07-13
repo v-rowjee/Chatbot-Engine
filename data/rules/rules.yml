@@ -12,7 +12,6 @@ rules:
     - action: utter_more
 
 - rule: Tell user how the chatbot works
-  conversation_start: true  # this rule only applies at the beginning of a conversation
   steps:
     - intent: get_started
     - action: utter_get_started
@@ -47,6 +46,7 @@ rules:
   condition:
       - active_loop: diet_form
   steps:
+      - intent: nlu_fallback
       - action: action_default_fallback
       - action: diet_form
       - active_loop: diet_form

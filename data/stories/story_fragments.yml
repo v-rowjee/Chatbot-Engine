@@ -11,6 +11,13 @@ stories:
     - intent: greet
     - action: utter_greet
 
+- story: faq
+  steps:
+    - intent: faq
+    - action: utter_faq
+    - intent: thanks
+    - action: utter_more
+
 - story: user has allergen
   steps:
     - slot_was_set:
@@ -116,42 +123,15 @@ stories:
     - slot_was_set:
         - has_allergens: true
 
-- story: Test interruption with faq inside form
+- story: gluten free diet
   steps:
-  - user: /ask_diet_plan
-    intent: ask_diet_plan
-  - action: diet_form
-  - active_loop: diet_form
-  - user: |
-      i want to gain weight
-    intent: gain_weight
-  - action: diet_form
-  - active_loop: diet_form
-  - user: |
-      what are the diet types i get to choose from?
-    intent: faq
-  - action: utter_faq
-  - action: diet_form
-  - active_loop: diet_form
-  - user: |
-      i want a keto diet
-    intent: inform_diet
-  - action: diet_form
-  - active_loop: diet_form
-
-- story: Faq before form
-  steps:
-  - user: |
-      What are food that are high in protein?
-    intent: faq
-  - action: utter_faq
-  - user: |
-       i will need you to make me a diet plan
-    intent: ask_diet_plan
-  - action: diet_form
-  - active_loop: diet_form
-  - user: |
-       i want to gain weight
-    intent: gain_weight
-  - action: diet_form
-  - active_loop: diet_form
+    - slot_was_set:
+        - requested_slot: diet
+    - intent: inform_diet
+      entities:
+        - diet: gluten free
+    - slot_was_set:
+        - diet: gluten free
+    - action: diet_form
+    - slot_was_set:
+        - diet: Gluten Free

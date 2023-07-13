@@ -71,6 +71,7 @@ nlu:
     - i'm interested in the [plant-based](diet) diet because I think it's healthier for me.
     - i will need a [whole30](diet) diet
     - maybe a diet called [primal](diet) diet
+    - [keto]{"entity": "diet", "value": "ketogenic"}
 - intent: inform_no_diet
   examples: |
     - idk
@@ -174,6 +175,7 @@ nlu:
     - height : [1m 64cm](height)
     - weight: [52kg](weight)
     - age : [34](age)
+    - [168cm](height) [58kg](weight) [31](age) [female](gender)
 - intent: inform_activity_level
   examples: |
     - [1](activity_level)
@@ -197,10 +199,6 @@ nlu:
     - [7](activity_level) /10
     - [2](activity_level) /5
     - [1](activity_level)
-    - [2](activity_level)
-    - [3](activity_level)
-    - [4](activity_level)
-    - [5](activity_level)
 - intent: lose_weight
   examples: |
     - i want to lose weight
@@ -237,7 +235,7 @@ nlu:
     - i want a [vegetarian](diet) diet to lose weight
     - give me a [keto]{"entity": "diet", "value": "ketogenic"} diet to lose weight
     - i want a [paleolithic]{"entity": "diet", "value": "paleo"} diet to loss weight
-    - i want a [low carb]{"entity": "diet", "value": "low carb"} diet for weight loss
+    - i want a [low carb](diet) diet for weight loss
     - i need a [keto](diet) meal plan to lose weight
     - i want a [keto](diet) to lose weigh
 - intent: gain_weight
@@ -295,3 +293,66 @@ nlu:
     - i need to balance my weight
     - i want to maintain my weight with a [vegetarian](diet) diet
     - i want a [keto](diet) diet to maintain my weight
+- intent: greet
+  examples: |
+    - hi
+- intent: thanks
+  examples: |
+    - THANKS
+- synonym: gluten free
+  examples: |
+    - dont eat gluten
+    - no gluten
+- synonym: vegetarian
+  examples: |
+    - veggie
+    - veg
+- synonym: ketogenic
+  examples: |
+    - keto
+    - keto-friendly
+- synonym: mediterranean
+  examples: |
+    - mediteranean
+- synonym: dash
+  examples: |
+    - Dietary Approaches to Stop Hypertension
+- synonym: egg
+  examples: |
+    - eggs
+- synonym: '25'
+  examples: |
+    - 25yo
+- synonym: '18'
+  examples: |
+    - 18years
+- synonym: female
+  examples: |
+    - girl
+- synonym: male
+  examples: |
+    - man
+- synonym: '45'
+  examples: |
+    - 45yo
+- synonym: '21'
+  examples: |
+    - 21yo
+- synonym: '1'
+  examples: |
+    - one
+- synonym: '2'
+  examples: |
+    - two
+- synonym: '3'
+  examples: |
+    - three
+- synonym: '4'
+  examples: |
+    - four
+- synonym: '5'
+  examples: |
+    - five
+- synonym: paleo
+  examples: |
+    - paleolithic

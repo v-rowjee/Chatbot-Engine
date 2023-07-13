@@ -419,9 +419,97 @@ stories:
   - active_loop: null
   - action: action_generate_diet
 
-- story: faq
+- story: happy path with get started
   steps:
-    - intent: faq
-    - action: utter_faq
-    - intent: thanks
-    - action: utter_more
+  - intent: greet
+  - action: utter_greet
+  - intent: get_started
+  - action: utter_get_started
+  - intent: ask_diet_plan
+  - action: diet_form
+  - active_loop: diet_form
+  - slot_was_set:
+    - requested_slot: goal
+  - intent: lose_weight
+  - slot_was_set:
+    - goal: lose_weight
+  - action: diet_form
+  - slot_was_set:
+    - goal: lose_weight
+  - slot_was_set:
+    - requested_slot: diet
+  - intent: inform_diet
+    entities:
+    - diet: ketogenic
+  - slot_was_set:
+    - diet: ketogenic
+  - action: diet_form
+  - slot_was_set:
+    - diet: Ketogenic
+  - slot_was_set:
+    - requested_slot: has_allergens
+  - intent: deny
+  - slot_was_set:
+    - diet: ''
+  - slot_was_set:
+    - has_allergens: false
+  - action: diet_form
+  - slot_was_set:
+    - diet: ''
+  - slot_was_set:
+    - has_allergens: false
+  - slot_was_set:
+    - requested_slot: height
+  - intent: inform_details
+    entities:
+    - height: 168cm
+    - weight: 58kg
+    - age: '31'
+    - gender: female
+  - slot_was_set:
+    - height: 168cm
+  - slot_was_set:
+    - weight: 58kg
+  - slot_was_set:
+    - age: '31'
+  - slot_was_set:
+    - gender: female
+  - action: diet_form
+  - slot_was_set:
+    - height: 168
+  - slot_was_set:
+    - weight: 58
+  - slot_was_set:
+    - age: '31'
+  - slot_was_set:
+    - gender: female
+  - slot_was_set:
+    - requested_slot: activity_level
+  - intent: inform_activity_level
+    entities:
+    - activity_level: '1'
+  - slot_was_set:
+    - activity_level: '1'
+  - action: diet_form
+  - slot_was_set:
+    - activity_level: 1
+  - slot_was_set:
+    - requested_slot: confirm
+  - intent: affirm
+  - slot_was_set:
+    - confirm: true
+  - action: diet_form
+  - slot_was_set:
+    - confirm: true
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_generate_diet
+  - slot_was_set:
+    - confirm: null
+  - intent: thanks
+  - action: utter_more
+  - intent: restart
+  - action: action_restart
