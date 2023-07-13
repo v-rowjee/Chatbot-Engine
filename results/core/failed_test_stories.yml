@@ -1,0 +1,136 @@
+version: "3.1"
+stories:
+- story: diet form with decimal weight (data/stories/stories.yml)
+  steps:
+  - intent: ask_diet_plan
+  - action: diet_form
+  - active_loop: diet_form
+  - slot_was_set:
+    - requested_slot: goal
+  - intent: lose_weight
+  - slot_was_set:
+    - goal: lose_weight
+  - action: diet_form
+  - slot_was_set:
+    - goal: lose_weight
+  - slot_was_set:
+    - requested_slot: diet
+  - intent: inform_diet
+    entities:
+    - diet: paleo
+  - slot_was_set:
+    - diet: paleo
+  - slot_was_set:
+    - diet: paleo
+  - action: diet_form
+  - slot_was_set:
+    - diet: Paleo
+  - slot_was_set:
+    - requested_slot: has_allergens
+  - intent: deny
+  - slot_was_set:
+    - has_allergens: false
+  - action: diet_form
+  - slot_was_set:
+    - has_allergens: false
+  - slot_was_set:
+    - requested_slot: height
+  - intent: inform_details
+    entities:
+    - height: 168cm
+    - weight: 61.5kg
+  - slot_was_set:
+    - height: 168cm
+  - slot_was_set:
+    - weight: 61.5kg
+  - action: diet_form
+  - slot_was_set:
+    - height: 168
+  - slot_was_set:
+    - weight: 61
+  - slot_was_set:
+    - requested_slot: gender
+  - intent: inform_details
+    entities:
+    - age: '19'
+    - gender: female
+  - slot_was_set:
+    - age: '19'
+  - slot_was_set:
+    - gender: female
+  - action: diet_form
+  - slot_was_set:
+    - age: '19'
+  - slot_was_set:
+    - gender: female
+  - slot_was_set:
+    - requested_slot: activity_level
+  - intent: inform_activity_level
+    entities:
+    - age: '3'
+  - action: action_listen  # predicted: action_default_fallback
+  - intent: inform_activity_level
+    entities:
+    - activity_level: '3'
+  - slot_was_set:
+    - age: '3'
+  - action: diet_form  # predicted: action_listen
+  - slot_was_set:
+    - goal: lose_weight
+  - slot_was_set:
+    - age: '3'
+  - slot_was_set:
+    - diet: Paleo
+  - slot_was_set:
+    - has_allergens: false
+  - slot_was_set:
+    - height: 168
+  - slot_was_set:
+    - weight: 61
+  - slot_was_set:
+    - gender: female
+  - slot_was_set:
+    - requested_slot: activity_level
+  - intent: inform_activity_level
+    entities:
+    - activity_level: '3'
+    - gender: maybe
+  - slot_was_set:
+    - gender: maybe
+  - slot_was_set:
+    - activity_level: '3'
+  - intent: inform_activity_level
+    entities:
+    - activity_level: '3'
+  - action: diet_form  # predicted: action_default_fallback
+  - slot_was_set:
+    - goal: lose_weight
+  - slot_was_set:
+    - age: '3'
+  - slot_was_set:
+    - diet: Paleo
+  - slot_was_set:
+    - has_allergens: false
+  - slot_was_set:
+    - height: 168
+  - slot_was_set:
+    - weight: 61
+  - slot_was_set:
+    - gender: male
+  - slot_was_set:
+    - activity_level: 3
+  - slot_was_set:
+    - requested_slot: confirm
+  - intent: inform_no_allergens
+  - slot_was_set:
+    - has_allergens: false
+  - slot_was_set:
+    - requested_slot: confirm
+  - slot_was_set:
+    - confirm: true
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_generate_diet  # predicted: action_default_fallback

@@ -1,0 +1,63 @@
+{
+  "action_generate_diet": {
+    "precision": 1.0,
+    "recall": 0.8,
+    "f1-score": 0.888888888888889,
+    "support": 5
+  },
+  "utter_greet": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2
+  },
+  "diet_form": {
+    "precision": 1.0,
+    "recall": 0.9166666666666666,
+    "f1-score": 0.9565217391304348,
+    "support": 24
+  },
+  "utter_more": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 3
+  },
+  "utter_faq": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 3
+  },
+  "action_listen": {
+    "precision": 0.9787234042553191,
+    "recall": 0.9787234042553191,
+    "f1-score": 0.9787234042553191,
+    "support": 47
+  },
+  "micro avg": {
+    "precision": 0.9876543209876543,
+    "recall": 0.9523809523809523,
+    "f1-score": 0.9696969696969696,
+    "support": 84
+  },
+  "macro avg": {
+    "precision": 0.9964539007092199,
+    "recall": 0.9492316784869977,
+    "f1-score": 0.9706890053791072,
+    "support": 84
+  },
+  "weighted avg": {
+    "precision": 0.9880952380952381,
+    "recall": 0.9523809523809523,
+    "f1-score": 0.9690591212330343,
+    "support": 84
+  },
+  "accuracy": 0.9523809523809523,
+  "conversation_accuracy": {
+    "accuracy": 0.9411764705882353,
+    "correct": 16,
+    "with_warnings": 0,
+    "total": 17
+  }
+}
