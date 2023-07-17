@@ -17,28 +17,20 @@ action_endpoint:
 # By default, the conversations are stored in memory.
 # https://rasa.com/docs/rasa/tracker-stores
 
-tracker_store:
-   type: SQL
-   dialect: "mysql+pymysql"  # the dialect used to interact with the db
-   url: "localhost"  # (optional) host of the sql db, e.g. "localhost"
-   db: "rasa"  # path to your db
-   username: "root"  # username used for authentication
-   password: "1234"  # password used for authentication
-# tracker_store:
-#    type: sql
-#    dialect: "sqlite"  # the dialect used to interact with the db
-#    url: <host of the redis instance, e.g. localhost>
-#    port: <port of your redis instance, usually 6379>
-#    db: <number of your database within redis, e.g. 0>
-#    password: <password used for authentication>
-#    use_ssl: <whether or not the communication is encrypted, default false>
-
 #tracker_store:
-#    type: mongod
-#    url: <url to your mongo instance, e.g. mongodb://localhost:27017>
-#    db: <name of the db within your mongo instance, e.g. rasa>
-#    username: <username used for authentication>
-#    password: <password used for authentication>
+#   type: SQL
+#   dialect: "mysql+pymysql"  # the dialect used to interact with the db
+#   url: "localhost"  # (optional) host of the sql db, e.g. "localhost"
+#   db: "rasa"  # path to your db
+#   username: "root"  # username used for authentication
+#   password: "1234"  # password used for authentication
+
+tracker_store:
+    type: mongod
+    url: mongodb+srv://vedrowjee:8knbJ23DP5F7ZoTH@rasa.cs6xuyr.mongodb.net/?retryWrites=true&w=majority #mongodb://localhost:27017
+    db: Rasa
+    username: vedrowjee
+    password: 8knbJ23DP5F7ZoTH
 
 # Event broker which all conversation events should be streamed to.
 # https://rasa.com/docs/rasa/event-brokers
