@@ -111,3 +111,23 @@ nlu:
     - what do you recommend for a person with high cholesterol?
     - having cholesterol, what should i eat?
     - How does dietary cholesterol impact my blood cholesterol levels?
+
+- intent: faq/healthy_food
+  examples: |
+    - what are examples of healthy food
+    - what foods are good for you?
+    - give me a list of good food for your health
+    - what are some healthy food?
+    - What are some healthy snacks?
+    - What are some healthy snacks for on the go?
+    - What are some healthy snacks for work?
+    - What are some healthy snacks for school?
+    - What are some good snacks that are easy to make?
+    - What are some healthy snacks for kids?
+    - How can i make healthier choices when eating?
+    - What are some tips for eating healthy on a budget?
+    - what are some tips for a healthy eating
+    - what are osme tips for healthy foods?
+    - list me healthy food
+    - give me a list of food that would benefit me
+    - what things i eat can be good for me?

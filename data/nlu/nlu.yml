@@ -176,6 +176,12 @@ nlu:
     - weight: [52kg](weight)
     - age : [34](age)
     - [168cm](height) [58kg](weight) [31](age) [female](gender)
+    - [167.5cm](height), [65kg](weight), [40](age), [female](gender)
+    - HEIGHT: [1 m 64cm](height)
+    - WEIGHT: [52kg](weight)
+    - AGE: [34](age)
+    - GENDER: [female](gender)
+    - AGE: [25](age)
 - intent: inform_activity_level
   examples: |
     - [1](activity_level)
@@ -238,6 +244,7 @@ nlu:
     - i want a [low carb](diet) diet for weight loss
     - i need a [keto](diet) meal plan to lose weight
     - i want a [keto](diet) to lose weigh
+    - how can i lose weight
 - intent: gain_weight
   examples: |
     - i want to gain weight
@@ -269,6 +276,7 @@ nlu:
     - i want a [paleo](diet) meal plan to gain weight
     - i want a [vegetarian](diet) diet plan to gain muscles mass
     - i want a [high protein](diet) diet to gain mass
+    - how can i gain weight
 - intent: maintain_weight
   examples: |
     - i want to maintain my weight

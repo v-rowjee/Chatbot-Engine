@@ -35,8 +35,7 @@ policies:
 - name: TEDPolicy
   max_history: 9
   epochs: 57
-  split_entities_by_comma:
-    allergen: true
+  split_entities_by_comma: true
   constrain_similarities: true
 
 assistant_id: 20230505-140653-annoying-grenade

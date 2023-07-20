@@ -185,6 +185,11 @@ actions:
 responses:
   utter_default:
   - text: I'm sorry, I didn't quite understand that. Could you rephrase?🤔
+    buttons:
+      - payload: /restart
+        title: Restart🔄
+      - payload: /ask_diet_plan
+        title: Continue Meal Plan🍽️
   utter_get_started:
   - text: |-
       Hello there, I'm Cibo! My goal is to help you create your personalized meal plan based on your goals and preferences.🍽️
@@ -286,3 +291,5 @@ responses:
   - text: Eating disorders can have severe physical and emotional impacts. It's crucial to seek professional help from a therapist or registered dietitian experienced in eating disorders. Treatment focuses on restoring a healthy relationship with food, addressing underlying emotional factors, and creating balanced meal plans tailored to individual needs.
   utter_faq/cholesterol:
   - text: Cholesterol plays a crucial role in our bodies, but high levels of LDL (bad) cholesterol can increase the risk of heart disease and other health complications. Lifestyle changes, including a heart-healthy diet rich in fiber, healthy fats, and regular physical activity, can help manage cholesterol levels. Medications may be prescribed in some cases.
+  utter_faq/healthy_food:
+  - text: A healthy diet is one that provides your body with all the nutrients it needs to function properly. This includes a variety of fruits, vegetables, whole grains, lean protein, and healthy fats. It's also important to limit processed foods and added sugars.

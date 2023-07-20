@@ -11,7 +11,7 @@ class CleanSlot:
         except ValueError:
             pass
 
-        height = height.lower().replace(' ', '').replace("'", 'foot').replace('"', 'inch').replace("ft",
+        height = height.lower().replace(' ', '').replace(',', '').replace("'", 'foot').replace('"', 'inch').replace("ft",
                                                                                                    "foot").replace(
             "feet", "foot").replace("inches", "inch").replace("inchs", "inch").replace("cms", "cm").replace(
             "centimeter", "cm").replace("meters", "m").replace("metre", "m")
@@ -52,7 +52,7 @@ class CleanSlot:
             return weight
         except ValueError:
             pass
-        weight = weight.lower().replace(' ', '').replace("lb", "pound").replace("lbs", "pound").replace("pounds",
+        weight = weight.lower().replace(' ', '').replace(',', '').replace("lb", "pound").replace("lbs", "pound").replace("pounds",
                                                                                                         "pound").replace(
             "kilo", "kg")
         kg = re.search(r"(\d+(\.\d+)?)(?:kg)", weight)

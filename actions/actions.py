@@ -112,7 +112,7 @@ class ValidateDietForm(FormValidationAction):
         if tracker.get_intent_of_latest_message() in ["inform_no_diet", "deny"]:
             return {"diet": ""}
         else:
-            diet_matches = difflib.get_close_matches(slot_value.lower(), self.diet_db(), cutoff=0.8)
+            diet_matches = difflib.get_close_matches(slot_value, self.diet_db())
             diet = diet_matches[0] if diet_matches else None
             if diet in self.diet_db():
                 return {"diet": diet}
@@ -144,7 +144,7 @@ class ValidateDietForm(FormValidationAction):
     ) -> Dict[Text, Any]:
         matching_allergens = []
         for item in slot_value:
-            matches = difflib.get_close_matches(item, self.intolerances_db(), n=len(self.intolerances_db()), cutoff=0.6)
+            matches = difflib.get_close_matches(item, self.intolerances_db(), n=len(self.intolerances_db()))
             current_matching_allergens = [allergen for allergen in self.intolerances_db() if allergen in matches]
             matching_allergens += current_matching_allergens
 
