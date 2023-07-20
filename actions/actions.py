@@ -237,14 +237,14 @@ class AskForConfirmation(Action):
         gender = tracker.slots.get("gender")
         activity_level = tracker.slots.get("activity_level")
 
-        message = f"Great! I can now generate a customised diet plan for you. Based on the information you provided, I will create a {diet} diet designed to help you {goal.replace('_', ' ')} at {age} years old. As per your physical attributes, you mentioned being a {gender} standing at {height}cm tall, weighing {weight}kg and being {activity_level * 20}% active. "
+        message = f"Great! I can now generate a customised diet plan for you.\n\nBased on the information you provided, I will create a {diet} diet designed to help you {goal.replace('_', ' ')} at {age} years old. As per your physical attributes, you mentioned being a {gender} standing at {height}cm tall, weighing {weight}kg and being {activity_level * 20}% active. "
         allergens = tracker.slots.get("allergens")
         if allergens not in [None, []]:
             message += f"I will also consider that you are allergic to {', '.join(allergens)}."
         else:
             message += "You also confirm not having any allergies."
 
-        message += "\nDo you want to continue? If not, please specify any changes you would like to make before generating the meal plan."
+        message += "\n\nDo you want to continue? If not, please specify any changes you would like to make before generating the meal plan."
         dispatcher.utter_message(text=message, buttons=[{"title": "Continue", "payload": "/affirm"}])
         return []
 
