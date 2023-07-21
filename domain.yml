@@ -58,6 +58,9 @@ slots:
     - type: from_intent
       intent: deny
       value: ''
+      conditions:
+      - active_loop: diet_form
+        requested_slot: diet
   has_allergens:
     type: bool
     influence_conversation: true
@@ -104,7 +107,7 @@ slots:
       conditions:
       - active_loop: diet_form
   age:
-    type: text
+    type: float
     influence_conversation: true
     mappings:
     - type: from_entity
@@ -120,6 +123,8 @@ slots:
         requested_slot: gender
       - active_loop: diet_form
         requested_slot: age
+      - active_loop: diet_form
+        requested_slot: confirm
   gender:
     type: categorical
     values:
@@ -145,6 +150,8 @@ slots:
       conditions:
       - active_loop: diet_form
         requested_slot: activity_level
+      - active_loop: diet_form
+        requested_slot: confirm
   confirm:
     type: bool
     influence_conversation: true
