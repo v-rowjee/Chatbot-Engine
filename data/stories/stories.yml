@@ -661,3 +661,78 @@ stories:
   - action: utter_faq
   - intent: thanks
   - action: utter_more
+
+- story: quick form story
+  steps:
+  - intent: gain_weight
+    entities:
+    - diet: paleo
+  - slot_was_set:
+    - goal: gain_weight
+  - slot_was_set:
+    - diet: paleo
+  - action: diet_form
+  - active_loop: diet_form
+  - slot_was_set:
+    - goal: gain_weight
+  - slot_was_set:
+    - diet: Paleo
+  - slot_was_set:
+    - requested_slot: has_allergens
+  - intent: deny
+  - slot_was_set:
+    - has_allergens: false
+  - action: diet_form
+  - slot_was_set:
+    - has_allergens: false
+  - slot_was_set:
+    - requested_slot: height
+  - intent: inform_details
+    entities:
+    - height: 170cm
+    - weight: 80kg
+    - age: '25'
+    - gender: female
+  - slot_was_set:
+    - height: 170cm
+  - slot_was_set:
+    - weight: 80kg
+  - slot_was_set:
+    - age: '25'
+  - slot_was_set:
+    - gender: female
+  - action: diet_form
+  - slot_was_set:
+    - height: 170
+  - slot_was_set:
+    - weight: 80
+  - slot_was_set:
+    - age: '25'
+  - slot_was_set:
+    - gender: female
+  - slot_was_set:
+    - requested_slot: activity_level
+  - intent: inform_activity_level
+    entities:
+    - activity_level: '3'
+  - slot_was_set:
+    - activity_level: '3'
+  - action: diet_form
+  - slot_was_set:
+    - activity_level: 3
+  - slot_was_set:
+    - requested_slot: confirm
+  - intent: affirm
+  - slot_was_set:
+    - confirm: true
+  - action: diet_form
+  - slot_was_set:
+    - confirm: true
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_generate_diet
+  - slot_was_set:
+    - confirm: null

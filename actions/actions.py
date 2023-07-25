@@ -1,6 +1,6 @@
 import difflib
+import random
 
-from random import choice
 from typing import Text, List, Any, Dict, Optional
 from rasa_sdk import Tracker, FormValidationAction, Action
 from rasa_sdk.executor import CollectingDispatcher
@@ -197,7 +197,7 @@ class ValidateDietForm(FormValidationAction):
     ) -> Dict[Text, Any]:
         if slot_value not in ["male", "female"]:
             # dispatcher.utter_message(text=f'Please provide a valid gender. (male or female)')
-            return {"gender": choice(["male", "female"])}
+            return {"gender": random.choice(["male", "female"])}
         return {"gender": slot_value}
 
     def validate_activity_level(
@@ -258,11 +258,15 @@ class AskForDetails(Action):
     ) -> List[EventType]:
         slots = ['height', 'weight', 'age', 'gender']
         requested_slots = [slot for slot in slots if tracker.slots.get(slot) is None]
+
+        start_string_list = ["Please provide your", "Could you please share your", "I will now need your"]
+
         if len(requested_slots) > 1:
-            message = f"Please provide your {', '.join(requested_slots[:-1])} and {requested_slots[-1]}."
+            message = f"{random.choice(start_string_list)} {', '.join(requested_slots[:-1])} and {requested_slots[-1]}."
+            message += "\n\nYou can specify all your details in one line and in metric format (e.g. 170cm, 80kg, 25 years old, female)."
             dispatcher.utter_message(text=message)
         elif len(requested_slots) == 1:
-            message = f"Please provide your {requested_slots[0]}."
+            message = f"One last detail is needed. Can you provide your {requested_slots[0]}."
             dispatcher.utter_message(text=message)
         return []
 

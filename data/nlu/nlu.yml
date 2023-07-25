@@ -31,6 +31,10 @@ nlu:
     - What are some quick and easy meal ideas?
     - Create a Meal Plan🍽️
     - Create another Meal Plan🍽️
+    - where is my diet?
+    - wheres my diet plan?
+    - where is my meal plan?
+    - continue my meal plan
 - intent: inform_diet
   examples: |
     - [gluten free](diet)
@@ -170,6 +174,7 @@ nlu:
     - gender [male](gender)
     - age [34](age)
     - age: [51](age)
+    - [40](age)
     - [1m75](height) [69kg](weight) [22](age) [male](gender)
     - [179cm](height) [70kg](weight) [39](age) [female](gender)
     - [168cm](height) , [65kg](weight) , [40](age) , [female](gender)
@@ -189,6 +194,13 @@ nlu:
     - GENDER: [female](gender)
     - AGE: [25](age)
     - [177cm](height) [70kg](weight) [22](age) [male](gender)
+    - [21](age)
+    - [34](age)
+    - [22](age) [f]{"entity":"gender","value":"female"}
+    - [m]{"entity":"gender","value":"male"}
+    - [176cm](height), [70kg](weight), [22](age) years old, [female](gender)
+    - [176cm](height), [70kg](weight), [22](age) years old, [m]{"entity":"gender","value":"male"}
+    - [170cm](height), [80kg](weight), [25](age) years old, [female](gender)
 - intent: inform_activity_level
   examples: |
     - [1](activity_level)
@@ -309,71 +321,3 @@ nlu:
     - i need to balance my weight
     - i want to maintain my weight with a [vegetarian](diet) diet
     - i want a [keto](diet) diet to maintain my weight
-- intent: greet
-  examples: |
-    - hi
-- intent: faq
-  examples: |
-    - how much water should a [male](gender) of 35years drink
-    - what other healthy food can i consume?
-- intent: thanks
-  examples: |
-    - thanks
-    - thnx
-- synonym: gluten free
-  examples: |
-    - dont eat gluten
-    - no gluten
-- synonym: vegetarian
-  examples: |
-    - veggie
-    - veg
-- synonym: ketogenic
-  examples: |
-    - keto
-    - keto-friendly
-- synonym: mediterranean
-  examples: |
-    - mediteranean
-- synonym: dash
-  examples: |
-    - Dietary Approaches to Stop Hypertension
-- synonym: egg
-  examples: |
-    - eggs
-- synonym: '18'
-  examples: |
-    - 18years
-- synonym: female
-  examples: |
-    - girl
-- synonym: male
-  examples: |
-    - man
-- synonym: '45'
-  examples: |
-    - 45yo
-- synonym: '21'
-  examples: |
-    - 21yo
-- synonym: '25'
-  examples: |
-    - 25yo
-- synonym: '1'
-  examples: |
-    - one
-- synonym: '2'
-  examples: |
-    - two
-- synonym: '3'
-  examples: |
-    - three
-- synonym: '4'
-  examples: |
-    - four
-- synonym: '5'
-  examples: |
-    - five
-- synonym: paleo
-  examples: |
-    - paleolithic
