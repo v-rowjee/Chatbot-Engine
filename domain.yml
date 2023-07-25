@@ -6,7 +6,8 @@ intents:
 - affirm
 - ask_diet_plan
 - deny
-- faq
+- faq:
+    is_retrieval_intent: true
 - gain_weight
 - get_started
 - greet
